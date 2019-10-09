@@ -1,0 +1,27 @@
+/*================================================================================
+	Item Name: Frest HTML Admin Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+/*Using body tag in stead of important everywhere*/
+body {
+  /*SIDEMENU*/
+  /*PAGEHEADERMENU*/ }
+  body .main-menu .navbar-header .navbar-brand .brand-logo {
+    background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
+    background-size: contain;
+    margin-left: 10px; }
+  body .main-menu .navigation-main li.nav-item:hover .menu-title {
+    color: #ED6D05; }
+  body .main-menu .nav-toggle .toggle-icon {
+    color: #A3AFBD !important; }
+  body .header-navbar .dropdown-notification .dropdown-menu-header {
+    background-color: #FFBF00; }
+  body .dropdown-item:focus, body .dropdown-item:active, body .dropdown-item.active {
+    background-color: #FFBF00; }
