@@ -2535,16 +2535,16 @@ body.navbar-static .navbar-container .search-input.open {
   body:after {
     content: "lg - min-width: 992px"; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   head {
-    font-family: "xl 1200px"; }
+    font-family: "xl 1600px"; }
   body:after {
-    content: "xl - min-width: 1200px"; } }
+    content: "xl - min-width: 1600px"; } }
 
 head {
   clear: both; }
   head title {
-    font-family: "xs 0px, sm 544px, md 768px, lg 992px, xl 1200px"; }
+    font-family: "xs 0px, sm 544px, md 768px, lg 992px, xl 1600px"; }
 
 body:after {
   display: none; }

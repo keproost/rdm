@@ -18,6 +18,12 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 /*FREST COMPONENTS STYLE OVERRIDES*/
 /*Currently overriding styles with body parent in stead of importants everywere*/
 body {
+	// DASHBOARD SPECIFIC
+	&.dashboard-layout-1 {
+		.widget-timeline {
+			height: 280px;
+		}
+	}
 	// SIDEMENU
 	.main-menu{
 
@@ -68,6 +74,44 @@ body {
 			background-color: $tertiary;
 		}
 	}
+
+	// Activity Card Content
+	.activity-content{
+		margin-bottom: 2.13rem;
+	}
+
+	//CARDS - WIDGETS
+	.card {
+		&.card-flex-column {
+			display: flex; 
+			flex-direction: column;
+			flex: 1;
+			.card-content {
+				display: flex;
+				flex: 1;
+				.card-body {
+					flex: 1;
+					display: flex;
+				}
+			}
+		}
+		.card-footer {
+			ul.legend {
+				list-style: none;
+				padding-left: 0px;
+					li {
+						margin-right: 0.5rem;
+						.label {
+							font-size: 1rem;
+							margin-bottom: 5px;
+						}
+						.indicator {
+							margin-right: 0.253rem;
+						}
+					}
+			}
+		}
+	}
 	// BOOKMARK NAVIGATION
 	.bookmark-icons {
 		.nav-item {
@@ -79,32 +123,30 @@ body {
 		}
 	}
 
-	// TIMELINE CARD
-	.timline-card {
-		.card {
-			max-height: 300px;
-		}
-	}
 	// NAV PILLS
 	.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 		background-color: $secondary;
 	}
+	
 	//PACE LOADER
 	.pace .pace-progress {
 		background-color: $tertiary;
 	}
+
 	// BUTTONS 
 	.btn-group-vertical{
 		.btn {
 			border-radius: $border-radius;
 		}
 	}
+
 	// DROPDOWNS
 	.dropdown-item {
 		&:focus, &:active, &.active {
 			background-color: $tertiary;
 		}
 	}
+
 	// FORMS
 	label {
 		margin-bottom: 0.5rem;
@@ -138,6 +180,7 @@ body {
 			box-shadow: 0 0px 10px 0 rgba($secondary, 0.2);
 		}
 	}	
+
 	// Authentication Pages
 	&.bg-full-screen-image {
 		background: url(../../assets/images/pages/auth-bg.jpg);

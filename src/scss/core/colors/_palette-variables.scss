@@ -50,6 +50,19 @@ $secondary: (
   "darken-4": darken(theme-color("secondary"), 20%),
   "light"   : #E6EAEE
 );
+$tertiary: (
+  "lighten-5": lighten(theme-color("secondary"), 25%),
+  "lighten-4": lighten(theme-color("secondary"), 20%),
+  "lighten-3": lighten(theme-color("secondary"), 15%),
+  "lighten-2": lighten(theme-color("secondary"), 10%),
+  "lighten-1": lighten(theme-color("secondary"), 5%),
+  "base": theme-color("tertiary"),
+  "darken-1": darken(theme-color("secondary"), 5%),
+  "darken-2": darken(theme-color("secondary"), 10%),
+  "darken-3": darken(theme-color("secondary"), 15%),
+  "darken-4": darken(theme-color("secondary"), 20%),
+  "light"   : #E6EAEE
+);
 $success: (
   "lighten-5": lighten(theme-color("success"), 25%),
   "lighten-4": lighten(theme-color("success"), 20%),
@@ -126,6 +139,7 @@ $colors: (
   "light": $light,
   "primary": $primary,
   "secondary": $secondary,
+  "tertiary": $tertiary,
   "success": $success,
   "info": $info,
   "warning": $warning,

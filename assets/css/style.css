@@ -12,6 +12,9 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 /*CUSTOM I3 COMPONENTS*/
 /*FREST COMPONENTS STYLE OVERRIDES*/
 /*Currently overriding styles with body parent in stead of importants everywere*/
+body.dashboard-layout-1 .widget-timeline {
+  height: 280px; }
+
 body .main-menu .navbar-header .navbar-brand .brand-logo {
   background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
   background-size: contain;
@@ -39,11 +42,33 @@ body .main-menu .nav-toggle .toggle-icon {
 body .header-navbar .dropdown-notification .dropdown-menu-header {
   background-color: #FFBF00; }
 
+body .activity-content {
+  margin-bottom: 2.13rem; }
+
+body .card.card-flex-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+  body .card.card-flex-column .card-content {
+    display: flex;
+    flex: 1; }
+    body .card.card-flex-column .card-content .card-body {
+      flex: 1;
+      display: flex; }
+
+body .card .card-footer ul.legend {
+  list-style: none;
+  padding-left: 0px; }
+  body .card .card-footer ul.legend li {
+    margin-right: 0.5rem; }
+    body .card .card-footer ul.legend li .label {
+      font-size: 1rem;
+      margin-bottom: 5px; }
+    body .card .card-footer ul.legend li .indicator {
+      margin-right: 0.253rem; }
+
 body .bookmark-icons .nav-item.active .nav-link i {
   color: #ED6D05 !important; }
-
-body .timline-card .card {
-  max-height: 300px; }
 
 body .nav-pills .nav-link.active, body .nav-pills .show > .nav-link {
   background-color: #F49800; }

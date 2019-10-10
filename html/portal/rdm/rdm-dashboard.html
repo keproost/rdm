@@ -45,7 +45,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static dashboard-layout-1" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
@@ -159,7 +159,7 @@
     <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
-            <div class="content-header row">
+            <div class="content-header row d-none">
                 <div class="content-header-left col-12 mb-2 mt-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
@@ -182,10 +182,10 @@
 
                 
                 <section id="widgets-Statistics">
-                    <div class="row">
-                        <div class="col-xl-7 col-md-6">
+                    <div class="row">                      
+                        <div class="col-xl-3 col-lg-4 col-md-12 d-flex flex-column">
                             <div class="row">
-                                <div class="col-xl-4 col-md-6">
+                                <div class="col-md-6">
                                     <div class="card text-center flex-fill">
                                         <div class="card-content">
                                             <div class="card-body">
@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-md-6">
+                                <div class="col-md-6">
                                     <div class="card text-center flex-fill">
                                         <div class="card-content">
                                             <div class="card-body">
@@ -210,312 +210,115 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="card text-center flex-fill">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-danger mx-auto my-1">
-                                                    <i class="bx bx-archive font-medium-5"></i>
-                                                </div>
-                                                <p class="text-muted mb-0 line-ellipsis">Pending updates</p>
-                                                <h2 class="mb-0">1</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                                                 
+                                </div>                                                                
                             </div>                              
                             <div class="row">
-                                <div class="col-xl-6 col-md-8">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="card-body p-0">
-                                                <div class="d-lg-flex justify-content-between">
-                                                    <div class="widget-card-details d-flex flex-column justify-content-between p-2">
-                                                        <div>
-                                                            <h5 class="font-medium-2 font-weight-normal">Users</h5>
-                                                            <p class="text-muted">How To Stop Living Your Life On Auto Mode.</p>
-                                                        </div>
-                                                        <a href="#">Details</a>
-                                                    </div>
-                                                    <div id="radial-chart-danger"></div>
+                                <div class="col-md-12">
+                                    <div class="card widget-followers">
+                                        <div class="card-header d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-end widget-followers-heading-left">
+                                                <div class="d-flex flex-column align-items-start mr-1">
+                                                    <h4 class="card-title">Activity</h4>
+                                                    <small class="text-muted">Device pool</small>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>                           
-                                </div>   
-                                <div class="col-xl-6 col-md-8">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="card-body p-0">
-                                                <div class="d-lg-flex justify-content-between">
-                                                    <div class="widget-card-details d-flex flex-column justify-content-between p-2">
-                                                        <div>
-                                                            <h5 class="font-medium-2 font-weight-normal">Users</h5>
-                                                            <p class="text-muted">How To Stop Living Your Life On Auto Mode.</p>
-                                                        </div>
-                                                        <a href="#">Details</a>
-                                                    </div>
-                                                    <div id="radial-chart-primary"></div>
-                                                </div>
+                                            <div class="d-flex align-items-end widget-followers-heading-right">
+                                                <div class="d-flex flex-column align-items-end mr-1">
+                                                    <i class='bx bx-caret-up text-success font-medium-1'></i>
+                                                    <small class="text-muted">+62%</small>
+                                                </div>                                                
+                                                <div class="d-flex flex-column align-items-end">
+                                                    <h5 class="font-weight-normal mb-0">150</h5>
+                                                    <small class="text-muted">Sessions</small>
+                                                </div>                                                                                               
                                             </div>
                                         </div>
-                                    </div>                           
-                                </div>                                                             
-                            </div>                          
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div id="follower-primary-chart"></div>
+                                            </div>
+                                        </div>
+                                    </div>                          
+                                </div>                                                              
+                            </div>     
                         </div>
-                        <div class="col-lg-5 col-md-6">
-                            <div class="card">
+                        <div class="col-xl-3 col-lg-4 d-flex flex-column">
+                             <div class="card card-flex-column">
                                 <div class="card-header border-bottom d-flex justify-content-between align-items-center">
                                     <h4 class="card-title">Global app usage</h4>
                                     <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body">
-                                        <div id="radial-chart-multi"></div>
-                                        <ul class="list-inline text-center">
-                                            <li class="mr-2"> <span class="bullet bullet-xs bullet-primary mr-50"></span>I3Allsync</li>
-                                            <li class="mr-2"> <span class="bullet bullet-xs bullet-warning mr-50"></span>Annotate</li>
-                                            <li> <i class="bullet bullet-xs bullet-danger mr-50"></i>Skype</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                    <div class="card-body pb-0">
+                                        <div id="radial-chart-multi" class="d-flex flex-fill align-center justify-content-center"></div>
 
-                <div class="row">
-                    <!-- Statistics Line Chart Starts -->
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                        <div class="card">
-                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
-                                <h4 class="card-title">Statistics</h4>
-                                <ul class="list-inline mb-0">
-                                    <li class="mr-50"> <i class="bullet bullet-xs bullet-info mr-50"></i>Views </li>
-                                    <li class="mr-1"> <i class="bullet bullet-xs bullet-success mr-50"></i>Likes </li>
-                                    <li><i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i></li>
-                                </ul>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div id="statistics-line-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Statistics Line Chart Ends -->
-                    <!-- Sales Heat Map Chart Starts -->
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">
-                                    Device activity
-                                </h4>
-                                <div class="heading-elements">
-                                    <i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div id="sales-heatmap-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Sales Heat Map Chart Ends -->
-                </div> 
-                
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="card widget-followers">
-                            <div class="card-header d-flex align-items-center justify-content-between">
-                                <div>
-                                    <h4 class="card-title">Followers</h4>
-                                    <small class="text-muted">System project</small>
-                                </div>
-                                <div class="d-flex align-items-center widget-followers-heading-right">
-                                    <h5 class="mr-2 font-weight-normal mb-0">673K</h5>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class='bx bx-caret-up text-success font-medium-1'></i>
-                                        <small class="text-muted">+62%</small>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div id="follower-success-chart"></div>
+                                <div class="card-footer">
+                                    <ul class="legend list-inline text-center">
+                                        <li> 
+                                            <span class="indicator"><i class="bullet bullet-xs bullet-primary"></i></span>
+                                            <span class="label">I3Allsync</span>
+                                        </li>
+                                        <li> 
+                                            <span class="indicator"><i class="bullet bullet-xs bullet-secondary"></i></span>
+                                            <span class="label">Annotate</span>
+                                        </li>
+                                        <li> 
+                                            <span class="indicator"><i class="bullet bullet-xs bullet-tertiary"></i></span>
+                                            <span class="label">Skype</span>
+                                        </li>
+                                        <li> 
+                                            <span class="indicator"><i class="bullet bullet-xs bullet-info"></i></span>
+                                            <span class="label">Teams</span>
+                                        </li>
+                                        <li> 
+                                            <span class="indicator"><i class="bullet bullet-xs bullet-success"></i></span>
+                                            <span class="label">Excel</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
+                            </div>                           
                         </div>
-                    </div>
-                     <div class="col-xl-4">
-                        <div class="card widget-followers">
-                            <div class="card-header d-flex align-items-center justify-content-between">
-                                <div>
-                                    <h4 class="card-title">Followers</h4>
-                                    <small class="text-muted">System project</small>
-                                </div>
-                                <div class="d-flex align-items-center widget-followers-heading-right">
-                                    <h5 class="mr-2 font-weight-normal mb-0">673K</h5>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class='bx bx-caret-up text-success font-medium-1'></i>
-                                        <small class="text-muted">+62%</small>
+                        <div class="col-xl-3 col-lg-4 d-flex flex-column">
+                            <div class="card">
+                                <div class="card-body d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar bg-rgba-primary m-0 p-25 mr-75 mr-xl-2">
+                                            <div class="avatar-content">
+                                                <i class="bx bx-user text-primary font-medium-2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="total-amount">
+                                            <h5 class="mb-0">$38,566</h5>
+                                            <small class="text-muted">Conversion</small>
+                                        </div>
                                     </div>
+                                    <div id="primary-line-chart"></div>
                                 </div>
                             </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div id="follower-danger-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class="col-xl-4">
-                        <div class="card widget-followers">
-                            <div class="card-header d-flex align-items-center justify-content-between">
-                                <div>
-                                    <h4 class="card-title">Followers</h4>
-                                    <small class="text-muted">System project</small>
-                                </div>
-                                <div class="d-flex align-items-center widget-followers-heading-right">
-                                    <h5 class="mr-2 font-weight-normal mb-0">673K</h5>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <i class='bx bx-caret-up text-success font-medium-1'></i>
-                                        <small class="text-muted">+62%</small>
+                            <div class="card">
+                                <div class="card-body d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar bg-rgba-primary m-0 p-25 mr-75 mr-xl-2">
+                                            <div class="avatar-content">
+                                                <i class="bx bx-user text-primary font-medium-2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="total-amount">
+                                            <h5 class="mb-0">$38,566</h5>
+                                            <small class="text-muted">Conversion</small>
+                                        </div>
                                     </div>
+                                    <div id="warning-line-chart"></div>
                                 </div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div id="follower-primary-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                                     
-                </div>
-
-
-                <!-- Widgets Advance start -->
-                <section id="widgets-advance">
-                    <div class="row">
-                        <div class="col-12 mt-1 mb-2">
-                            <h4>Advance</h4>
-                            <hr>
-                        </div>
-                    </div>
-                    <div class="row widgets-text-chart">
-                        <!-- Notification Widget Starts -->
-                        <div class="col-md-6">
-                            <div class="card widget-notification">
-                                <div class="card-header border-bottom">
-                                    <h4 class="card-title d-flex align-items-center">
-                                        <i class='bx bx-bell font-medium-4 mr-1'></i>Notifications</h4>
-                                    <div class="heading-elements">
-                                        <button type="button" class="btn btn-sm btn-light-primary">Read All</button>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-body p-0">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
-                                                <div class="list-left d-flex">
-                                                    <div class="list-icon mr-1">
-                                                        <div class="avatar bg-rgba-primary m-0 p-25">
-                                                            <div class="avatar-content">
-                                                                <i class="bx bx-edit-alt text-primary font-medium-5"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-content">
-                                                        <span class="list-title">New Report has been received</span>
-                                                        <small class="text-muted d-block">Few sec ago</small>
-                                                    </div>
-                                                </div>
-                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
-                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
-                                                <div class="list-left d-flex">
-                                                    <div class="list-icon mr-1">
-                                                        <div class="avatar bg-rgba-primary m-0">
-                                                            <img class="img-fluid" src="../../../app-assets/images/profile/user-uploads/social-2.jpg" alt="img placeholder" height="38" width="38">
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-content">
-                                                        <span class="list-title">New Customer is registered</span>
-                                                        <small class="text-muted d-block">03:44PM</small>
-                                                    </div>
-                                                </div>
-                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
-                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
-                                                <div class="list-left d-flex">
-                                                    <div class="list-icon mr-1">
-                                                        <div class="avatar bg-rgba-danger m-0 p-25">
-                                                            <div class="avatar-content">
-                                                                <span class="font-medium-1 text-danger">BM</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-content">
-                                                        <span class="list-title">New Customer is registered</span>
-                                                        <small class="text-muted d-block">03:44PM</small>
-                                                    </div>
-                                                </div>
-                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
-                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
-                                                <div class="list-left d-flex">
-                                                    <div class="list-icon mr-1">
-                                                        <div class="avatar bg-rgba-info m-0 p-25">
-                                                            <div class="avatar-content">
-                                                                <i class="bx bx-cake text-info font-medium-5"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-content">
-                                                        <span class="list-title">Julia's birthday on Monay, party arrangment</span>
-                                                        <small class="text-muted d-block">Monday</small>
-                                                    </div>
-                                                </div>
-                                                <div class="readable-mark-icon mark-as-read" data-toggle="tooltip" data-placement="left" title="Mark as Unread">
-                                                    <i class='bx bxs-circle text-light-secondary font-medium-1'></i>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
-                                                <div class="list-left d-flex">
-                                                    <div class="list-icon mr-1">
-                                                        <div class="avatar bg-rgba-primary m-0">
-                                                            <img class="img-fluid" src="../../../app-assets/images/profile/user-uploads/user-07.jpg" alt="img placeholder" height="38" width="38">
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-content">
-                                                        <span class="list-title">New Mail From Ardis Balderson</span>
-                                                        <small class="text-muted d-block">12 March</small>
-                                                    </div>
-                                                </div>
-                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
-                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Notification Widget Ends -->
-                        <!-- Timeline Widget Starts -->
-                        <div class="col-xl-6 col-md-6 timline-card">
-                            <div class="card ">
+                            </div>                                                     
+                        </div>                          
+                        <div class="col-xl-3 col-lg-12 col-md-12 d-flex">
+                           <div class="card flex-fill">
                                 <div class="card-header">
                                     <h4 class="card-title">
-                                        Timeline
+                                        RDM Activity feed
                                     </h4>
                                 </div>
                                 <div class="card-content">
@@ -567,89 +370,170 @@
                                         <button class="btn btn-block btn-primary">View All Notifications</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Timeline Widget Ends -->                        
-                    </div>
-                </section>
-                <!-- Widgets Advance End -->
-                
-                <!-- Widgets Charts start -->
-                <section id="widgets-chart">
-                    <div class="row">
+                            </div>                               
 
-                        <!-- Statistics Half Radial Chart Starts -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card">
-                                <div class="card-header border-bottom d-flex justify-content-between align-items-center">
-                                    <h4 class="card-title">Statistics</h4>
-                                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                        </div>                                                
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 d-flex">
+                            <div class="card widget-notification flex-fill">
+                                <div class="card-header border-bottom">
+                                    <h4 class="card-title d-flex align-items-center">
+                                        <i class='bx bx-envelope font-medium-4 mr-1'></i>Messages</h4>
+                                    <div class="heading-elements">
+                                        <button type="button" class="btn btn-sm btn-light-primary">New</button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
+                                                <div class="list-left d-flex">
+                                                    <div class="list-icon mr-1">
+                                                        <div class="avatar bg-rgba-info m-0 p-25">
+                                                            <div class="avatar-content">
+                                                                <i class="bx bx-bolt-circle text-info font-medium-5"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-content">
+                                                        <span class="list-title">New Report has been received</span>
+                                                        <small class="text-muted d-block">Few sec ago</small>
+                                                    </div>
+                                                </div>
+                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
+                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
+                                                <div class="list-left d-flex">
+                                                    <div class="list-icon mr-1">
+                                                        <div class="avatar bg-rgba-warning m-0 p-25">
+                                                            <div class="avatar-content">
+                                                                <i class="bx bx-bolt-circle text-warning font-medium-5"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-content">
+                                                        <span class="list-title">New Report has been received</span>
+                                                        <small class="text-muted d-block">Few sec ago</small>
+                                                    </div>
+                                                </div>
+                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
+                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action border-0 d-flex align-items-center justify-content-between">
+                                                <div class="list-left d-flex">
+                                                    <div class="list-icon mr-1">
+                                                        <div class="avatar bg-rgba-danger m-0 p-25">
+                                                            <div class="avatar-content">
+                                                                <i class="bx bx-bolt-circle text-danger font-medium-5"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-content">
+                                                        <span class="list-title">New Report has been received</span>
+                                                        <small class="text-muted d-block">Few sec ago</small>
+                                                    </div>
+                                                </div>
+                                                <div class="readable-mark-icon" data-toggle="tooltip" data-placement="left" title="Mark as read">
+                                                    <i class='bx bxs-circle text-light-primary font-medium-1'></i>
+                                                </div>
+                                            </li>                                                                                        
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                              
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <div class="card card-activity flex-fill">
+                                <div class="card-header">
+                                    <h4 class="card-title">Endpoints</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body pt-1">
-                                        <div id="radial-chart-half"></div>
-                                        <div class="chart-details text-center">
-                                            <h6 class="font-medium-2 mb-1">Awesome</h6>
-                                            <p class="text-muted">Close to reach 1000k followers !</p>
+                                        <div class="d-flex activity-content">
+                                            <div class="avatar bg-rgba-primary m-0 mr-75">
+                                                <div class="avatar-content">
+                                                    <i class="bx bx-bar-chart-alt-2 text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div class="activity-progress flex-grow-1">
+                                                <small class="text-muted d-inline-block mb-50">Total Sales</small>
+                                                <small class="float-right">$8,125</small>
+                                                <div class="progress progress-bar-primary progress-sm">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" style="width:50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex activity-content">
+                                            <div class="avatar bg-rgba-success m-0 mr-75">
+                                                <div class="avatar-content">
+                                                    <i class="bx bx-dollar text-success"></i>
+                                                </div>
+                                            </div>
+                                            <div class="activity-progress flex-grow-1">
+                                                <small class="text-muted d-inline-block mb-50">Income Amount</small>
+                                                <small class="float-right">$18,963</small>
+                                                <div class="progress progress-bar-success progress-sm">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" style="width:80%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex activity-content">
+                                            <div class="avatar bg-rgba-warning m-0 mr-75">
+                                                <div class="avatar-content">
+                                                    <i class="bx bx-stats text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="activity-progress flex-grow-1">
+                                                <small class="text-muted d-inline-block mb-50">Total Budget</small>
+                                                <small class="float-right">$14,150</small>
+                                                <div class="progress progress-bar-warning progress-sm">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" style="width:60%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-75">
+                                            <div class="avatar bg-rgba-danger m-0 mr-75">
+                                                <div class="avatar-content">
+                                                    <i class="bx bx-check text-danger"></i>
+                                                </div>
+                                            </div>
+                                            <div class="activity-progress flex-grow-1">
+                                                <small class="text-muted d-inline-block mb-50">Completed Tasks</small>
+                                                <small class="float-right">106</small>
+                                                <div class="progress progress-bar-danger progress-sm">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" style="width:30%"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Statistics Half Radial Chart Ends -->
-
-                        <!-- Statistics Donut Chart Starts -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card">
-                                <div class="card-header d-flex justify-content-between align-items-center border-bottom">
-                                    <h4 class="card-title">Statistics</h4>
-                                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                            </div>          
+                        </div>                 
+                        <div class="col-md-6 d-flex">
+                             <div class="card flex-fill">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Activity heat map
+                                    </h4>
+                                    <small class="text-muted">By amount of sessions</small>
                                 </div>
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div class="pb-1 pt-3" id="donut-chart-statistics"></div>
-                                        <div class="chart-info d-flex justify-content-between mb-1">
-                                            <div class="d-flex align-items-center">
-                                                <i class="bullet bullet-xs bullet-primary mr-50"></i>
-                                                <span class="text-muted text-bold-600 ml-50">Installation</span>
-                                            </div>
-                                            <div class="text-muted">70%</div>
-                                        </div>
-                                        <div class="chart-info d-flex justify-content-between mb-1">
-                                            <div class="d-flex align-items-center">
-                                                <i class="bullet bullet-xs bullet-warning mr-50"></i>
-                                                <span class="text-muted text-bold-600 ml-50">Page Views</span>
-                                            </div>
-                                            <div class="text-muted">30%</div>
-                                        </div>
-                                        <div class="chart-info d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <i class="bullet bullet-xs bullet-danger mr-50"></i>
-                                                <span class="text-muted text-bold-600 ml-50">Active Users</span>
-                                            </div>
-                                            <div class="text-muted">40%</div>
-                                        </div>
+                                <div class="card-content d-flex align-items-center flex-fill">
+                                    <div class="card-body pb-0">
+                                        <div id="sales-heatmap-chart"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>                                           
                         </div>
-                        <!-- Statistics Donut Chart Ends -->
                     </div>
-
                 </section>
-                <!-- Widgets Charts End -->
             </div>
         </div>
     </div>
     <!-- END: Content-->
-
-    <!-- BEGIN: Footer-->
-    <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-left d-inline-block">2019 &copy; I3 TECHNOLOGIES</span><span class="float-right d-sm-inline-block d-none"><a href="#">Privacy policy</a><a href="#">Cookie policy</a></span>
-            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
-        </p>
-    </footer>
-    <!-- END: Footer-->
 
 
     <!-- BEGIN: Vendor JS-->
@@ -676,7 +560,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/cards/widgets.js"></script>
+    <script src="../../../assets/js/dashboard-1.js"></script>
     <!-- END: Page JS-->
 
 </body>

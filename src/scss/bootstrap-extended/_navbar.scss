@@ -751,18 +751,17 @@
   }
 }
 /* for width of navbar in fixed-top */
-@media (max-width: 1200px) {
-  .header-navbar {
-    &.fixed-top {
-      left: 0;
-    }
-    &.navbar-static-top {
-      .navbar-wrapper {
-        margin-left: 0;
-      }
+.header-navbar {
+  &.fixed-top {
+    @include media-breakpoint-down(lg) {left: 0;}
+  }
+  &.navbar-static-top {
+    .navbar-wrapper {
+      @include media-breakpoint-down(lg) {margin-left: 0;}
     }
   }
 }
+
 /* for notification dropdown of navbar component page */
 @media (max-width: 768px) {
   .navbar-components-wrapper {

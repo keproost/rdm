@@ -70,6 +70,18 @@
 .slider-secondary.circle-filled .noUi-handle, .slider-secondary.square .noUi-handle {
   background: #F49800 !important; }
 
+.slider-tertiary .noUi-connect {
+  background: #FFBF00 !important; }
+
+.slider-tertiary.noUi-connect {
+  background: #FFBF00 !important; }
+
+.slider-tertiary .noUi-handle {
+  border-color: #FFBF00 !important; }
+
+.slider-tertiary.circle-filled .noUi-handle, .slider-tertiary.square .noUi-handle {
+  background: #FFBF00 !important; }
+
 .slider-success .noUi-connect {
   background: #39DA8A !important; }
 
