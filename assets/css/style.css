@@ -9,19 +9,63 @@ NOTE:
 ------
 PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+/*CUSTOM I3 COMPONENTS*/
+/*FREST COMPONENTS STYLE OVERRIDES*/
 /*Currently overriding styles with body parent in stead of importants everywere*/
-body {
-  /*SIDEMENU*/
-  /*PAGEHEADERMENU*/ }
-  body .main-menu .navbar-header .navbar-brand .brand-logo {
-    background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
-    background-size: contain;
-    margin-left: 10px; }
-  body .main-menu .navigation-main li.nav-item:hover .menu-title {
-    color: #ED6D05; }
-  body .main-menu .nav-toggle .toggle-icon {
-    color: #A3AFBD !important; }
-  body .header-navbar .dropdown-notification .dropdown-menu-header {
-    background-color: #FFBF00; }
-  body .dropdown-item:focus, body .dropdown-item:active, body .dropdown-item.active {
-    background-color: #FFBF00; }
+body .main-menu .navbar-header .navbar-brand .brand-logo {
+  background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
+  background-size: contain;
+  margin-left: 6px; }
+
+body .main-menu .navigation > li.active:not(.sidebar-group-active) > a {
+  border-radius: 5rem !important; }
+  body .main-menu .navigation > li.active:not(.sidebar-group-active) > a .menu-title {
+    color: #F49800; }
+
+body .main-menu .navigation > li.nav-item.open.has-sub.open {
+  border-radius: 1rem !important; }
+
+body .main-menu .navigation .menu-content > li > a > i {
+  width: 1.6rem !important;
+  margin-right: 1rem;
+  float: left; }
+
+body .main-menu .navigation-main li.nav-item:hover .menu-title {
+  color: #F49800; }
+
+body .main-menu .nav-toggle .toggle-icon {
+  color: rgba(163, 175, 189, 0.4) !important; }
+
+body .header-navbar .dropdown-notification .dropdown-menu-header {
+  background-color: #FFBF00; }
+
+body .bookmark-icons .nav-item.active .nav-link i {
+  color: #ED6D05 !important; }
+
+body .pace .pace-progress {
+  background-color: #FFBF00; }
+
+body .btn-group-vertical .btn {
+  border-radius: 0.267rem; }
+
+body .dropdown-item:focus, body .dropdown-item:active, body .dropdown-item.active {
+  background-color: #FFBF00; }
+
+body label {
+  margin-bottom: 0.5rem; }
+
+body input.form-control.round {
+  padding-left: 25px; }
+
+body select.form-control.round {
+  padding-left: 25px; }
+
+body .has-icon-left input.form-control {
+  padding-left: 2.5rem; }
+
+body .form-control:focus, body .form-control:active, body .form-control.active, body .custom-select:focus, body .custom-select:active, body .custom-select.active, body .optgroup:focus, body .optgroup:active, body .optgroup.active {
+  border-color: rgba(244, 152, 0, 0.2);
+  box-shadow: 0 0px 10px 0 rgba(244, 152, 0, 0.2); }
+
+body.bg-full-screen-image {
+  background: url(../../assets/images/pages/auth-bg.jpg); }

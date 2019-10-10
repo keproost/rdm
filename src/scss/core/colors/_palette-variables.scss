@@ -35,7 +35,7 @@ $primary: (
   "accent-2":   #8AFBFF,
   "accent-3":   #57FAFF,
   "accent-4":   #3DF9FF,
-  "light"   :   #E2ECFF
+  "light"   :   $gray-15,
 );
 $secondary: (
   "lighten-5": lighten(theme-color("secondary"), 25%),

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Account Settings - Frest - Bootstrap HTML admin template</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/validation/form-validation.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav bookmark-icons">
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-reports.html" data-toggle="tooltip" data-placement="top" title="Reports"><i class="ficon bx bx-chart"></i></a></li>
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-packages.html" data-toggle="tooltip" data-placement="top" title="Packages"><i class="ficon bx bx-rocket"></i></a></li>
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-support.html" data-toggle="tooltip" data-placement="top" title="Support"><i class="ficon bx bx-support"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon bx bx-star warning"></i></a>
+                                <div class="bookmark-input search-input">
+                                    <div class="bookmark-input-icon"><i class="bx bx-search primary"></i></div>
+                                    <input class="form-control input" type="text" placeholder="Search..." tabindex="0" data-search="template-list">
+                                    <ul class="search-list"></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us mr-50"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr mr-50"></i> French</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de mr-50"></i> German</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt mr-50"></i> Portuguese</a></div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon bx bx-fullscreen"></i></a></li>
+                        <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon bx bx-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="bx bx-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Search..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="bx bx-x"></i></div>
+                                <ul class="search-list"></ul>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none">
+                                    <span class="user-name">John Doe</span>
+                                    <span class="user-status text-muted">Online</span>
+                                </div>
+                                <div class="avatar mr-1">
+                                    <img src="../../../app-assets/images/portrait/small/avatar-s-20.jpg" alt="avtar img holder" width="40" height="40">
+                                    <span class="avatar-status-online"></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right pb-0">
+                                <a class="dropdown-item" href="rdm-user-edit.html"><i class="bx bx-user mr-50"></i> Edit Profile</a>
+                                <div class="dropdown-divider mb-0"></div>
+                                <a class="dropdown-item" href="rdm-dashboard.html"><i class="bx bx-power-off mr-50"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="rdm-dashboard.html">
+                        <div class="brand-logo"></div>
+                        <h2 class="brand-text mb-0">I3 Portal</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
+                <li class=" navigation-header"><span>Display management</span>
+                </li>
+                <li class=" nav-item"><a href="rdm-dashboard.html"><i class="menu-livicon" data-icon="dashboard"></i><span class="menu-title" data-i18n="Users">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-2">2</span></a>
+                </li>                
+                <li class=" nav-item"><a href="#"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Invoice">Devices</span></a>
+                    <ul class="menu-content">
+                            <li class=" nav-item"><a href="rdm-devices.html"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Devices">My devices</span></a>
+                            </li>
+                            <li class=" nav-item"><a href="rdm-device-groups.html"><i class="menu-livicon" data-icon="diagram"></i><span class="menu-title" data-i18n="Groups">Groups</span></a>
+                            </li>
+                            <li class=" nav-item"><a href="rdm-device-policies.html"><i class="menu-livicon" data-icon="lock"></i><span class="menu-title" data-i18n="Policies">Policies</span></a>
+                            </li>
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a href="rdm-app-repository.html"><i class="menu-livicon" data-icon="thumbnails-small"></i><span class="menu-title" data-i18n="App respository">App repository</span></a>
+                </li>
+                <li class=" nav-item"><a href="rdm-packages.html"><i class="menu-livicon" data-icon="rocket"></i><span class="menu-title" data-i18n="Packages">Packages</span></a>
+                </li> 
+                <li class=" nav-item"><a href="rdm-messages.html"><i class="menu-livicon" data-icon="morph-envelope"></i><span class="menu-title" data-i18n="Messages">Messages</span></a>
+                </li>   
+                <li class=" nav-item"><a href="rdm-reports.html"><i class="menu-livicon" data-icon="bar-chart"></i><span class="menu-title" data-i18n="Reports">Reports</span></a>
+                </li>  
+                <li class=" nav-item"><a href="rdm-user-list.html"><i class="menu-livicon" data-icon="users"></i><span class="menu-title" data-i18n="Users">Users</span></a>
+                </li>                                                             
+                <li class=" navigation-header"><span>Support</span>
+                </li>
+                <li class=" nav-item"><a href="https://pixinvent.com/demo/frest-clean-bootstrap-admin-dashboard-template/documentation"><i class="menu-livicon" data-icon="morph-folder"></i><span class="menu-title" data-i18n="Documentation">Documentation</span></a>
+                </li>
+                <li class=" nav-item"><a href="https://pixinvent.ticksy.com/"><i class="menu-livicon" data-icon="help"></i><span class="menu-title" data-i18n="Raise Support">Raise Support</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-2 mt-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h5 class="content-header-title float-left pr-1 mb-0">Account Settings</h5>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb p-0 mb-0">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Pages</a>
+                                    </li>
+                                    <li class="breadcrumb-item active"> Account Settings
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- account setting page start -->
+                <section id="page-account-settings">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <!-- left menu section -->
+                                <div class="col-md-3 mb-2 mb-md-0 pills-stacked">
+                                    <ul class="nav nav-pills flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center active" id="account-pill-general" data-toggle="pill" href="#account-vertical-general" aria-expanded="true">
+                                                <i class="bx bx-cog"></i>
+                                                <span>General</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center" id="account-pill-password" data-toggle="pill" href="#account-vertical-password" aria-expanded="false">
+                                                <i class="bx bx-lock"></i>
+                                                <span>Change Password</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
+                                                <i class="bx bx-info-circle"></i>
+                                                <span>Info</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
+                                                <i class="bx bxl-twitch"></i>
+                                                <span>Social links</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center" id="account-pill-connections" data-toggle="pill" href="#account-vertical-connections" aria-expanded="false">
+                                                <i class="bx bx-link"></i>
+                                                <span>Connections</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link d-flex align-items-center" id="account-pill-notifications" data-toggle="pill" href="#account-vertical-notifications" aria-expanded="false">
+                                                <i class="bx bx-bell"></i>
+                                                <span>Notifications</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- right content section -->
+                                <div class="col-md-9">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="account-vertical-general" aria-labelledby="account-pill-general" aria-expanded="true">
+                                                        <div class="media">
+                                                            <a href="javascript: void(0);">
+                                                                <img src="../../../app-assets/images/portrait/small/avatar-s-16.jpg" class="rounded mr-75" alt="profile image" height="64" width="64">
+                                                            </a>
+                                                            <div class="media-body mt-25">
+                                                                <div class="col-12 px-0 d-flex flex-sm-row flex-column justify-content-start">
+                                                                    <button id="select-files" class="btn btn-sm btn-light-primary ml-50 mb-50 mb-sm-0">Upload
+                                                                        new
+                                                                        photo</button>
+                                                                    <form hidden action="#" class="dropzone dropzone-area" id="dpz-btn-select-files">
+                                                                        <!-- <div class="dz-message">Drop Files Here To Upload</div> -->
+                                                                    </form>
+                                                                    <button class="btn btn-sm btn-light-secondary ml-50">Reset</button>
+                                                                </div>
+                                                                <p class="text-muted ml-1 mt-50"><small>Allowed JPG, GIF or PNG. Max
+                                                                        size of
+                                                                        800kB</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <form novalidate>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Username</label>
+                                                                            <input type="text" class="form-control" placeholder="Username" value="hermione007" required data-validation-required-message="This username field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Name</label>
+                                                                            <input type="text" class="form-control" placeholder="Name" value="Hermione Granger" required data-validation-required-message="This name field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>E-mail</label>
+                                                                            <input type="email" class="form-control" placeholder="Email" value="granger007@hogward.com" required data-validation-required-message="This email field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="alert bg-rgba-warning alert-dismissible mb-2" role="alert">
+                                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                        <p class="mb-0">
+                                                                            Your email is not confirmed. Please check your inbox.
+                                                                        </p>
+                                                                        <a href="javascript: void(0);">Resend confirmation</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Company</label>
+                                                                        <input type="text" class="form-control" placeholder="Company name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                    <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                        changes</button>
+                                                                    <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade " id="account-vertical-password" role="tabpanel" aria-labelledby="account-pill-password" aria-expanded="false">
+                                                        <form novalidate>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Old Password</label>
+                                                                            <input type="password" class="form-control" required placeholder="Old Password" data-validation-required-message="This old password field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>New Password</label>
+                                                                            <input type="password" name="password" class="form-control" placeholder="New Password" required data-validation-required-message="The password field is required" minlength="6">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Retype new Password</label>
+                                                                            <input type="password" name="con-password" class="form-control" required data-validation-match-match="password" placeholder="New Password" data-validation-required-message="The Confirm password field is required" minlength="6">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                    <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                        changes</button>
+                                                                    <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="account-vertical-info" role="tabpanel" aria-labelledby="account-pill-info" aria-expanded="false">
+                                                        <form novalidate>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Bio</label>
+                                                                        <textarea class="form-control" id="accountTextarea" rows="3" placeholder="Your Bio data here..."></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Birth date</label>
+                                                                            <input type="text" class="form-control birthdate-picker" required placeholder="Birth date" data-validation-required-message="This birthdate field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Country</label>
+                                                                        <select class="form-control" id="accountSelect">
+                                                                            <option>USA</option>
+                                                                            <option>India</option>
+                                                                            <option>Canada</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Languages</label>
+                                                                        <select class="form-control" id="languageselect2" multiple="multiple">
+                                                                            <option value="English" selected>English</option>
+                                                                            <option value="Spanish">Spanish</option>
+                                                                            <option value="French">French</option>
+                                                                            <option value="Russian">Russian</option>
+                                                                            <option value="German">German</option>
+                                                                            <option value="Arabic" selected>Arabic</option>
+                                                                            <option value="Sanskrit">Sanskrit</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Phone</label>
+                                                                            <input type="text" class="form-control" required placeholder="Phone number" value="(+656) 254 2568" data-validation-required-message="This phone number field is required">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Website</label>
+                                                                        <input type="text" class="form-control" placeholder="Website address">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Favourite Music</label>
+                                                                        <select class="form-control" id="musicselect2" multiple="multiple">
+                                                                            <option value="Rock">Rock</option>
+                                                                            <option value="Jazz" selected>Jazz</option>
+                                                                            <option value="Disco">Disco</option>
+                                                                            <option value="Pop">Pop</option>
+                                                                            <option value="Techno">Techno</option>
+                                                                            <option value="Folk" selected>Folk</option>
+                                                                            <option value="Hip hop">Hip hop</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Favourite movies</label>
+                                                                        <select class="form-control" id="moviesselect2" multiple="multiple">
+                                                                            <option value="The Dark Knight" selected>The Dark Knight
+                                                                            </option>
+                                                                            <option value="Harry Potter" selected>Harry Potter</option>
+                                                                            <option value="Airplane!">Airplane!</option>
+                                                                            <option value="Perl Harbour">Perl Harbour</option>
+                                                                            <option value="Spider Man">Spider Man</option>
+                                                                            <option value="Iron Man" selected>Iron Man</option>
+                                                                            <option value="Avatar">Avatar</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                    <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                        changes</button>
+                                                                    <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade " id="account-vertical-social" role="tabpanel" aria-labelledby="account-pill-social" aria-expanded="false">
+                                                        <form>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Twitter</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link" value="https://www.twitter.com">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Facebook</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Google+</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>LinkedIn</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link" value="https://www.linkedin.com">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Instagram</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Quora</label>
+                                                                        <input type="text" class="form-control" placeholder="Add link">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                    <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                        changes</button>
+                                                                    <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="account-vertical-connections" role="tabpanel" aria-labelledby="account-pill-connections" aria-expanded="false">
+                                                        <div class="row">
+                                                            <div class="col-12 my-2">
+                                                                <a href="javascript: void(0);" class="btn btn-info">Connect to
+                                                                    <strong>Twitter</strong></a>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="col-12 my-2">
+                                                                <button class=" btn btn-sm btn-light-secondary float-right">edit</button>
+                                                                <h6>You are connected to facebook.</h6>
+                                                                <p>Johndoe@gmail.com</p>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="col-12 my-2">
+                                                                <a href="javascript: void(0);" class="btn btn-danger">Connect to
+                                                                    <strong>Google</strong>
+                                                                </a>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="col-12 my-2">
+                                                                <button class=" btn btn-sm btn-light-secondary float-right">edit</button>
+                                                                <h6>You are connected to Instagram.</h6>
+                                                                <p>Johndoe@gmail.com</p>
+                                                            </div>
+                                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                    changes</button>
+                                                                <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="account-vertical-notifications" role="tabpanel" aria-labelledby="account-pill-notifications" aria-expanded="false">
+                                                        <div class="row">
+                                                            <h6 class="m-1">Activity</h6>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" checked id="accountSwitch1">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch1"></label>
+                                                                    <span class="switch-label w-100">Email me when someone comments
+                                                                        onmy
+                                                                        article</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" checked id="accountSwitch2">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch2"></label>
+                                                                    <span class="switch-label w-100">Email me when someone answers on
+                                                                        my
+                                                                        form</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" id="accountSwitch3">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch3"></label>
+                                                                    <span class="switch-label w-100">Email me hen someone follows
+                                                                        me</span>
+                                                                </div>
+                                                            </div>
+                                                            <h6 class="m-1">Application</h6>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" checked id="accountSwitch4">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch4"></label>
+                                                                    <span class="switch-label w-100">News and announcements</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" id="accountSwitch5">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch5"></label>
+                                                                    <span class="switch-label w-100">Weekly product updates</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-1">
+                                                                <div class="custom-control custom-switch custom-control-inline">
+                                                                    <input type="checkbox" class="custom-control-input" checked id="accountSwitch6">
+                                                                    <label class="custom-control-label mr-1" for="accountSwitch6"></label>
+                                                                    <span class="switch-label w-100">Weekly blog digest</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                <button type="submit" class="btn btn-primary glow mr-sm-1 mb-1">Save
+                                                                    changes</button>
+                                                                <button type="reset" class="btn btn-light mb-1">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- account setting page ends -->
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <!-- demo chat-->
+    <div class="widget-chat-demo">
+        <!-- widget chat demo footer button start -->
+        <button class="btn btn-primary chat-demo-button glow px-1"><i class="livicon-evo" data-options="name: comments.svg; style: lines; size: 24px; strokeColor: #fff; autoPlay: true; repeat: loop;"></i></button>
+        <!-- widget chat demo footer button ends -->
+        <!-- widget chat demo start -->
+        <div class="widget-chat widget-chat-demo d-none">
+            <div class="card mb-0">
+                <div class="card-header border-bottom p-0">
+                    <div class="media m-75">
+                        <a href="JavaScript:void(0);">
+                            <div class="avatar mr-75">
+                                <img src="../../../app-assets/images/portrait/small/avatar-s-2.jpg" alt="avtar images" width="32" height="32">
+                                <span class="avatar-status-online"></span>
+                            </div>
+                        </a>
+                        <div class="media-body">
+                            <h6 class="media-heading mb-0 pt-25"><a href="javaScript:void(0);">Kiara Cruiser</a></h6>
+                            <span class="text-muted font-small-3">Active</span>
+                        </div>
+                        <i class="bx bx-x widget-chat-close float-right my-auto cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="card-body widget-chat-container widget-chat-demo-scroll">
+                    <div class="chat-content">
+                        <div class="badge badge-pill badge-light-secondary my-1">today</div>
+                        <div class="chat">
+                            <div class="chat-body">
+                                <div class="chat-message">
+                                    <p>How can we help? 😄</p>
+                                    <span class="chat-time">7:45 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat chat-left">
+                            <div class="chat-body">
+                                <div class="chat-message">
+                                    <p>Hey John, I am looking for the best admin template.</p>
+                                    <p>Could you please help me to find it out? 🤔</p>
+                                    <span class="chat-time">7:50 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat">
+                            <div class="chat-body">
+                                <div class="chat-message">
+                                    <p>Stack admin is the responsive bootstrap 4 admin template.</p>
+                                    <span class="chat-time">8:01 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer border-top p-1">
+                    <form class="d-flex" onsubmit="widgetChatMessageDemo();" action="javascript:void(0);">
+                        <input type="text" class="form-control chat-message-demo mr-75" placeholder="Type here...">
+                        <button type="submit" class="btn btn-primary glow px-1"><i class="bx bx-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- widget chat demo ends -->
+
+    </div>
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0"><span class="float-left d-inline-block">2019 &copy; PIXINVENT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a></span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../../app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="../../../app-assets/vendors/js/extensions/dropzone.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../../app-assets/js/scripts/configs/vertical-menu-light.js"></script>
+    <script src="../../../app-assets/js/core/app-menu.js"></script>
+    <script src="../../../app-assets/js/core/app.js"></script>
+    <script src="../../../app-assets/js/scripts/components.js"></script>
+    <script src="../../../app-assets/js/scripts/footer.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/pages/page-account-settings.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>

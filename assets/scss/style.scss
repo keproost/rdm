@@ -12,45 +12,123 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 
 @import "../../src/scss/core/variables/variables";
 
+/*CUSTOM I3 COMPONENTS*/
+@import "I3-components/tabs";
 
+/*FREST COMPONENTS STYLE OVERRIDES*/
 /*Currently overriding styles with body parent in stead of importants everywere*/
-
 body {
-	/*SIDEMENU*/
+	// SIDEMENU
 	.main-menu{
+
 		.navbar-header {
 			.navbar-brand {
 				.brand-logo {
 					background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
 					background-size: contain;
-					margin-left: 10px;
+					margin-left: 6px;
 				  }
 			}
 		}
+		.navigation > li.active:not(.sidebar-group-active) > a {
+			border-radius: 5rem !important;
+			.menu-title {
+				color: $secondary;
+			}
+
+		}
+		.navigation > li.nav-item.open.has-sub.open {
+			border-radius: 1rem !important;
+		}
+
+		.navigation .menu-content > li > a > i {
+			width: 1.6rem !important;
+			margin-right: 1rem;
+			float: left;
+		}
+
 		.navigation-main {
 			li.nav-item {
 				&:hover {
 					.menu-title {
-						color: $primary;
+						color: $secondary;
 					}
 				}
 			}
 		}
 		.nav-toggle {
 			.toggle-icon {
-				color: $gray-100 !important;
+				color: $gray-40 !important;
 			}
 		}
 	}
-	/*PAGEHEADERMENU*/
+	// NAVBAR - HEADER
 	.header-navbar {
 		.dropdown-notification .dropdown-menu-header {
 			background-color: $tertiary;
 		}
 	}
+	.bookmark-icons {
+		.nav-item {
+			&.active {
+				.nav-link i {
+					color: $primary !important;
+				}
+			}
+		}
+	}
+
+	//PACE LOADER
+	.pace .pace-progress {
+		background-color: $tertiary;
+	}
+	// BUTTONS 
+	.btn-group-vertical{
+		.btn {
+			border-radius: $border-radius;
+		}
+	}
+	// DROPDOWNS
 	.dropdown-item {
 		&:focus, &:active, &.active {
 			background-color: $tertiary;
 		}
+	}
+	// FORMS
+	label {
+		margin-bottom: 0.5rem;
+	}
+	input {
+		&.form-control {
+			&.round{
+				padding-left: 25px;
+			}
+		}
+
+	}
+	select {
+		&.form-control {
+			&.round{
+				padding-left: 25px;
+			}
+		}
+
+	}
+	.has-icon-left {
+		input {
+			&.form-control {
+				padding-left: 2.5rem;
+			}
+		}
+	}
+	.form-control, .custom-select, .optgroup {
+		&:focus, &:active, &.active {
+			border-color: rgba($secondary, 0.2);
+			box-shadow: 0 0px 10px 0 rgba($secondary, 0.2);
+		}
+	}	
+	// Authentication Pages
+	&.bg-full-screen-image {
+		background: url(../../assets/images/pages/auth-bg.jpg);
 	}
 }

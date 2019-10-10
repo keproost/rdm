@@ -207,9 +207,9 @@ $btn-border-width: 0;
 
 $btn-disabled-opacity: .45;
 
-$btn-border-radius: $border-radius;
-$btn-border-radius-lg: $border-radius;
-$btn-border-radius-sm: $border-radius;
+$btn-border-radius: 5rem;
+$btn-border-radius-lg: 5rem;
+$btn-border-radius-sm: 5rem;
 
 $btn-link-disabled-color: $gray-200;
 
@@ -236,10 +236,10 @@ $input-border-radius: $border-radius;
 $input-border-radius-lg: $border-radius;
 $input-border-radius-sm: $border-radius;
 
-$input-focus-border-color: $primary;
-$input-focus-box-shadow :0 3px 8px 0 rgba($black,.1);
+$input-focus-border-color: rgba($secondary, 0.2);
+$input-focus-box-shadow:0 0px 10px 0 rgba($secondary, 0.2);
 
-$input-placeholder-color: $gray-200;
+$input-placeholder-color: $gray-80;
 $input-plaintext-color: $body-color;
 
 $input-height-border: $input-border-width * 3.7;

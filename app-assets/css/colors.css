@@ -1230,7 +1230,7 @@ input:focus ~ .bg-primary {
   background-color: #ED6D05; }
 
 .badge.badge-light-primary {
-  background-color: #E2ECFF;
+  background-color: rgba(163, 175, 189, 0.15);
   color: #ED6D05 !important; }
 
 .badge.bg-primary.badge-glow, .badge.border-primary.badge-glow, .badge.badge-primary.badge-glow {
@@ -1240,7 +1240,7 @@ input:focus ~ .bg-primary {
   background-color: #ED6D05; }
 
 .badge-circle-light-primary {
-  background-color: #E2ECFF;
+  background-color: rgba(163, 175, 189, 0.15);
   color: #ED6D05; }
 
 .overlay-primary {
@@ -1267,7 +1267,7 @@ input:focus ~ .bg-primary {
     color: #fff !important; }
 
 .btn-light-primary {
-  background-color: #E2ECFF;
+  background-color: rgba(163, 175, 189, 0.15);
   color: #ED6D05 !important; }
   .btn-light-primary:hover, .btn-light-primary.hover {
     background-color: #fa7a12 !important;
@@ -1325,7 +1325,7 @@ input:focus ~ .bg-primary {
   color: #fff; }
 
 .pagination-primary .page-item .page-link:hover {
-  background-color: #E2ECFF !important; }
+  background-color: rgba(163, 175, 189, 0.15) !important; }
 
 .pagination-primary .page-item.previous .page-link, .pagination-primary .page-item.next .page-link {
   color: #ED6D05; }
@@ -1406,7 +1406,7 @@ input[type="checkbox"].bg-primary + .custom-control-label:before, input[type="ra
 /* Select2 primary */
 /* ---------------*/
 select.select-light-primary ~ .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice, select.select-light-primary ~ .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice__remove {
-  background-color: #E2ECFF !important;
+  background-color: rgba(163, 175, 189, 0.15) !important;
   color: #ED6D05 !important; }
 
 .primary.darken-1 {
@@ -1762,14 +1762,14 @@ input:focus ~ .bg-primary {
   background: rgba(61, 249, 255, 0.6); }
 
 .primary.light {
-  color: #E2ECFF !important; }
+  color: rgba(163, 175, 189, 0.15) !important; }
 
 .bg-primary.bg-light {
-  background-color: #E2ECFF !important; }
+  background-color: rgba(163, 175, 189, 0.15) !important; }
 
 .btn-primary.btn-light {
   border-color: #bb5604 !important;
-  background-color: #E2ECFF !important; }
+  background-color: rgba(163, 175, 189, 0.15) !important; }
   .btn-primary.btn-light:hover {
     border-color: #bb5604 !important;
     background-color: #a24b03 !important; }
@@ -1778,32 +1778,32 @@ input:focus ~ .bg-primary {
     background-color: #893f03 !important; }
 
 .btn-outline-primary.btn-outline-light {
-  border-color: #E2ECFF !important;
-  color: #E2ECFF !important; }
+  border-color: rgba(163, 175, 189, 0.15) !important;
+  color: rgba(163, 175, 189, 0.15) !important; }
   .btn-outline-primary.btn-outline-light:hover {
-    background-color: #E2ECFF !important; }
+    background-color: rgba(163, 175, 189, 0.15) !important; }
 
 input:focus ~ .bg-primary {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem #E2ECFF !important; }
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.21rem rgba(163, 175, 189, 0.15) !important; }
 
 .border-primary.border-light {
-  border: 1px solid #E2ECFF !important; }
+  border: 1px solid rgba(163, 175, 189, 0.15) !important; }
 
 .border-top-primary.border-top-light {
-  border-top: 1px solid #E2ECFF !important; }
+  border-top: 1px solid rgba(163, 175, 189, 0.15) !important; }
 
 .border-bottom-primary.border-bottom-light {
-  border-bottom: 1px solid #E2ECFF !important; }
+  border-bottom: 1px solid rgba(163, 175, 189, 0.15) !important; }
 
 .border-left-primary.border-left-light {
-  border-left: 1px solid #E2ECFF !important; }
+  border-left: 1px solid rgba(163, 175, 189, 0.15) !important; }
 
 .border-right-primary.border-right-light {
-  border-right: 1px solid #E2ECFF !important; }
+  border-right: 1px solid rgba(163, 175, 189, 0.15) !important; }
 
 .overlay-primary.overlay-light {
-  background: #E2ECFF;
-  background: rgba(226, 236, 255, 0.6); }
+  background: rgba(163, 175, 189, 0.15);
+  background: rgba(163, 175, 189, 0.6); }
 
 .secondary.lighten-5 {
   color: #ffcb75 !important; }
