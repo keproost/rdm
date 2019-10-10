@@ -68,6 +68,7 @@ body {
 			background-color: $tertiary;
 		}
 	}
+	// BOOKMARK NAVIGATION
 	.bookmark-icons {
 		.nav-item {
 			&.active {
@@ -78,6 +79,16 @@ body {
 		}
 	}
 
+	// TIMELINE CARD
+	.timline-card {
+		.card {
+			max-height: 300px;
+		}
+	}
+	// NAV PILLS
+	.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+		background-color: $secondary;
+	}
 	//PACE LOADER
 	.pace .pace-progress {
 		background-color: $tertiary;

@@ -42,6 +42,12 @@ body .header-navbar .dropdown-notification .dropdown-menu-header {
 body .bookmark-icons .nav-item.active .nav-link i {
   color: #ED6D05 !important; }
 
+body .timline-card .card {
+  max-height: 300px; }
+
+body .nav-pills .nav-link.active, body .nav-pills .show > .nav-link {
+  background-color: #F49800; }
+
 body .pace .pace-progress {
   background-color: #FFBF00; }
 
