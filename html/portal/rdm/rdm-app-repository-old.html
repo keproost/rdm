@@ -9,15 +9,13 @@
     <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>App repository</title>
+    <title>Page template</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
-    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -31,7 +29,6 @@
 
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-file-manager.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -43,11 +40,11 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern content-left-sidebar file-manager-application navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar">
+<body class="vertical-layout vertical-menu-modern 2-columns file-manager-application navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
-    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top">
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
         <div class="navbar-wrapper">
             <div class="navbar-container content">
                 <div class="navbar-collapse" id="navbar-mobile">
@@ -171,42 +168,39 @@
                             </div>
                             <div class="app-file-sidebar-content">
                                 <!-- App File Left Sidebar - Drive Content Starts -->
-                                <label class="app-file-label">General</label>
+                                <label class="app-file-label">My Drive</label>
                                 <div class="list-group list-group-messages my-50">
+                                    <a href="#" class="list-group-item list-group-item-action pt-0 active">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: morph-folder.svg; size: 24px; style: lines; strokeColor:#5A8DEE; eventOn:grandparent; duration:0.85;"></i>
+                                        </div>
+                                        All Files
+                                        <span class="badge badge-light-danger badge-pill badge-round float-right mt-50">2</span>
+                                    </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="livicon-evo" data-options="name: morph-desktop-smartphone.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
-                                        Recent apps
+                                        My Devices
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: clock.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                        </div> Recents
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="livicon-evo" data-options="name: morph-star.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
-                                        Favorites
+                                        Important
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: trash.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                        </div>
+                                        Deleted Files
                                     </a>
                                 </div>
-                                <label class="app-file-label">Repositories</label>
-                                <div class="list-group list-group-messages my-50">
-                                    <a href="#" class="list-group-item list-group-item-action pt-0 active">
-                                        <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="bx bxl-play-store"></i>
-                                        </div>
-                                        All
-                                    </a>                                    
-                                    <a href="#" class="list-group-item list-group-item-action pt-0">
-                                        <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="bx bx-diamond"></i>
-                                        </div>
-                                        I3
-                                    </a>
-                                    <a href="#" class="list-group-item list-group-item-action pt-0">
-                                        <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="bx bxl-play-store"></i>                                       
-                                        </div>
-                                        Play store
-                                    </a>                                                                       
-                                </div>                                
                                 <!-- App File Left Sidebar - Drive Content Ends -->
 
                                 <!-- App File Left Sidebar - Labels Content Starts -->
@@ -216,18 +210,30 @@
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="livicon-evo" data-options="name: morph-doc.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
-                                        Business
+                                        Documents
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="livicon-evo" data-options="name: image.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
-                                        Communication
+                                        Images
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="livicon-evo" data-options="name: camcoder.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
-                                        </div> Productivity
+                                        </div> Videos
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: music.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                        </div>
+                                        Audio
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: servers.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                        </div>
+                                        Zip Files
                                     </a>
                                 </div>
                                 <!-- App File Left Sidebar - Labels Content Ends -->
@@ -301,48 +307,9 @@
                                                     <label class="custom-control-label" for="customSwitchGlow3"></label>
                                                 </div>
                                             </div>
-                                                <div class="form-group">
-                                                    <select data-placeholder="Select a state..." class="select2-icons form-control" id="select2-icons">
-                                                        <optgroup label="Services">
-                                                            <option value="wordpress2" data-icon="bx bxl-wordpress" selected>WordPress</option>
-                                                            <option value="codepen" data-icon="bx bxl-codepen">Codepen</option>
-                                                            <option value="drupal" data-icon="bx bxl-drupal">Drupal</option>
-                                                            <option value="pinterest2" data-icon="bx bxl-css3">CSS3</option>
-                                                            <option value="html5" data-icon="bx bxl-html5">HTML5</option>
-                                                        </optgroup>
-                                                        <optgroup label="Browsers">
-                                                            <option value="chrome" data-icon="bx bxl-chrome">Chrome</option>
-                                                            <option value="firefox" data-icon="bx bxl-firefox">Firefox</option>
-                                                            <option value="opera" data-icon="bx bxl-opera">Opera</option>
-                                                            <option value="IE" data-icon="bx bxl-internet-explorer">IE</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
+
                                             <label class="app-file-label">Info</label>
-                                            This app has access to:
-                                            Storage
-                                            read the contents of your USB storage
-                                            modify or delete the contents of your USB storage
-                                            Microphone
-                                            record audio
-                                            Wi-Fi connection information
-                                            view Wi-Fi connections
-                                            Photos/Media/Files
-                                            read the contents of your USB storage
-                                            modify or delete the contents of your USB storage
-                                            Contacts
-                                            find accounts on the device
-                                            Identity
-                                            find accounts on the device
-                                            add or remove accounts
-                                            Other
-                                            receive data from Internet
-                                            create accounts and set passwords
-                                            full network access
-                                            prevent device from sleeping
-                                            use accounts on the device
-                                            view network connections
-                                            <!-- <div class="d-flex justify-content-between align-items-center mt-75">
+                                            <div class="d-flex justify-content-between align-items-center mt-75">
                                                 <p>Type</p>
                                                 <p class="font-weight-bold">PDF</p>
                                             </div>
@@ -369,7 +336,7 @@
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <p>Created</p>
                                                 <p class="font-weight-bold">July 1, 2019</p>
-                                            </div> -->
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane pl-0" id="activity" aria-labelledby="activity-tab" role="tabpanel">
@@ -444,7 +411,7 @@
                                         <i class="bx bx-menu"></i>
                                     </div>
                                     <fieldset class="form-group position-relative has-icon-left m-0">
-                                        <input type="text" class="form-control border-0 shadow-none" id="email-search" placeholder="Search">
+                                        <input type="text" class="form-control border-0 shadow-none" id="email-search" placeholder="Search email">
                                         <div class="form-control-position">
                                             <i class="bx bx-search"></i>
                                         </div>
@@ -453,21 +420,13 @@
                                 <!-- Header search bar Ends -->
                                 <!-- Header Icons Starts -->
                                 <div class="app-file-header-icons">
-                                    <a class="btn" href="rdm-devices.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Reports">
-                                        <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
-                                            </a><i class="livicon-evo cursor-pointer" data-options="name: morph-desktop-smartphone.svg; size: 24px; style: lines; strokeColor:#596778; duration:0.85;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="rdm-dashboard.html">
-                                        <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
-                                            </a><i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
-                                        </div>
-                                    </a>  
-                                    <a href="rdm-dashboard.html">
-                                        <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
-                                            </a><i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
-                                        </div>
-                                    </a>                                                                        
+                                    <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
+                                        <i class="livicon-evo cursor-pointer" data-options="name: user.svg; size: 24px; style: lines; strokeColor:#596778; duration:0.85;"></i>
+                                    </div>
+                                    <div class="fonticon-wrap d-inline mr-sm-50 align-middle">
+                                        <i class="livicon-evo cursor-pointer" data-options="name: trash.svg; size: 24px; style: lines; strokeColor:#596778; duration:0.85;"></i>
+                                    </div>
+                                    <i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
                                 </div>
                                 <!-- Header Icons Ends -->
                             </div>
@@ -475,50 +434,189 @@
 
                             <!-- App File Content Starts -->
                             <div class="app-file-content p-2">
-                                <h5>All apps</h5>
+                                <h5>All Files</h5>
 
                                 <!-- App File - Recent Accessed Files Section Starts -->
-                                <label class="app-file-label">Recently</label>
+                                <label class="app-file-label">Recently Accessed Files</label>
                                 <div class="row app-file-recent-access">
                                     <div class="col-md-3 col-6">
                                         <div class="card border shadow-none mb-1 app-file-info">
                                             <div class="card-content">
                                                 <div class="app-file-content-logo card-img-top">
                                                     <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/pdf.png" height="38" width="30" alt="Card image cap">
                                                 </div>
                                                 <div class="card-body p-50">
                                                     <div class="app-file-recent-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-name font-size-small font-weight-bold">Felecia Resume.pdf</div>
                                                         <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
-                                                        <label class="app-file-label bg-rgba-primary">PRODUCTIVITY</label>
                                                         <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="col-md-3 col-6">
+                                    <div class="col-md-3 col-6">
                                         <div class="card border shadow-none mb-1 app-file-info">
                                             <div class="card-content">
                                                 <div class="app-file-content-logo card-img-top">
                                                     <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/psd.png" height="38" width="30" alt="Card image cap">
                                                 </div>
                                                 <div class="card-body p-50">
-                                                    <div class="app-file-recent-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
-                                                        <label class="app-file-label bg-rgba-primary">PRODUCTIVITY</label>
+                                                    <div class="app-file-content-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Logo_design.psd</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">15.60mb</div>
                                                         <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                                   
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/doc.png" height="38" width="30" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-content-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Music_Two.xyz</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">1.2gb</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/sketch.png" height="38" width="30" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-content-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Application.sketch</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">92.83kb</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
                                 <!-- App File - Recent Accessed Files Section Ends -->
+
+                                <!-- App File - Folder Section Starts -->
+                                <label class="app-file-label">Folder</label>
+                                <div class="row app-file-folder">
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Project</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">2 files, 14.05mb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Video</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">130 files, 890mb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Music</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">15 files, 58mb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Documents</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">12 files, 9.5mb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Application Design</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">1 files, 36.25kb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="card-body px-75 py-50">
+                                                    <div class="app-file-folder-content d-flex align-items-center">
+                                                        <div class="app-file-folder-logo mr-75">
+                                                            <i class="bx bx-folder font-medium-4"></i>
+                                                        </div>
+                                                        <div class="app-file-folder-details">
+                                                            <div class="app-file-folder-name font-size-small font-weight-bold">Photos</div>
+                                                            <div class="app-file-folder-size font-size-small text-muted">3.6k files, 348mb</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- App File - Folder Section Ends -->
 
                                 <!-- App File - Files Section Starts -->
                                 <label class="app-file-label">Files</label>
@@ -673,6 +771,9 @@
     </div>
     <!-- END: Content-->
 
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div> 
+
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
         <p class="clearfix mb-0"><span class="float-left d-inline-block">2019 &copy; I3 TECHNOLOGIES</span><span class="float-right d-sm-inline-block d-none"><a href="#">Privacy policy</a><a href="#">Cookie policy</a></span>
@@ -702,7 +803,6 @@
 
     <!-- BEGIN: Page JS-->
     <script src="../../../app-assets/js/scripts/pages/app-file-manager.js"></script>
-    <script src="../../../app-assets/js/scripts/tooltip/tooltip.js"></script>
     <!-- END: Page JS-->
 
 </body>
