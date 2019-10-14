@@ -9,13 +9,14 @@
     <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Signup - Payments</title>
+    <title>Signup - Credentials</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -60,18 +61,30 @@
                                         <div class="card-header pb-1">
                                             <div class="card-title">
                                                 <div class="card-title">
-                                                    <h3 class="text-center">Payment page</h3>
-                                                    <h6 class="text-center mb-2 text-light">Enter your payment data to continue</h6>
+                                                    <h3 class="text-center">What would suit you best?</h3>
+                                                    <h6 class="text-center mb-2 text-light">Choose a package to continue</h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-content">
                                             <div class="card-body">
-                                                <form action="auth-signup-confirmation.html">
-                                                    <hr>
-                                                    <p class="text-center">INSERT PAYMENT PORTAL</p>
-                                                    <hr>
-                                                    <button type="submit" class="btn btn-primary glow position-relative w-100">PAY NOW<i id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
+                                                <form action="auth-signup-payment.html">                                                   
+                                                    <div class="form-group">
+                                                        <label class="text-bold-600" for="exampleInputUsername1">Choose a product </label>
+                                                        <select class="select2-theme form-control" id="select2-theme">
+                                                            <optgroup label="Remote display management">
+                                                                <option value="romboid">Rdm - Small</option>
+                                                                <option value="trapeze">Rdm - Medium</option>
+                                                                <option value="triangle">Rdm - Large</option>
+                                                            </optgroup>
+                                                            <optgroup label="Other i3 saas">
+                                                                <option value="red">Product a - Small</option>
+                                                                <option value="green">Product b - Medium</option>
+                                                                <option value="blue">Product c - Large</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary glow position-relative w-100">CHOOSE PACKAGE<i id="icon-arrow" class="bx bx-right-arrow-alt"></i></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -100,6 +113,7 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -111,6 +125,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- END: Page JS-->
 
 </body>

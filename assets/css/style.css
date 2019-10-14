@@ -15,6 +15,16 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 body.dashboard-layout-1 .widget-timeline {
   height: 280px; }
 
+body.page-auth .card.bg-authentication {
+  min-height: 600px;
+  display: flex; }
+
+body.page-auth img.img-auth {
+  max-width: 75%; }
+
+body.page-app-repository .app-file-sidebar-content {
+  padding-top: 4.5rem !important; }
+
 body .main-menu .navbar-header .navbar-brand .brand-logo {
   background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
   background-size: contain;

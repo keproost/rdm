@@ -24,6 +24,22 @@ body {
 			height: 280px;
 		}
 	}
+	//AUTH
+	&.page-auth {
+		.card {
+			&.bg-authentication {
+				min-height: 600px;
+				display: flex; 
+			}
+		}
+		img.img-auth {
+			max-width: 75%;
+		}
+	}
+	&.page-app-repository {
+		.app-file-sidebar-content {
+			padding-top: 4.5rem !important;		}
+	}
 	// SIDEMENU
 	.main-menu{
 

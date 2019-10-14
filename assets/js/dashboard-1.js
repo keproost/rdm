@@ -132,6 +132,70 @@
     );
     followerChartPrimary.render();
 
+  // Donut Chart Spending
+  // ---------------------
+  var donustSpendingChart = {
+    chart: {
+      width: 270,
+      type: 'donut',
+    },
+    dataLabels: {
+      enabled: false
+    },
+    series: [44, 55, 13],
+    labels: ["Public Transport", "Cafe & Resturants", "Business Projects"],
+    stroke: {
+      width: 0
+    },
+    colors: [$danger, $success, $warning, $primary],
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '95%',
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              fontFamily: 'Rubik',
+              color: $gray_light,
+              offsetY: 30
+            },
+            value: {
+              show: true,
+              fontSize: '32px',
+              fontFamily: 'Rubik',
+              color: undefined,
+              offsetY: -20,
+              formatter: function (val) {
+                return val
+              }
+            },
+            total: {
+              show: true,
+              label: 'Total',
+              color: $gray_light,
+              formatter: function (w) {
+                return w.globals.seriesTotals.reduce(function (a, b) {
+                  return a + b
+                }, 0)
+              }
+            }
+          }
+        }
+      }
+    },
+    legend: {
+      show: false
+    }
+  }
+
+  var donustChartSpending = new ApexCharts(
+    document.querySelector("#donut-chart-spending"),
+    donustSpendingChart
+  );
+
+  donustChartSpending.render();
+
 
     // Activity - Heat Map Chart
     // -----------------------------------

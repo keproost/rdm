@@ -43,7 +43,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern content-left-sidebar file-manager-application navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar">
+<body class="vertical-layout vertical-menu-modern content-left-sidebar file-manager-application navbar-sticky footer-static page-app-repository " data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar">
 
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
@@ -164,36 +164,43 @@
                             <!-- sidebar close icon starts -->
                             <span class="app-file-sidebar-close"><i class="bx bx-x"></i></span>
                             <!-- sidebar close icon ends -->
-                            <div class="form-group add-new-file text-center">
-                                <!-- Add File Button -->
-                                <label for="getFile" class="btn btn-primary btn-block glow my-2 add-file-btn text-capitalize"><i class="bx bx-plus"></i>Add File</label>
-                                <input type="file" class="d-none" id="getFile">
-                            </div>
                             <div class="app-file-sidebar-content">
                                 <!-- App File Left Sidebar - Drive Content Starts -->
                                 <label class="app-file-label">General</label>
                                 <div class="list-group list-group-messages my-50">
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: morph-desktop-smartphone.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                            <i class="bx bx-timer"></i>                                        
                                         </div>
                                         Recent apps
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: morph-star.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                            <i class="bx bx-star"></i>                                        
                                         </div>
                                         Favorites
                                     </a>
+                                    <!-- <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="livicon-evo" data-options="name: rocket.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                        </div>
+                                        Packages
+                                    </a>                                     -->
                                 </div>
-                                <label class="app-file-label">Repositories</label>
+                                <label class="app-file-label">App repositories</label>
                                 <div class="list-group list-group-messages my-50">
                                     <a href="#" class="list-group-item list-group-item-action pt-0 active">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="bx bxl-play-store"></i>
+                                            <i class="bx bx-select-multiple"></i>
                                         </div>
                                         All
-                                    </a>                                    
+                                    </a>    
+                                    <a href="#" class="list-group-item list-group-item-action pt-0">
+                                        <div class="fonticon-wrap d-inline mr-25">
+                                            <i class="bx bx-diamond"></i>
+                                        </div>
+                                        My apps
+                                    </a>                                                                    
                                     <a href="#" class="list-group-item list-group-item-action pt-0">
                                         <div class="fonticon-wrap d-inline mr-25">
                                             <i class="bx bx-diamond"></i>
@@ -214,26 +221,32 @@
                                 <div class="list-group list-group-labels my-50">
                                     <a href="#" class="list-group-item list-group-item-action pt-0">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: morph-doc.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                            <i class="livicon-evo" data-options="name: building.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
                                         Business
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: image.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                            <i class="livicon-evo" data-options="name: comments.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div>
                                         Communication
                                     </a>
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: camcoder.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
+                                            <i class="livicon-evo" data-options="name: briefcase.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
                                         </div> Productivity
                                     </a>
                                 </div>
                                 <!-- App File Left Sidebar - Labels Content Ends -->
 
+
+                                <div class="form-group add-new-file text-center">
+                                    <!-- Add File Button -->
+                                    <label for="getFile" class="btn btn-primary btn-block glow my-2 add-file-btn text-capitalize"><i class="bx bx-plus"></i>Add app</label>
+                                    <input type="file" class="d-none" id="getFile">
+                                </div>                               
                                 <!-- App File Left Sidebar - Storage Content Starts -->
-                                <label class="app-file-label mb-75">Storage Status</label>
+                                <!-- <label class="app-file-label mb-75">Storage Status</label>
                                 <div class="d-flex mb-1">
                                     <div class="fonticon-wrap mr-1">
                                         <i class="livicon-evo cursor-pointer" data-options="name: save.svg; size: 30px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;">
@@ -246,7 +259,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="font-weight-bold">Upgrade Storage</a>
+                                <a href="#" class="font-weight-bold">Upgrade Storage</a> -->
                                 <!-- App File Left Sidebar - Storage Content Ends -->
                             </div>
                         </div>
@@ -255,7 +268,7 @@
                     <div class="app-file-sidebar-info">
                         <div class="card shadow-none mb-0 p-0 pb-1">
                             <div class="card-header d-flex justify-content-between align-items-center border-bottom">
-                                <h6 class="mb-0">Document.pdf</h6>
+                                <h6 class="mb-0">Adobe XD</h6>
                                 <div class="app-file-action-icons d-flex align-items-center">
                                     <i class="bx bx-trash cursor-pointer mr-50"></i>
                                     <i class="bx bx-x close-icon cursor-pointer"></i>
@@ -269,79 +282,78 @@
                                     </li>
                                     <li class="nav-item pt-50 ">
                                         <a class=" nav-link d-flex align-items-center" id="activity-tab" data-toggle="tab" href="#activity" aria-controls="activity" role="tab" aria-selected="false">
-                                            <i class="bx bx-pulse mr-50"></i>Activity</a>
+                                            <i class="bx bx-pulse mr-50"></i>History</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content pl-0">
                                     <div class="tab-pane active" id="details" aria-labelledby="details-tab" role="tabpanel">
                                         <div class="border-bottom d-flex align-items-center flex-column pb-1">
-                                            <img src="../../../app-assets/images/icon/pdf.png" alt="PDF" height="42" width="35" class="my-1">
+                                            <img src="../../../assets/images/app-repository/app-icon-xd.png" alt="PDF" height="80" width="80" class="my-1">
                                             <p class="mt-2">15.3mb</p>
                                         </div>
                                         <div class="card-body pt-2">
-                                            <label class="app-file-label">Setting</label>
+
+ 
+                                            <label class="app-file-label">Install</label>
+                                            <div class="form-group">
+                                                <label class="text-bold-600" for="exampleInputUsername1">Choose device or group</label>
+                                                <select class="select2-theme form-control" id="select2-theme">
+                                                    <optgroup label="Group a">
+                                                        <option value="romboid">Display a</option>
+                                                        <option value="trapeze">Display b</option>
+                                                        <option value="triangle">Display c</option>
+                                                    </optgroup>
+                                                    <optgroup label="Group b">
+                                                        <option value="red">Display a</option>
+                                                        <option value="green">Display b</option>
+                                                        <option value="blue">Display c</option>
+                                                    </optgroup>
+                                                </select>
+                                                <div class="d-inline">
+                                                    <div class="btn btn-light-primary mt-1 ml-auto">Install</div>
+                                                    <div class="btn btn-light-danger mt-1 ml-auto">Stop</div>  
+                                                </div>
+                                            </div>       
+
+                                            <label class="app-file-label">Settings</label>
                                             <div class="d-flex justify-content-between align-items-center mt-75">
-                                                <p>File Sharing</p>
+                                                <p>Enable/Disable</p>
                                                 <div class="custom-control custom-switch custom-switch-primary custom-switch-glow custom-control-inline">
                                                     <input type="checkbox" class="custom-control-input" id="customSwitchGlow1">
                                                     <label class="custom-control-label" for="customSwitchGlow1"></label>
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <p>Synchronization</p>
+                                                <p>Auto updates</p>
+                                                <div class="custom-control custom-switch custom-switch-primary custom-switch-glow custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchGlow2" checked>
+                                                    <label class="custom-control-label" for="customSwitchGlow2"></label>
+                                                </div>
+                                            </div>   
+                                            <label class="app-file-label">Access rights</label>
+                                            <div class="d-flex justify-content-between align-items-center mt-75">
+                                                <p>Files</p>
+                                                <div class="custom-control custom-switch custom-switch-primary custom-switch-glow custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchGlow1">
+                                                    <label class="custom-control-label" for="customSwitchGlow1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p>Camera</p>
                                                 <div class="custom-control custom-switch custom-switch-primary custom-switch-glow custom-control-inline">
                                                     <input type="checkbox" class="custom-control-input" id="customSwitchGlow2" checked>
                                                     <label class="custom-control-label" for="customSwitchGlow2"></label>
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <p>Backup</p>
+                                                <p>Audio</p>
                                                 <div class="custom-control custom-switch custom-switch-primary custom-switch-glow custom-control-inline">
                                                     <input type="checkbox" class="custom-control-input" id="customSwitchGlow3">
                                                     <label class="custom-control-label" for="customSwitchGlow3"></label>
                                                 </div>
-                                            </div>
-                                                <div class="form-group">
-                                                    <select data-placeholder="Select a state..." class="select2-icons form-control" id="select2-icons">
-                                                        <optgroup label="Services">
-                                                            <option value="wordpress2" data-icon="bx bxl-wordpress" selected>WordPress</option>
-                                                            <option value="codepen" data-icon="bx bxl-codepen">Codepen</option>
-                                                            <option value="drupal" data-icon="bx bxl-drupal">Drupal</option>
-                                                            <option value="pinterest2" data-icon="bx bxl-css3">CSS3</option>
-                                                            <option value="html5" data-icon="bx bxl-html5">HTML5</option>
-                                                        </optgroup>
-                                                        <optgroup label="Browsers">
-                                                            <option value="chrome" data-icon="bx bxl-chrome">Chrome</option>
-                                                            <option value="firefox" data-icon="bx bxl-firefox">Firefox</option>
-                                                            <option value="opera" data-icon="bx bxl-opera">Opera</option>
-                                                            <option value="IE" data-icon="bx bxl-internet-explorer">IE</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            <label class="app-file-label">Info</label>
-                                            This app has access to:
-                                            Storage
-                                            read the contents of your USB storage
-                                            modify or delete the contents of your USB storage
-                                            Microphone
-                                            record audio
-                                            Wi-Fi connection information
-                                            view Wi-Fi connections
-                                            Photos/Media/Files
-                                            read the contents of your USB storage
-                                            modify or delete the contents of your USB storage
-                                            Contacts
-                                            find accounts on the device
-                                            Identity
-                                            find accounts on the device
-                                            add or remove accounts
-                                            Other
-                                            receive data from Internet
-                                            create accounts and set passwords
-                                            full network access
-                                            prevent device from sleeping
-                                            use accounts on the device
-                                            view network connections
+                                            </div>                                           
+
+
                                             <!-- <div class="d-flex justify-content-between align-items-center mt-75">
                                                 <p>Type</p>
                                                 <p class="font-weight-bold">PDF</p>
@@ -377,43 +389,28 @@
                                             <ul class="widget-timeline mb-0">
                                                 <li class="timeline-items timeline-icon-success active">
                                                     <div class="timeline-time">Today</div>
-                                                    <h6 class="timeline-title">You added an item to</h6>
-                                                    <p class="timeline-text">You added an item</p>
-                                                    <div class="timeline-content">
-                                                        <img src="../../../app-assets/images/icon/psd.png" alt="PSD" height="30" width="25" class="mr-50">Mockup.psd
-                                                    </div>
+                                                    <h6 class="timeline-title">Update android</h6>
+                                                    <p class="timeline-text"><b>Root admin </b>preformed update to android 5.0</p>
                                                 </li>
                                                 <li class="timeline-items timeline-icon-info active">
-                                                    <div class="timeline-time">10 min ago</div>
-                                                    <h6 class="timeline-title">You shared 2 times</h6>
-                                                    <p class="timeline-text">Emily Bennett edited an item</p>
-                                                    <div class="timeline-content">
-                                                        <img src="../../../app-assets/images/icon/sketch.png" alt="Sketch" height="30" width="25" class="mr-50">Template_Design.sketch
-                                                    </div>
+                                                    <div class="timeline-time">Today</div>
+                                                    <h6 class="timeline-title">Update android</h6>
+                                                    <p class="timeline-text"><b>Root admin </b>preformed update to android 5.0</p>
                                                 </li>
                                                 <li class="timeline-items timeline-icon-danger active">
-                                                    <div class="timeline-time">Mon 10:20 PM</div>
-                                                    <h6 class="timeline-title">You edited an item</h6>
-                                                    <p class="timeline-text">You edited an item</p>
-                                                    <div class="timeline-content">
-                                                        <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25" class="mr-50">Information.doc
-                                                    </div>
+                                                    <div class="timeline-time">Today</div>
+                                                    <h6 class="timeline-title">Update android</h6>
+                                                    <p class="timeline-text"><b>Root admin </b>preformed update to android 5.0</p>
                                                 </li>
                                                 <li class="timeline-items timeline-icon-primary active">
-                                                    <div class="timeline-time">Jul 13 2019</div>
-                                                    <h6 class="timeline-title">You edited an item</h6>
-                                                    <p class="timeline-text">John Keller edited an item</p>
-                                                    <div class="timeline-content">
-                                                        <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25" class="mr-50">Documentation.doc
-                                                    </div>
+                                                    <div class="timeline-time">Today</div>
+                                                    <h6 class="timeline-title">Update android</h6>
+                                                    <p class="timeline-text"><b>Root admin </b>preformed update to android 5.0</p>
                                                 </li>
                                                 <li class="timeline-items timeline-icon-warning">
-                                                    <div class="timeline-time">Apr 18 2019</div>
-                                                    <h6 class="timeline-title">You added an item to</h6>
-                                                    <p class="timeline-text">You edited an item</p>
-                                                    <div class="timeline-content">
-                                                        <img src="../../../app-assets/images/icon/pdf.png" alt="document" height="30" width="25" class="mr-50">Resume.pdf
-                                                    </div>
+                                                    <div class="timeline-time">Today</div>
+                                                    <h6 class="timeline-title">Update android</h6>
+                                                    <p class="timeline-text"><b>Root admin </b>preformed update to android 5.0</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -453,16 +450,6 @@
                                 <!-- Header search bar Ends -->
                                 <!-- Header Icons Starts -->
                                 <div class="app-file-header-icons">
-                                    <a class="btn" href="rdm-devices.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Reports">
-                                        <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
-                                            </a><i class="livicon-evo cursor-pointer" data-options="name: morph-desktop-smartphone.svg; size: 24px; style: lines; strokeColor:#596778; duration:0.85;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="rdm-dashboard.html">
-                                        <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
-                                            </a><i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
-                                        </div>
-                                    </a>  
                                     <a href="rdm-dashboard.html">
                                         <div class="fonticon-wrap d-inline mx-sm-1 align-middle">
                                             </a><i class="bx bx-dots-vertical-rounded font-medium-3 align-middle cursor-pointer"></i>
@@ -478,7 +465,7 @@
                                 <h5>All apps</h5>
 
                                 <!-- App File - Recent Accessed Files Section Starts -->
-                                <label class="app-file-label">Recently</label>
+                                <label class="app-file-label">Recent apps</label>
                                 <div class="row app-file-recent-access">
                                     <div class="col-md-3 col-6">
                                         <div class="card border shadow-none mb-1 app-file-info">
@@ -491,14 +478,15 @@
                                                     <div class="app-file-recent-details">
                                                         <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
                                                         <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
-                                                        <label class="app-file-label bg-rgba-primary">PRODUCTIVITY</label>
-                                                        <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
+                                                        <div class="badge badge-light-info mr-1 mb-1">Installed</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="col-md-3 col-6">
+                                    <div class="col-md-3 col-6">
                                         <div class="card border shadow-none mb-1 app-file-info">
                                             <div class="card-content">
                                                 <div class="app-file-content-logo card-img-top">
@@ -509,160 +497,152 @@
                                                     <div class="app-file-recent-details">
                                                         <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
                                                         <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
-                                                        <label class="app-file-label bg-rgba-primary">PRODUCTIVITY</label>
-                                                        <div class="app-file-last-access font-size-small text-muted">Last accessed : 3 hours ago</div>
+                                                        <div class="badge badge-light-info mr-1 mb-1">Installed</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                                   
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-light-info mr-1 mb-1">Installed</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-light-info mr-1 mb-1">Installed</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                                                                                                                                    
                                 </div>
-                                
-                                <!-- App File - Recent Accessed Files Section Ends -->
+                                 <label class="app-file-label">New apps</label>
+                                <div class="row app-file-recent-access">
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-tertiary mr-1 mb-1">Install</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-tertiary mr-1 mb-1">Install</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-tertiary mr-1 mb-1">Install</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-tertiary mr-1 mb-1">Install</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="card border shadow-none mb-1 app-file-info">
+                                            <div class="card-content">
+                                                <div class="app-file-content-logo card-img-top">
+                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
+                                                    <img class="d-block mx-auto" src="../../../assets/images/app-repository/app-icon-xd.png" height="80" width="80" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body p-50">
+                                                    <div class="app-file-recent-details">
+                                                        <div class="app-file-name font-size-small font-weight-bold">Adobe XD</div>
+                                                        <div class="app-file-size font-size-small text-muted mb-25">12.85kb</div>
+                                                        <div class="badge badge-tertiary mr-1 mb-1">Install</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Installed on : 4 devices</div>
+                                                        <div class="app-file-last-access font-size-small text-muted">Last update : 3 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                                                                                                                                     
+                                </div>                               
 
-                                <!-- App File - Files Section Starts -->
-                                <label class="app-file-label">Files</label>
-                                <div class="row app-file-files">
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/pdf.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Banner.jpg</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">13kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Image File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/psd.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Management.docx</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">15.60mb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Word Document</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/doc.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Thunder.mp3</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">3.4mb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Mp3 File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/sketch.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Dashboard.sketch</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">108kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Sketch File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/psd.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Logo.psd</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">10.6kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Photoshop File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/sketch.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Logo_Design.sketch</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">256.5kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Sketch File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/doc.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Bootstrap.xyz</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">0.0kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">Unknown File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <div class="card border shadow-none mb-1 app-file-info">
-                                            <div class="card-content">
-                                                <div class="app-file-content-logo card-img-top">
-                                                    <i class="bx bx-dots-vertical-rounded app-file-edit-icon d-block float-right"></i>
-                                                    <img class="d-block mx-auto" src="../../../app-assets/images/icon/pdf.png" height="38" width="30" alt="Card image cap">
-                                                </div>
-                                                <div class="card-body p-50">
-                                                    <div class="app-file-details">
-                                                        <div class="app-file-name font-size-small font-weight-bold">Read_Me.pdf</div>
-                                                        <div class="app-file-size font-size-small text-muted mb-25">10.5kb</div>
-                                                        <div class="app-file-type font-size-small text-muted">PDF File</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- App File - Files Section Ends -->
                             </div>
                         </div>
 
@@ -690,6 +670,7 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -703,6 +684,10 @@
     <!-- BEGIN: Page JS-->
     <script src="../../../app-assets/js/scripts/pages/app-file-manager.js"></script>
     <script src="../../../app-assets/js/scripts/tooltip/tooltip.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- END: Page JS-->
 
 </body>
