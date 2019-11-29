@@ -110,3 +110,53 @@ body .form-control:focus, body .form-control:active, body .form-control.active, 
 
 body.bg-full-screen-image {
   background: url(../../assets/images/pages/auth-bg.jpg); }
+
+body #section-table-devices .card .card-header, body #section-table-groups .card .card-header, body #section-table-policies .card .card-header {
+  padding-bottom: 0px; }
+
+body #section-table-devices .card .heading-elements, body #section-table-groups .card .heading-elements, body #section-table-policies .card .heading-elements {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  top: auto;
+  right: auto; }
+  body #section-table-devices .card .heading-elements .table-actions, body #section-table-groups .card .heading-elements .table-actions, body #section-table-policies .card .heading-elements .table-actions {
+    display: flex;
+    flex: 1; }
+    body #section-table-devices .card .heading-elements .table-actions .btn-refresh, body #section-table-groups .card .heading-elements .table-actions .btn-refresh, body #section-table-policies .card .heading-elements .table-actions .btn-refresh {
+      font-size: 18px; }
+    body #section-table-devices .card .heading-elements .table-actions .actions-right, body #section-table-groups .card .heading-elements .table-actions .actions-right, body #section-table-policies .card .heading-elements .table-actions .actions-right {
+      margin-left: auto; }
+
+body #section-table-devices table .dt-checkboxes-cell, body #section-table-groups table .dt-checkboxes-cell, body #section-table-policies table .dt-checkboxes-cell {
+  padding-right: 0px; }
+
+body #section-table-devices table th i, body #section-table-groups table th i, body #section-table-policies table th i {
+  display: inline-block;
+  vertical-align: sub;
+  margin-right: 6px;
+  margin-left: 6px; }
+
+body #section-table-devices table td.device-group, body #section-table-groups table td.device-group, body #section-table-policies table td.device-group {
+  max-width: 200px; }
+  body #section-table-devices table td.device-group span:before, body #section-table-groups table td.device-group span:before, body #section-table-policies table td.device-group span:before {
+    content: ", ";
+    display: inline-block;
+    white-space: pre; }
+  body #section-table-devices table td.device-group span:first-child:before, body #section-table-groups table td.device-group span:first-child:before, body #section-table-policies table td.device-group span:first-child:before {
+    content: none; }
+
+body #section-table-devices table td.device-actions, body #section-table-devices table td.group-actions, body #section-table-devices table td.policy-actions, body #section-table-groups table td.device-actions, body #section-table-groups table td.group-actions, body #section-table-groups table td.policy-actions, body #section-table-policies table td.device-actions, body #section-table-policies table td.group-actions, body #section-table-policies table td.policy-actions {
+  text-align: center; }
+
+body #section-table-devices .page-actions, body #section-table-groups .page-actions, body #section-table-policies .page-actions {
+  padding: 12px 24px;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end; }
+  body #section-table-devices .page-actions > *, body #section-table-groups .page-actions > *, body #section-table-policies .page-actions > * {
+    margin-right: 12px; }
+  body #section-table-devices .page-actions:last-child, body #section-table-groups .page-actions:last-child, body #section-table-policies .page-actions:last-child {
+    margin-right: 0px; }

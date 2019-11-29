@@ -16,6 +16,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -172,8 +173,103 @@
                 </div>
             </div>
             <div class="content-body">
-                Content here
-
+                <section id="section-table-devices">
+                <div class="card">
+                        <div class="card-header">
+                            <!-- head -->
+                            <h5 class="card-title">Your devices</h5>
+                            <!-- Single Date Picker and button -->
+                            <div class="heading-elements">
+                                <div class="table-actions">
+                                    <div class="actions-left">
+                                        <button type="button" class="btn btn-light-primary btn-refresh"><i class="bx bx-sync"></i></button>
+                                    </div>
+                                    <div class="actions-right">
+                                        <button type="button" class="btn btn-light-primary btn-delete"><i class="bx bx-trash"></i></button>
+                                        <button type="button" class="btn btn-light-primary btn-delete"><i class="bx bx-hive"></i></button>
+                                        <button type="button" class="btn btn-light-primary btn-add"><i class="bx bx-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- datatable start -->
+                        <div class="table-responsive">
+                            <table id="table-devices" class="table table-transparent table-hover order-column">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="pl-0"><i class='bx bx-tv'></i>Device</th>
+                                        <th><i class='bx bx-barcode'></i>Device id</th>
+                                        <th><i class='bx bx-calendar'></i>Last seen</th>
+                                        <th><i class='bx bx-target-lock'></i>Location</th>
+                                        <th><i class='bx bx-hive'></i>Group</th>
+                                        <th><i class='bx bxs-bolt'></i>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                            <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
+                                            Huddle
+                                        </td>
+                                        <td class="device-internalname">I3HUDDLE25112019</td>
+                                        <td class="device-lastseen">11/04/2019</td>
+                                        <td class="device-location">Finance</td>
+                                        <td class="device-group"><span>Presentation displays</span></td>
+                                        <td class="device-actions">
+                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td></td>
+                                        <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                            <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
+                                            Touch E
+                                        </td>
+                                        <td class="device-internalname">I3TOUCH25112017</td>
+                                        <td class="device-lastseen">11/02/2019</td>
+                                        <td class="device-location">Audiotorium</td>
+                                        <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
+                                        <td class="device-actions">
+                                            <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td></td>
+                                        <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                            <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
+                                            Huddle
+                                        </td>
+                                        <td class="device-internalname">I3HUDDLE25112019</td>
+                                        <td class="device-lastseen">25/01/2019</td>
+                                        <td class="device-location">Infostand</td>
+                                        <td class="device-group"><span>Presentation displays</span>
+                                        </td>
+                                        <td class="device-actions">
+                                            <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td></td>
+                                        <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                            <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
+                                            Touch E
+                                        </td>
+                                        <td class="device-internalname">I3TOUCH25112017</td>
+                                        <td class="device-lastseen">4/03/2019</td>
+                                        <td class="device-location">Audiotorium</td>
+                                        <td class="device-group"><span>Presentation displays</span></td>
+                                        <td class="device-actions">
+                                            <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                        </td>
+                                    </tr>                                                                              
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- datatable ends -->
+                    </div>
+                </section>
             </div>
         </div>
     </div>
@@ -196,6 +292,9 @@
     <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
     <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
     <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
@@ -210,6 +309,8 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+    <script src="../../../assets/js/devices.js"></script>
+    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- END: Page JS-->
 
 </body>

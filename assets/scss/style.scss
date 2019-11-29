@@ -201,4 +201,82 @@ body {
 	&.bg-full-screen-image {
 		background: url(../../assets/images/pages/auth-bg.jpg);
 	}
+
+	//Tables
+	#section-table-devices, #section-table-groups, #section-table-policies {
+		.card {
+			.card-header {
+				padding-bottom: 0px;
+			}
+			.heading-elements {
+				position: relative;  
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 12px;
+				padding-bottom: 6px;
+				top: auto; 
+				right: auto;
+				.table-actions {
+					display: flex; 
+					flex: 1;
+					.btn-refresh {
+						font-size: 18px;
+					}
+					.actions-left {}
+					.actions-right {
+						margin-left: auto;
+					}
+
+				}
+			}
+		}
+		table {
+			.dt-checkboxes-cell {
+				padding-right: 0px;
+			}
+			th {
+				i {
+					display: inline-block;
+					vertical-align: sub;
+					margin-right: 6px;
+					margin-left: 6px;
+				}
+			}
+			td {
+				&.device-group {
+					max-width: 200px;
+					span {
+						&:before {
+							content: ", ";
+							display: inline-block;
+							white-space: pre;
+						}
+					}
+		
+					span:first-child {
+							&:before {
+								content: none;
+							}
+					}
+				}
+				&.device-actions, &.group-actions, &.policy-actions {
+					text-align: center;
+				}
+			}
+	
+		}
+		.page-actions {
+			padding: 12px 24px;
+			display: flex; 
+			flex: 1;
+			justify-content: flex-end;
+			> * {
+				margin-right: 12px;
+			}
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+
 }
