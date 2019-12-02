@@ -16,7 +16,6 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -24,8 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
@@ -54,8 +51,6 @@
                             <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
                         </ul>
                         <ul class="nav navbar-nav bookmark-icons">
-                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-reports.html" data-toggle="tooltip" data-placement="top" title="Reports"><i class="ficon bx bx-chart"></i></a></li>
-                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-packages.html" data-toggle="tooltip" data-placement="top" title="Packages"><i class="ficon bx bx-rocket"></i></a></li>
                             <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-faq.html" data-toggle="tooltip" data-placement="top" title="Support"><i class="ficon bx bx-support"></i></a></li>
                         </ul>
                         <ul class="nav navbar-nav">
@@ -136,12 +131,6 @@
 
                 <li class=" nav-item"><a href="rdm-app-repository.html"><i class="menu-livicon" data-icon="thumbnails-small"></i><span class="menu-title" data-i18n="App respository">App repository</span></a>
                 </li>
-                <li class=" nav-item"><a href="rdm-packages.html"><i class="menu-livicon" data-icon="rocket"></i><span class="menu-title" data-i18n="Packages">Packages</span></a>
-                </li> 
-                <li class=" nav-item"><a href="rdm-messages.html"><i class="menu-livicon" data-icon="morph-envelope"></i><span class="menu-title" data-i18n="Messages">Messages</span></a>
-                </li>   
-                <li class=" nav-item"><a href="rdm-reports.html"><i class="menu-livicon" data-icon="bar-chart"></i><span class="menu-title" data-i18n="Reports">Reports</span></a>
-                </li>  
                 <li class=" navigation-header"><span>User management</span>
                 <li class=" nav-item"><a href="rdm-user-list.html"><i class="menu-livicon" data-icon="users"></i><span class="menu-title" data-i18n="Users">Users</span></a>
                 </li>                                                            
@@ -204,15 +193,6 @@
                                 <a class="heading-elements-toggle">
                                     <i class="bx bx-dots-vertical font-medium-3"></i>
                                 </a>
-                                <div class="heading-elements">
-                                    <ul class="list-inline mb-0">
-                                        <li>
-                                            <a data-action="reload">
-                                                <i class="bx bx-revision"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -232,15 +212,6 @@
                                 <a class="heading-elements-toggle">
                                     <i class="bx bx-dots-vertical font-medium-3"></i>
                                 </a>
-                                <div class="heading-elements">
-                                    <ul class="list-inline mb-0">
-                                        <li>
-                                            <a data-action="reload">
-                                                <i class="bx bx-revision"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -254,182 +225,155 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="policies" role="tabpanel" aria-labelledby="messages-tab-justified">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Policies</h4>
-                                <a class="heading-elements-toggle">
-                                    <i class="bx bx-dots-vertical font-medium-3"></i>
-                                </a>
-                                <div class="heading-elements">
-                                    <ul class="list-inline mb-0">
-                                        <li>
-                                            <a data-action="reload">
-                                                <i class="bx bx-revision"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                        <section id="section-table-policies">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Policies</h4>
+                                    <a class="heading-elements-toggle">
+                                        <i class="bx bx-dots-vertical font-medium-3"></i>
+                                    </a>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <!-- datatable start -->
+                                        <div class="table-responsive">
+                                            <table id="device-detail-table-policies" class="table table-transparent table-hover order-column">
+                                                <thead>
+                                                    <tr>
+                                                        <th><i class='bx bx-hive'></i>Name</th>
+                                                        <th><i class='bx bx-info-circle'></i>Description</th>
+                                                        <th><i class='bx bxs-bolt'></i>Policy applied</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="policy-name">
+                                                            <img src="../../../assets/images/devices/devices-genericpolicyicon.png" alt="file" class="policy-image" height="60" width="60">
+                                                            Policy 1
+                                                        </td>
+                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                        <td class="policy-actions">
+                                                            <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
+                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                <label class="custom-control-label" for="customSwitch11">
+                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>  
+                                                    <tr>
+                                                        <td class="policy-name">
+                                                            <img src="../../../assets/images/devices/devices-genericpolicyicon.png" alt="file" class="policy-image" height="60" width="60">
+                                                            Policy 2
+                                                        </td>
+                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                        <td class="policy-actions">
+                                                            <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
+                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                <label class="custom-control-label" for="customSwitch11">
+                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>  
+                                                    <tr>
+                                                        <td class="policy-name">
+                                                            <img src="../../../assets/images/devices/devices-genericpolicyicon.png" alt="file" class="policy-image" height="60" width="60">
+                                                            Policy 3
+                                                        </td>
+                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                        <td class="policy-actions">
+                                                            <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
+                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                <label class="custom-control-label" for="customSwitch11">
+                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- datatable ends -->
+                                        <div class="page-actions">
+                                            <button type="button" class="btn btn-primary disabled"><i class="bx bx-save"></i>Save</button>
+                                        </div>                                      
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                        <section id="section-table-policies">
-                                            <div class="card">
-                                                <!-- datatable start -->
-                                                <div class="table-responsive">
-                                                    <table id="table-policies" class="table table-transparent table-hover order-column">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="pl-0"><i class='bx bx-hive'></i>Name</th>
-                                                                <th><i class='bx bx-info-circle'></i>Description</th>
-                                                                <th><i class='bx bxs-bolt'></i>POlicy applied</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class=" policy-name text-bold-600 pl-0">
-                                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                    Policy 1
-                                                                </td>
-                                                                <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                                <td class="policy-actions">
-                                                                    <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
-                                                                        <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                        <label class="custom-control-label" for="customSwitch11">
-                                                                            <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                            <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>  
-                                                            <tr>
-                                                                <td class=" policy-name text-bold-600 pl-0">
-                                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                    Policy 2
-                                                                </td>
-                                                                <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                                <td class="policy-actions">
-                                                                    <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
-                                                                        <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                        <label class="custom-control-label" for="customSwitch11">
-                                                                            <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                            <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>  
-                                                            <tr>
-                                                                <td class="policy-name text-bold-600 pl-0">
-                                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                    Policy 3
-                                                                </td>
-                                                                <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                                </td>
-                                                                <td class="policy-actions">
-                                                                    <div class="custom-control custom-switch custom-switch-success mr-2 mb-1">
-                                                                        <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                        <label class="custom-control-label" for="customSwitch11">
-                                                                            <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                            <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>                                                                              
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <!-- datatable ends -->
-                                                <div class="page-actions">
-                                                    <button type="button" class="btn btn-light-primary"><i class="bx bx-x"></i>Cancel</button>
-                                                    <button type="button" class="btn btn-primary"><i class="bx bx-save"></i>Save</button>
-                                                </div>
-                                            </div>
-                                        </section>                                        
-                                </div>
-                            </div>
-                        </div>
+                        </section>
                     </div>
                     <div class="tab-pane" id="groups" role="tabpanel" aria-labelledby="settings-tab-justified">
+                        <section id="section-table-groups">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Groups</h4>
                                 <a class="heading-elements-toggle">
                                     <i class="bx bx-dots-vertical font-medium-3"></i>
                                 </a>
-                                <div class="heading-elements">
-                                    <ul class="list-inline mb-0">
-                                        <li>
-                                            <a data-action="reload">
-                                                <i class="bx bx-revision"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
-                                    <section id="section-table-groups">
-                                        <div class="card">
-                                            <!-- datatable start -->
-                                            <div class="table-responsive">
-                                                <table id="table-groups" class="table table-transparent table-hover order-column">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="pl-0"><i class='bx bx-hive'></i>Name</th>
-                                                            <th><i class='bx bx-info-circle'></i>Description</th>
-                                                            <th><i class='bx bxs-bolt'></i>Added to group</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="group-name text-bold-600 pl-0">
-                                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                Presentation
-                                                            </td>
-                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                            <td class="group-actions">
-                                                                <div class="checkbox">
-                                                                    <input type="checkbox" id="checkboxdefault" checked="">
-                                                                    <label for="checkboxdefault"></label>
-                                                                </div>
-                                                            </td>
-                                                        </tr>  
-                                                        <tr>
-                                                            <td class="group-name text-bold-600 pl-0">
-                                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                Clients
-                                                            </td>
-                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                            <td class="group-actions">
-                                                                <div class="checkbox">
-                                                                    <input type="checkbox" id="checkboxdefault" checked="">
-                                                                    <label for="checkboxdefault"></label>
-                                                                </div>
-                                                            </td>
-                                                        </tr>  
-                                                        <tr>
-                                                            <td class="group-name text-bold-600 pl-0">
-                                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="mr-1" height="60" width="60">
-                                                                Finance
-                                                            </td>
-                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                            </td>
-                                                            <td class="group-actions">
-                                                                <div class="checkbox">
-                                                                    <input type="checkbox" id="checkboxdefault" checked="">
-                                                                    <label for="checkboxdefault"></label>
-                                                                </div>
-                                                            </td>
-                                                        </tr>                                                                              
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <!-- datatable ends -->
-                                            <div class="page-actions">
-                                                <button type="button" class="btn btn-light-primary"><i class="bx bx-x"></i>Cancel</button>
-                                                <button type="button" class="btn btn-primary"><i class="bx bx-save"></i>Save</button>
-                                            </div>
-                                        </div>
-                                    </section>                                        
+                                    <!-- datatable start -->
+                                    <div class="table-responsive">
+                                        <table id="device-detail-table-groups" class="table table-transparent table-hover order-column">
+                                            <thead>
+                                                <tr>
+                                                    <th><i class='bx bx-hive'></i>Name</th>
+                                                    <th><i class='bx bx-info-circle'></i>Description</th>
+                                                    <th><i class='bx bxs-bolt'></i>Added to group</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="group-name">
+                                                        <img src="../../../assets/images/devices/devices-genericgroupicon.png" alt="file" class="group-image" height="60" width="60">
+                                                        Presentation
+                                                    </td>
+                                                    <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                    <td class="group-actions">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="checkboxdefault" checked="">
+                                                            <label for="checkboxdefault"></label>
+                                                        </div>
+                                                    </td>
+                                                </tr>  
+                                                <tr>
+                                                    <td class="group-name">
+                                                        <img src="../../../assets/images/devices/devices-genericgroupicon.png" alt="file" class="group-image" height="60" width="60">
+                                                        Clients
+                                                    </td>
+                                                    <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                    <td class="group-actions">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="checkboxdefault" checked="">
+                                                            <label for="checkboxdefault"></label>
+                                                        </div>
+                                                    </td>
+                                                </tr>  
+                                                <tr>
+                                                    <td class="group-name">
+                                                        <img src="../../../assets/images/devices/devices-genericgroupicon.png" alt="file" class="group-image" height="60" width="60">
+                                                        Finance
+                                                    </td>
+                                                    <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                    <td class="group-actions">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" id="checkboxdefault" checked="">
+                                                            <label for="checkboxdefault"></label>
+                                                        </div>
+                                                    </td>
+                                                </tr>                                                                              
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- datatable ends -->
+                                    <div class="page-actions">
+                                        <button type="button" class="btn btn-primary"><i class="bx bx-save"></i>Save</button>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
@@ -458,8 +402,8 @@
     <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
     <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
     <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
     <script src="../../../app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
@@ -474,8 +418,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../assets/js/device-detail.js"></script>
-    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <script src="../../../assets/js/rdm-device-detail.js"></script>
     <!-- END: Page JS-->
 
 </body>

@@ -1,15 +1,13 @@
 
 (function (window, document, $) {
-
-  // table extended checkbox
-  var tablecheckbox = $('#table-devices').DataTable({
-    "searching": false,
-    "lengthChange": false,
-    "paging": false,
-    "bInfo": false,
+  var tablepolicies = $('#table-policies').DataTable({
+    "searching": true,
+    "lengthChange": true,
+    "paging": true,
+    "bInfo": true,
     "responsive": true,  
     'columnDefs': [
-      { "orderable": false, "targets": [6, 5] },
+      { "orderable": false, "targets": [2, 3] },
       {
         'targets': 0,
         'render': function (data, type, row, meta) {
@@ -23,10 +21,11 @@
           'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes" checked=""><label></label></div >'  //head checkbox
         }
       }],
-    'select': 'multi',
+      'select': {
+        style: 'multi',
+        selector: 'tr',
+        blurable: true
+    },
     'order': [[1, 'asc']]
   });
-
-
-
 })(window, document, jQuery);

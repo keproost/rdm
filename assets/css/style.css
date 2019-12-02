@@ -114,30 +114,34 @@ body.bg-full-screen-image {
 body #section-table-devices .card .card-header, body #section-table-groups .card .card-header, body #section-table-policies .card .card-header {
   padding-bottom: 0px; }
 
-body #section-table-devices .card .heading-elements, body #section-table-groups .card .heading-elements, body #section-table-policies .card .heading-elements {
-  position: relative;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 12px;
-  padding-bottom: 6px;
-  top: auto;
-  right: auto; }
-  body #section-table-devices .card .heading-elements .table-actions, body #section-table-groups .card .heading-elements .table-actions, body #section-table-policies .card .heading-elements .table-actions {
-    display: flex;
-    flex: 1; }
-    body #section-table-devices .card .heading-elements .table-actions .btn-refresh, body #section-table-groups .card .heading-elements .table-actions .btn-refresh, body #section-table-policies .card .heading-elements .table-actions .btn-refresh {
-      font-size: 18px; }
-    body #section-table-devices .card .heading-elements .table-actions .actions-right, body #section-table-groups .card .heading-elements .table-actions .actions-right, body #section-table-policies .card .heading-elements .table-actions .actions-right {
-      margin-left: auto; }
+body #section-table-devices .card .heading-elements a, body #section-table-devices .card .heading-elements .heading-elements-toggle a, body #section-table-groups .card .heading-elements a, body #section-table-groups .card .heading-elements .heading-elements-toggle a, body #section-table-policies .card .heading-elements a, body #section-table-policies .card .heading-elements .heading-elements-toggle a {
+  padding-left: 1.5rem; }
 
-body #section-table-devices table .dt-checkboxes-cell, body #section-table-groups table .dt-checkboxes-cell, body #section-table-policies table .dt-checkboxes-cell {
-  padding-right: 0px; }
+body #section-table-devices .card .heading-elements .table-actions, body #section-table-groups .card .heading-elements .table-actions, body #section-table-policies .card .heading-elements .table-actions {
+  display: flex;
+  flex: 1; }
+  body #section-table-devices .card .heading-elements .table-actions > *, body #section-table-groups .card .heading-elements .table-actions > *, body #section-table-policies .card .heading-elements .table-actions > * {
+    margin-right: 10px; }
+    body #section-table-devices .card .heading-elements .table-actions > *:last-child, body #section-table-groups .card .heading-elements .table-actions > *:last-child, body #section-table-policies .card .heading-elements .table-actions > *:last-child {
+      margin-right: 0px; }
+  body #section-table-devices .card .heading-elements .table-actions .btn-refresh, body #section-table-groups .card .heading-elements .table-actions .btn-refresh, body #section-table-policies .card .heading-elements .table-actions .btn-refresh {
+    font-size: 18px; }
+
+body #section-table-devices table .device-name, body #section-table-devices table .group-name, body #section-table-devices table .policy-name, body #section-table-groups table .device-name, body #section-table-groups table .group-name, body #section-table-groups table .policy-name, body #section-table-policies table .device-name, body #section-table-policies table .group-name, body #section-table-policies table .policy-name {
+  font-weight: 600; }
+
+body #section-table-devices table .group-image, body #section-table-devices table .policy-image, body #section-table-devices table .device-image, body #section-table-groups table .group-image, body #section-table-groups table .policy-image, body #section-table-groups table .device-image, body #section-table-policies table .group-image, body #section-table-policies table .policy-image, body #section-table-policies table .device-image {
+  margin-right: 1.25rem;
+  border-radius: 100%; }
 
 body #section-table-devices table th i, body #section-table-groups table th i, body #section-table-policies table th i {
   display: inline-block;
   vertical-align: sub;
   margin-right: 6px;
   margin-left: 6px; }
+
+body #section-table-devices table td.dt-checkboxes-cell, body #section-table-groups table td.dt-checkboxes-cell, body #section-table-policies table td.dt-checkboxes-cell {
+  padding-right: 0px; }
 
 body #section-table-devices table td.device-group, body #section-table-groups table td.device-group, body #section-table-policies table td.device-group {
   max-width: 200px; }
@@ -148,8 +152,60 @@ body #section-table-devices table td.device-group, body #section-table-groups ta
   body #section-table-devices table td.device-group span:first-child:before, body #section-table-groups table td.device-group span:first-child:before, body #section-table-policies table td.device-group span:first-child:before {
     content: none; }
 
-body #section-table-devices table td.device-actions, body #section-table-devices table td.group-actions, body #section-table-devices table td.policy-actions, body #section-table-groups table td.device-actions, body #section-table-groups table td.group-actions, body #section-table-groups table td.policy-actions, body #section-table-policies table td.device-actions, body #section-table-policies table td.group-actions, body #section-table-policies table td.policy-actions {
-  text-align: center; }
+body #section-table-devices table.dataTable thead > tr > th.sorting_asc, body #section-table-devices table.dataTable thead > tr > th.sorting_desc, body #section-table-devices table.dataTable thead > tr > td.sorting_asc, body #section-table-devices table.dataTable thead > tr > td.sorting_desc, body #section-table-groups table.dataTable thead > tr > th.sorting_asc, body #section-table-groups table.dataTable thead > tr > th.sorting_desc, body #section-table-groups table.dataTable thead > tr > td.sorting_asc, body #section-table-groups table.dataTable thead > tr > td.sorting_desc, body #section-table-policies table.dataTable thead > tr > th.sorting_asc, body #section-table-policies table.dataTable thead > tr > th.sorting_desc, body #section-table-policies table.dataTable thead > tr > td.sorting_asc, body #section-table-policies table.dataTable thead > tr > td.sorting_desc {
+  color: #ED6D05; }
+  body #section-table-devices table.dataTable thead > tr > th.sorting_asc i, body #section-table-devices table.dataTable thead > tr > th.sorting_desc i, body #section-table-devices table.dataTable thead > tr > td.sorting_asc i, body #section-table-devices table.dataTable thead > tr > td.sorting_desc i, body #section-table-groups table.dataTable thead > tr > th.sorting_asc i, body #section-table-groups table.dataTable thead > tr > th.sorting_desc i, body #section-table-groups table.dataTable thead > tr > td.sorting_asc i, body #section-table-groups table.dataTable thead > tr > td.sorting_desc i, body #section-table-policies table.dataTable thead > tr > th.sorting_asc i, body #section-table-policies table.dataTable thead > tr > th.sorting_desc i, body #section-table-policies table.dataTable thead > tr > td.sorting_asc i, body #section-table-policies table.dataTable thead > tr > td.sorting_desc i {
+    color: #ED6D05; }
+
+body #section-table-devices table.dataTable tbody > tr.selected, body #section-table-devices table.dataTable tbody > tr > .selected, body #section-table-groups table.dataTable tbody > tr.selected, body #section-table-groups table.dataTable tbody > tr > .selected, body #section-table-policies table.dataTable tbody > tr.selected, body #section-table-policies table.dataTable tbody > tr > .selected {
+  background-color: #e1e2e8; }
+
+body #section-table-devices table.dataTable tbody tr.selected, body #section-table-devices table.dataTable tbody th.selected, body #section-table-devices table.dataTable tbody td.selected, body #section-table-groups table.dataTable tbody tr.selected, body #section-table-groups table.dataTable tbody th.selected, body #section-table-groups table.dataTable tbody td.selected, body #section-table-policies table.dataTable tbody tr.selected, body #section-table-policies table.dataTable tbody th.selected, body #section-table-policies table.dataTable tbody td.selected {
+  color: #75758d;
+  border-color: #75758d; }
+  body #section-table-devices table.dataTable tbody tr.selected i, body #section-table-devices table.dataTable tbody th.selected i, body #section-table-devices table.dataTable tbody td.selected i, body #section-table-groups table.dataTable tbody tr.selected i, body #section-table-groups table.dataTable tbody th.selected i, body #section-table-groups table.dataTable tbody td.selected i, body #section-table-policies table.dataTable tbody tr.selected i, body #section-table-policies table.dataTable tbody th.selected i, body #section-table-policies table.dataTable tbody td.selected i {
+    color: #75758d; }
+
+body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-devices table.dataTable.order-column tbody > tr > .selected, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-devices table.dataTable.display tbody > tr > .selected, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-groups table.dataTable.order-column tbody > tr > .selected, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-groups table.dataTable.display tbody > tr > .selected, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-policies table.dataTable.order-column tbody > tr > .selected, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-policies table.dataTable.display tbody > tr > .selected {
+  background-color: rgba(244, 152, 0, 0); }
+
+body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  color: white;
+  border-radius: 20px;
+  border-color: #DFE3E7;
+  color: #DFE3E7;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 22px;
+  border-width: 1px;
+  font-weight: 200;
+  background-color: transparent; }
+  body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover {
+    background-color: #75758d;
+    color: white; }
+
+body #section-table-devices table.collapsed .dtr-details, body #section-table-groups table.collapsed .dtr-details, body #section-table-policies table.collapsed .dtr-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  body #section-table-devices table.collapsed .dtr-details > li, body #section-table-groups table.collapsed .dtr-details > li, body #section-table-policies table.collapsed .dtr-details > li {
+    display: flex;
+    justify-content: space-between; }
+  body #section-table-devices table.collapsed .dtr-details .dtr-title, body #section-table-groups table.collapsed .dtr-details .dtr-title, body #section-table-policies table.collapsed .dtr-details .dtr-title {
+    margin-right: 1.25rem; }
+    body #section-table-devices table.collapsed .dtr-details .dtr-title .bx, body #section-table-groups table.collapsed .dtr-details .dtr-title .bx, body #section-table-policies table.collapsed .dtr-details .dtr-title .bx {
+      margin-right: 0.50rem; }
+  body #section-table-devices table.collapsed .dtr-details .dtr-data, body #section-table-groups table.collapsed .dtr-details .dtr-data, body #section-table-policies table.collapsed .dtr-details .dtr-data {
+    margin-left: auto; }
+
+body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+  background-color: #ED6D05; }
 
 body #section-table-devices .page-actions, body #section-table-groups .page-actions, body #section-table-policies .page-actions {
   padding: 12px 24px;
