@@ -1,15 +1,3 @@
-/*================================================================================
-	Item Name: Frest HTML Admin Template
-	Version: 1.0
-	Author: PIXINVENT
-	Author URL: http://www.themeforest.net/user/pixinvent
-================================================================================
-
-NOTE:
-------
-PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
-WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
-/*CUSTOM I3 COMPONENTS*/
 /*FREST COMPONENTS STYLE OVERRIDES*/
 /*Currently overriding styles with body parent in stead of importants everywere*/
 body.dashboard-layout-1 .widget-timeline {
@@ -51,6 +39,32 @@ body .main-menu .nav-toggle .toggle-icon {
 
 body .header-navbar .dropdown-notification .dropdown-menu-header {
   background-color: #FFBF00; }
+
+body .nav.nav-tabs.nav-tabs-i3 {
+  border: none; }
+  body .nav.nav-tabs.nav-tabs-i3 .nav-item {
+    margin-right: 0px; }
+    body .nav.nav-tabs.nav-tabs-i3 .nav-item a.nav-link {
+      background-color: transparent;
+      box-shadow: none;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-top-width: 0px;
+      border-bottom-width: 3px;
+      border-bottom-color: rgba(163, 175, 189, 0.2);
+      font-size: 18px;
+      min-width: 200px;
+      border-radius: 0px;
+      font-weight: 600; }
+      body .nav.nav-tabs.nav-tabs-i3 .nav-item a.nav-link .title {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        body .nav.nav-tabs.nav-tabs-i3 .nav-item a.nav-link .title .icon {
+          margin-right: 0.50rem; }
+      body .nav.nav-tabs.nav-tabs-i3 .nav-item a.nav-link.active {
+        border-bottom-color: #ed6d05;
+        color: #475F7B; }
 
 body .activity-content {
   margin-bottom: 2.13rem; }
@@ -101,6 +115,13 @@ body input.form-control.round {
 body select.form-control.round {
   padding-left: 25px; }
 
+body .select2-dropdown {
+  border-color: #DFE3E7 !important; }
+
+body .select2-container--classic.select2-container--focus .select2-selection--multiple, body .select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: #DFE3E7 !important;
+  box-shadow: none !important; }
+
 body .has-icon-left input.form-control {
   padding-left: 2.5rem; }
 
@@ -108,68 +129,92 @@ body .form-control:focus, body .form-control:active, body .form-control.active, 
   border-color: rgba(244, 152, 0, 0.2);
   box-shadow: 0 0px 10px 0 rgba(244, 152, 0, 0.2); }
 
-body.bg-full-screen-image {
-  background: url(../../assets/images/pages/auth-bg.jpg); }
+body table.dataTable thead > tr > td.sorting_asc, body table.dataTable thead > tr > td.sorting_desc, body table.dataTable thead > tr > th.sorting_asc, body table.dataTable thead > tr > th.sorting_desc {
+  color: #ED6D05; }
+  body table.dataTable thead > tr > td.sorting_asc i, body table.dataTable thead > tr > td.sorting_desc i, body table.dataTable thead > tr > th.sorting_asc i, body table.dataTable thead > tr > th.sorting_desc i {
+    color: #ED6D05; }
 
-body #section-table-devices .card .card-header, body #section-table-groups .card .card-header, body #section-table-policies .card .card-header {
-  padding-bottom: 0px; }
+body table.dataTable tbody > tr.selected, body table.dataTable tbody > tr > .selected {
+  background-color: rgba(163, 175, 189, 0.15); }
 
-body #section-table-devices .card .heading-elements a, body #section-table-devices .card .heading-elements .heading-elements-toggle a, body #section-table-groups .card .heading-elements a, body #section-table-groups .card .heading-elements .heading-elements-toggle a, body #section-table-policies .card .heading-elements a, body #section-table-policies .card .heading-elements .heading-elements-toggle a {
-  padding-left: 1.5rem; }
+body table.dataTable tbody tr.selected, body table.dataTable tbody td.selected, body table.dataTable tbody hd.selected {
+  color: #727E8C;
+  border-color: #75758d; }
+  body table.dataTable tbody tr.selected i, body table.dataTable tbody td.selected i, body table.dataTable tbody hd.selected i {
+    color: #75758d; }
 
-body #section-table-devices .card .heading-elements .table-actions, body #section-table-groups .card .heading-elements .table-actions, body #section-table-policies .card .heading-elements .table-actions {
-  display: flex;
-  flex: 1; }
-  body #section-table-devices .card .heading-elements .table-actions > *, body #section-table-groups .card .heading-elements .table-actions > *, body #section-table-policies .card .heading-elements .table-actions > * {
-    margin-right: 10px; }
-    body #section-table-devices .card .heading-elements .table-actions > *:last-child, body #section-table-groups .card .heading-elements .table-actions > *:last-child, body #section-table-policies .card .heading-elements .table-actions > *:last-child {
-      margin-right: 0px; }
-  body #section-table-devices .card .heading-elements .table-actions .btn-refresh, body #section-table-groups .card .heading-elements .table-actions .btn-refresh, body #section-table-policies .card .heading-elements .table-actions .btn-refresh {
-    font-size: 18px; }
+body table.dataTable.table-hover tbody tr:hover {
+  background-color: rgba(163, 175, 189, 0.1); }
 
-body #section-table-devices table .device-name, body #section-table-devices table .group-name, body #section-table-devices table .policy-name, body #section-table-groups table .device-name, body #section-table-groups table .group-name, body #section-table-groups table .policy-name, body #section-table-policies table .device-name, body #section-table-policies table .group-name, body #section-table-policies table .policy-name {
-  font-weight: 600; }
-
-body #section-table-devices table .group-image, body #section-table-devices table .policy-image, body #section-table-devices table .device-image, body #section-table-groups table .group-image, body #section-table-groups table .policy-image, body #section-table-groups table .device-image, body #section-table-policies table .group-image, body #section-table-policies table .policy-image, body #section-table-policies table .device-image {
-  margin-right: 1.25rem;
-  border-radius: 100%; }
-
-body #section-table-devices table th i, body #section-table-groups table th i, body #section-table-policies table th i {
+body table.dataTable th i {
   display: inline-block;
   vertical-align: sub;
   margin-right: 6px;
   margin-left: 6px; }
+  @media (max-width: 1599.98px) {
+    body table.dataTable th i {
+      display: none; } }
 
-body #section-table-devices table td.dt-checkboxes-cell, body #section-table-groups table td.dt-checkboxes-cell, body #section-table-policies table td.dt-checkboxes-cell {
+body table.dataTable td.dt-checkboxes-cell {
   padding-right: 0px; }
 
-body #section-table-devices table td.device-group, body #section-table-groups table td.device-group, body #section-table-policies table td.device-group {
+body table.dataTable td.device-group {
   max-width: 200px; }
-  body #section-table-devices table td.device-group span:before, body #section-table-groups table td.device-group span:before, body #section-table-policies table td.device-group span:before {
+  body table.dataTable td.device-group span:before {
     content: ", ";
     display: inline-block;
     white-space: pre; }
-  body #section-table-devices table td.device-group span:first-child:before, body #section-table-groups table td.device-group span:first-child:before, body #section-table-policies table td.device-group span:first-child:before {
+  body table.dataTable td.device-group span:first-child:before {
     content: none; }
 
-body #section-table-devices table.dataTable thead > tr > th.sorting_asc, body #section-table-devices table.dataTable thead > tr > th.sorting_desc, body #section-table-devices table.dataTable thead > tr > td.sorting_asc, body #section-table-devices table.dataTable thead > tr > td.sorting_desc, body #section-table-groups table.dataTable thead > tr > th.sorting_asc, body #section-table-groups table.dataTable thead > tr > th.sorting_desc, body #section-table-groups table.dataTable thead > tr > td.sorting_asc, body #section-table-groups table.dataTable thead > tr > td.sorting_desc, body #section-table-policies table.dataTable thead > tr > th.sorting_asc, body #section-table-policies table.dataTable thead > tr > th.sorting_desc, body #section-table-policies table.dataTable thead > tr > td.sorting_asc, body #section-table-policies table.dataTable thead > tr > td.sorting_desc {
-  color: #ED6D05; }
-  body #section-table-devices table.dataTable thead > tr > th.sorting_asc i, body #section-table-devices table.dataTable thead > tr > th.sorting_desc i, body #section-table-devices table.dataTable thead > tr > td.sorting_asc i, body #section-table-devices table.dataTable thead > tr > td.sorting_desc i, body #section-table-groups table.dataTable thead > tr > th.sorting_asc i, body #section-table-groups table.dataTable thead > tr > th.sorting_desc i, body #section-table-groups table.dataTable thead > tr > td.sorting_asc i, body #section-table-groups table.dataTable thead > tr > td.sorting_desc i, body #section-table-policies table.dataTable thead > tr > th.sorting_asc i, body #section-table-policies table.dataTable thead > tr > th.sorting_desc i, body #section-table-policies table.dataTable thead > tr > td.sorting_asc i, body #section-table-policies table.dataTable thead > tr > td.sorting_desc i {
-    color: #ED6D05; }
+body table.dataTable td .table-action-wrapper {
+  display: flex;
+  justify-content: center; }
+  body table.dataTable td .table-action-wrapper .btn-table-action {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68px;
+    margin-right: 4px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: transparent; }
+    body table.dataTable td .table-action-wrapper .btn-table-action:hover {
+      background-color: white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12); }
+      body table.dataTable td .table-action-wrapper .btn-table-action:hover label {
+        color: #ED6D05; }
+      body table.dataTable td .table-action-wrapper .btn-table-action:hover i:before {
+        color: #ED6D05; }
+    body table.dataTable td .table-action-wrapper .btn-table-action:last-child {
+      margin-right: 0px; }
+    body table.dataTable td .table-action-wrapper .btn-table-action .label {
+      font-size: 10px; }
+    @media (max-width: 1599.98px) {
+      body table.dataTable td .table-action-wrapper .btn-table-action {
+        width: 50px;
+        display: block; }
+        body table.dataTable td .table-action-wrapper .btn-table-action .label {
+          display: none; } }
 
-body #section-table-devices table.dataTable tbody > tr.selected, body #section-table-devices table.dataTable tbody > tr > .selected, body #section-table-groups table.dataTable tbody > tr.selected, body #section-table-groups table.dataTable tbody > tr > .selected, body #section-table-policies table.dataTable tbody > tr.selected, body #section-table-policies table.dataTable tbody > tr > .selected {
-  background-color: #e1e2e8; }
+body table.dataTable .device-name, body table.dataTable .group-name, body table.dataTable .policy-name, body table.dataTable .apprepo-name {
+  font-weight: 600; }
 
-body #section-table-devices table.dataTable tbody tr.selected, body #section-table-devices table.dataTable tbody th.selected, body #section-table-devices table.dataTable tbody td.selected, body #section-table-groups table.dataTable tbody tr.selected, body #section-table-groups table.dataTable tbody th.selected, body #section-table-groups table.dataTable tbody td.selected, body #section-table-policies table.dataTable tbody tr.selected, body #section-table-policies table.dataTable tbody th.selected, body #section-table-policies table.dataTable tbody td.selected {
-  color: #75758d;
-  border-color: #75758d; }
-  body #section-table-devices table.dataTable tbody tr.selected i, body #section-table-devices table.dataTable tbody th.selected i, body #section-table-devices table.dataTable tbody td.selected i, body #section-table-groups table.dataTable tbody tr.selected i, body #section-table-groups table.dataTable tbody th.selected i, body #section-table-groups table.dataTable tbody td.selected i, body #section-table-policies table.dataTable tbody tr.selected i, body #section-table-policies table.dataTable tbody th.selected i, body #section-table-policies table.dataTable tbody td.selected i {
-    color: #75758d; }
+body table.dataTable .group-image, body table.dataTable .policy-image, body table.dataTable .device-image, body table.dataTable .apprepo-image {
+  margin-right: 10px; }
+  @media (max-width: 1599.98px) {
+    body table.dataTable .group-image, body table.dataTable .policy-image, body table.dataTable .device-image, body table.dataTable .apprepo-image {
+      width: 40px;
+      height: auto;
+      margin-bottom: 10px;
+      margin-top: 10px; } }
+  @media (max-width: 767.98px) {
+    body table.dataTable .group-image, body table.dataTable .policy-image, body table.dataTable .device-image, body table.dataTable .apprepo-image {
+      display: none; } }
 
-body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-devices table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-devices table.dataTable.order-column tbody > tr > .selected, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-devices table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-devices table.dataTable.display tbody > tr > .selected, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-groups table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-groups table.dataTable.order-column tbody > tr > .selected, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-groups table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-groups table.dataTable.display tbody > tr > .selected, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_1, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_2, body #section-table-policies table.dataTable.order-column tbody > tr.selected > .sorting_3, body #section-table-policies table.dataTable.order-column tbody > tr > .selected, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_1, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_2, body #section-table-policies table.dataTable.display tbody > tr.selected > .sorting_3, body #section-table-policies table.dataTable.display tbody > tr > .selected {
-  background-color: rgba(244, 152, 0, 0); }
-
-body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
+body table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
+body table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
   top: 0;
   bottom: 0;
   margin: auto;
@@ -186,33 +231,98 @@ body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[ro
   border-width: 1px;
   font-weight: 200;
   background-color: transparent; }
-  body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover {
+  body table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before:hover,
+  body table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before:hover {
     background-color: #75758d;
     color: white; }
 
-body #section-table-devices table.collapsed .dtr-details, body #section-table-groups table.collapsed .dtr-details, body #section-table-policies table.collapsed .dtr-details {
+body table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+body table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+  background-color: #ED6D05; }
+
+body table.dataTable.collapsed .dtr-details {
   display: flex;
   flex-direction: column;
   width: 100%; }
-  body #section-table-devices table.collapsed .dtr-details > li, body #section-table-groups table.collapsed .dtr-details > li, body #section-table-policies table.collapsed .dtr-details > li {
+  body table.dataTable.collapsed .dtr-details > li {
     display: flex;
     justify-content: space-between; }
-  body #section-table-devices table.collapsed .dtr-details .dtr-title, body #section-table-groups table.collapsed .dtr-details .dtr-title, body #section-table-policies table.collapsed .dtr-details .dtr-title {
+  body table.dataTable.collapsed .dtr-details .dtr-title {
     margin-right: 1.25rem; }
-    body #section-table-devices table.collapsed .dtr-details .dtr-title .bx, body #section-table-groups table.collapsed .dtr-details .dtr-title .bx, body #section-table-policies table.collapsed .dtr-details .dtr-title .bx {
+    body table.dataTable.collapsed .dtr-details .dtr-title .bx {
       margin-right: 0.50rem; }
-  body #section-table-devices table.collapsed .dtr-details .dtr-data, body #section-table-groups table.collapsed .dtr-details .dtr-data, body #section-table-policies table.collapsed .dtr-details .dtr-data {
+  body table.dataTable.collapsed .dtr-details .dtr-data {
     margin-left: auto; }
 
-body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-devices table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-groups table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, body #section-table-policies table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-  background-color: #ED6D05; }
+body #device-detail-table-apprepo td {
+  white-space: nowrap; }
+  body #device-detail-table-apprepo td.apprepo-name {
+    white-space: normal;
+    padding-left: 0px; }
+  body #device-detail-table-apprepo td.apprepo-publisher {
+    color: #A3AFBD; }
+  body #device-detail-table-apprepo td.apprepo-category {
+    color: #A3AFBD; }
+  body #device-detail-table-apprepo td.apprepo-version {
+    color: #A3AFBD; }
 
-body #section-table-devices .page-actions, body #section-table-groups .page-actions, body #section-table-policies .page-actions {
+body #section-table-devices .card .card-header,
+body #section-table-groups .card .card-header,
+body #section-table-policies .card .card-header,
+body #section-table-applications .card .card-header {
+  padding-bottom: 0px; }
+
+body #section-table-devices .card .heading-elements a, body #section-table-devices .card .heading-elements .heading-elements-toggle a,
+body #section-table-groups .card .heading-elements a,
+body #section-table-groups .card .heading-elements .heading-elements-toggle a,
+body #section-table-policies .card .heading-elements a,
+body #section-table-policies .card .heading-elements .heading-elements-toggle a,
+body #section-table-applications .card .heading-elements a,
+body #section-table-applications .card .heading-elements .heading-elements-toggle a {
+  padding-left: 1.5rem; }
+
+body #section-table-devices .card .heading-elements .table-actions,
+body #section-table-groups .card .heading-elements .table-actions,
+body #section-table-policies .card .heading-elements .table-actions,
+body #section-table-applications .card .heading-elements .table-actions {
+  display: flex;
+  flex: 1;
+  align-items: center; }
+  body #section-table-devices .card .heading-elements .table-actions > *,
+  body #section-table-groups .card .heading-elements .table-actions > *,
+  body #section-table-policies .card .heading-elements .table-actions > *,
+  body #section-table-applications .card .heading-elements .table-actions > * {
+    margin-right: 10px; }
+    body #section-table-devices .card .heading-elements .table-actions > *:last-child,
+    body #section-table-groups .card .heading-elements .table-actions > *:last-child,
+    body #section-table-policies .card .heading-elements .table-actions > *:last-child,
+    body #section-table-applications .card .heading-elements .table-actions > *:last-child {
+      margin-right: 0px; }
+  body #section-table-devices .card .heading-elements .table-actions .label,
+  body #section-table-groups .card .heading-elements .table-actions .label,
+  body #section-table-policies .card .heading-elements .table-actions .label,
+  body #section-table-applications .card .heading-elements .table-actions .label {
+    margin-left: 0.25rem;
+    text-transform: uppercase;
+    font-size: 12px; }
+  body #section-table-devices .card .heading-elements .table-actions .btn-refresh,
+  body #section-table-groups .card .heading-elements .table-actions .btn-refresh,
+  body #section-table-policies .card .heading-elements .table-actions .btn-refresh,
+  body #section-table-applications .card .heading-elements .table-actions .btn-refresh {
+    font-size: 18px; }
+
+body .page-actions {
   padding: 12px 24px;
   display: flex;
   flex: 1;
   justify-content: flex-end; }
-  body #section-table-devices .page-actions > *, body #section-table-groups .page-actions > *, body #section-table-policies .page-actions > * {
+  body .page-actions > * {
     margin-right: 12px; }
-  body #section-table-devices .page-actions:last-child, body #section-table-groups .page-actions:last-child, body #section-table-policies .page-actions:last-child {
+  body .page-actions:last-child {
     margin-right: 0px; }
+
+body.device-detail .card.widget-followers {
+  min-height: 280px; }
+
+body.bg-full-screen-image {
+  background: url(../../assets/images/pages/auth-bg.jpg); }

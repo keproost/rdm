@@ -7,7 +7,7 @@
     "bInfo": true,
     "responsive": true,  
     'columnDefs': [
-      { "orderable": false, "targets": [2, 3] },
+      { "orderable": false, "targets": [2, 3, 4] },
       {
         'targets': 0,
         'render': function (data, type, row, meta) {

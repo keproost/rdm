@@ -40,7 +40,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+<body class="vertical-layout vertical-menu-modern 2-columns  device-policies navbar-sticky footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
@@ -214,12 +214,13 @@
                             <div class="card-body">
                                 <!-- datatable start -->
                                 <div class="table-responsive">
-                                    <table id="table-policies" class="table table-hover order-column" style="width:100%">
+                                    <table id="table-policies" class="table table-hover" style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th class="pl-0"><i class='bx bx-hive'></i>Name</th>
+                                                <th class="pl-0"><i class='bx bx-lock'></i>Name</th>
                                                 <th><i class='bx bx-info-circle'></i>Description</th>
+                                                <th><i class='bx bx-info-circle'></i>Active groups</th>
                                                 <th><i class='bx bxs-bolt'></i>Actions</th>
                                             </tr>
                                         </thead>
@@ -231,8 +232,9 @@
                                                     Policy 1
                                                 </td>
                                                 <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span></td>
                                                 <td class="policy-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
+                                                    <button type="button" class="btn btn-table-action" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -242,8 +244,9 @@
                                                     Policy 2
                                                 </td>
                                                 <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
                                                 <td class="policy-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
+                                                    <button type="button" class="btn btn-table-action" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -253,8 +256,9 @@
                                                     Policy 3
                                                 </td>
                                                 <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                <td class="device-group"><span>All</span></td>
                                                 <td class="policy-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
+                                                    <button type="button" class="btn btn-table-action" data-toggle="modal" data-backdrop="false" data-target="#add-policy"><i class="bx bx-pencil"></i></button>
                                                 </td>
                                             </tr>                                                                              
                                         </tbody>

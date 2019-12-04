@@ -17,7 +17,8 @@
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
 
     <!-- END: Vendor CSS-->
 
@@ -42,7 +43,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+<body class="vertical-layout vertical-menu-modern 2-columns devices navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
@@ -174,6 +175,34 @@
             </div>
         </div>
     </div>
+    <div class="modal fade text-left" id="add-to-group" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel4">Add a device</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Enter this code into your device: 
+                    </p>
+                    <h1>24654211</h1>
+                    <p>
+                        Candy oat cake topping topping chocolate cake. Icing pudding jelly beans I love chocolate carrot
+                        cake wafer candy canes. Biscuit croissant fruitcake bonbon soufflé.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary ml-1" data-dismiss="modal">
+                        <i class="bx bx-check d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Ok, got it</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- BEGIN: Content-->
     <div class="app-content content">
@@ -197,273 +226,344 @@
                 </div>
             </div>
             <div class="content-body">
-                <section id="section-table-devices">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-header">
-                            <!-- head -->
-                            <h5 class="card-title">Your devices</h5>
-                            <!-- Single Date Picker and button -->
-                            <div class="heading-elements">
-                                <div class="table-actions">
-                                    <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
-                                    <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
-                                    <button type="button" class="btn btn-outline-light rounded btn-delete disabled"><i class="bx bx-trash"></i></button>
-                                    <button type="button" class="btn btn-outline-light rounded btn-groups disabled"><i class="bx bx-hive"></i></button>
-                                    <button type="button" class="btn btn-primary rounded btn-add"><i class="bx bx-plus" data-toggle="modal" data-backdrop="false" data-target="#add-device"></i></button>
+                <section id="device-short-stats">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card widget-followers">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-end widget-followers-heading-left">
+                                        <div class="d-flex flex-column align-items-start mr-1">
+                                            <h4 class="card-title">Activity</h4>
+                                            <small class="text-muted">Device pool</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-end widget-followers-heading-right">
+                                        <div class="d-flex flex-column align-items-end mr-1">
+                                            <i class='bx bx-caret-up text-success font-medium-1'></i>
+                                            <small class="text-muted">+62%</small>
+                                        </div>                                                
+                                        <div class="d-flex flex-column align-items-end">
+                                            <h5 class="font-weight-normal mb-0">150</h5>
+                                            <small class="text-muted">Sessions</small>
+                                        </div>                                                                                               
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div id="follower-primary-chart"></div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                         
+                        <div class="col-md-6 col-lg-3 d-flex">
+                            <div class="card text-center flex-fill">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                            <i class="bx bx-tv font-medium-5"></i>
+                                        </div>
+                                        <p class="text-muted mb-0 line-ellipsis">Devices</p>
+                                        <h2 class="mb-0">25</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <!-- datatable start -->
-                            <div class="table-responsive">
-                                <table id="table-devices" class="table table-hover order-column" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th class="pl-0"><i class='bx bx-tv'></i>Device</th>
-                                            <th><i class='bx bx-barcode'></i>Device id</th>
-                                            <th><i class='bx bx-calendar'></i>Last seen</th>
-                                            <th><i class='bx bx-target-lock'></i>Location</th>
-                                            <th><i class='bx bx-hive'></i>Group</th>
-                                            <th><i class='bx bxs-bolt'></i>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">11/04/2019</td>
-                                            <td class="device-location">Finance</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">11/02/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle ABC
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">25/01/2019</td>
-                                            <td class="device-location">Infostand</td>
-                                            <td class="device-group"><span>Management displays</span>
-                                            </td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">4/03/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">11/04/2019</td>
-                                            <td class="device-location">Finance</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">11/02/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">25/01/2019</td>
-                                            <td class="device-location">Infostand</td>
-                                            <td class="device-group"><span>Presentation displays</span>
-                                            </td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">4/03/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr> 
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">11/04/2019</td>
-                                            <td class="device-location">Finance</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">11/02/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">25/01/2019</td>
-                                            <td class="device-location">Infostand</td>
-                                            <td class="device-group"><span>Presentation displays</span>
-                                            </td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">4/03/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">11/04/2019</td>
-                                            <td class="device-location">Finance</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                    <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">11/02/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Huddle
-                                            </td>
-                                            <td class="device-internalname">I3HUDDLE25112019</td>
-                                            <td class="device-lastseen">25/01/2019</td>
-                                            <td class="device-location">Infostand</td>
-                                            <td class="device-group"><span>Presentation displays</span>
-                                            </td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>  
-                                        <tr>
-                                            <td></td>
-                                            <td class=" device-userfriendlyname text-bold-600 pl-0">
-                                                <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
-                                                Touch E
-                                            </td>
-                                            <td class="device-internalname">I3TOUCH25112017</td>
-                                            <td class="device-lastseen">4/03/2019</td>
-                                            <td class="device-location">Audiotorium</td>
-                                            <td class="device-group"><span>Presentation displays</span></td>
-                                            <td class="device-actions">
-                                                <button type="button" class="btn btn-icon btn-outline-light rounded" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
-                                            </td>
-                                        </tr>                                                                                                                                                              
-                                    </tbody>
-                                </table>
+                        <div class="col-md-6 col-lg-3 d-flex">
+                            <div class="card text-center flex-fill">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="badge-circle badge-circle-lg badge-circle-light-danger mx-auto my-1">
+                                            <i class="bx bx-hive font-medium-5"></i>
+                                        </div>
+                                        <p class="text-muted mb-0 line-ellipsis">Groups</p>
+                                        <h2 class="mb-0">5</h2>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- datatable ends -->
+                        </div>                        
+                        <div class="col-md-6 col-lg-3 d-flex">
+                            <div class="card text-center flex-fill">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="badge-circle badge-circle-lg badge-circle-light-success mx-auto my-1">
+                                            <i class="bx bx-target-lock font-medium-5"></i>
+                                        </div>
+                                        <p class="text-muted mb-0 line-ellipsis">Locations</p>
+                                        <h2 class="mb-0">3</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                                  
+                    </div>                                  
+                </section>
+
+                <section id="section-table-devices">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <!-- head -->
+                                <h5 class="card-title">Your devices</h5>
+                                <!-- Single Date Picker and button -->
+                                <div class="heading-elements">
+                                    <div class="table-actions">
+                                        <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
+                                        <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
+                                        <button type="button" class="btn btn-outline-light rounded btn-delete disabled"><i class="bx bx-trash"></i></button>
+                                        <button type="button" class="btn btn-outline-light rounded btn-groups" data-toggle="modal" data-backdrop="false" data-target="#add-device"><i class="bx bx-hive"></i></button>
+                                        <button type="button" class="btn btn-primary rounded btn-add" data-toggle="modal" data-backdrop="false" data-target="#add-device"><i class="bx bx-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- datatable start -->
+                                <div class="table-responsive">
+                                    <table id="table-devices" class="table table-hover" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="pl-0"><i class='bx bx-tv'></i>Device</th>
+                                                <th><i class='bx bx-barcode'></i>Device id</th>
+                                                <th><i class='bx bx-calendar'></i>Last seen</th>
+                                                <th><i class='bx bx-target-lock'></i>Location</th>
+                                                <th><i class='bx bx-hive'></i>Group</th>
+                                                <th><i class='bx bxs-bolt'></i>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">11/04/2019</td>
+                                                <td class="device-location">Hasselt, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">11/02/2019</td>
+                                                <td class="device-location">Leuven, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle ABC
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">25/01/2019</td>
+                                                <td class="device-location">Rome, IT</td>
+                                                <td class="device-group"><span>Management displays</span>
+                                                </td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">4/03/2019</td>
+                                                <td class="device-location">DIEST, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">11/04/2019</td>
+                                                <td class="device-location">Diest, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">11/02/2019</td>
+                                                <td class="device-location">Brussels, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">25/01/2019</td>
+                                                <td class="device-location">Brussels, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span>
+                                                </td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">4/03/2019</td>
+                                                <td class="device-location">Hasselt, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">11/04/2019</td>
+                                                <td class="device-location">Antwerp, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">11/02/2019</td>
+                                                <td class="device-location">Antwerp, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">25/01/2019</td>
+                                                <td class="device-location">Rome, IT</td>
+                                                <td class="device-group"><span>Presentation displays</span>
+                                                </td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">4/03/2019</td>
+                                                <td class="device-location">Brussels, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">11/04/2019</td>
+                                                <td class="device-location">Barcelona, ES</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">11/02/2019</td>
+                                                <td class="device-location">Amsterdam, NL</td>
+                                                <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Huddle
+                                                </td>
+                                                <td class="device-internalname">I3HUDDLE25112019</td>
+                                                <td class="device-lastseen">25/01/2019</td>
+                                                <td class="device-location">Hasselt, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span>
+                                                </td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td></td>
+                                                <td class=" device-userfriendlyname text-bold-600 pl-0">
+                                                    <img src="../../../assets/images/devices/devices-genericdeviceicon.png" alt="file" class="device-image" height="60" width="60">
+                                                    Touch E
+                                                </td>
+                                                <td class="device-internalname">I3TOUCH25112017</td>
+                                                <td class="device-lastseen">4/03/2019</td>
+                                                <td class="device-location">Antwerp, BE</td>
+                                                <td class="device-group"><span>Presentation displays</span></td>
+                                                <td class="device-actions">
+                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                </td>
+                                            </tr>                                                                                                                                                              
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- datatable ends -->
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </section>
             </div>
@@ -497,6 +597,7 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
