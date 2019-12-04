@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">    
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
 
     <!-- END: Vendor CSS-->
 
@@ -44,7 +45,6 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern 2-columns devices navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
-
     <!-- BEGIN: Header-->
     <div class="header-navbar-shadow"></div>
     <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
@@ -175,31 +175,37 @@
             </div>
         </div>
     </div>
-    <div class="modal fade text-left" id="add-to-group" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal fade text-left" id="add-to-group" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel4">Add a device</h4>
+                    <h4 class="modal-title" id="myModalLabel33">Add to group</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="bx bx-x"></i>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <p>
-                        Enter this code into your device: 
-                    </p>
-                    <h1>24654211</h1>
-                    <p>
-                        Candy oat cake topping topping chocolate cake. Icing pudding jelly beans I love chocolate carrot
-                        cake wafer candy canes. Biscuit croissant fruitcake bonbon soufflé.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary ml-1" data-dismiss="modal">
-                        <i class="bx bx-check d-block d-sm-none"></i>
-                        <span class="d-none d-sm-block">Ok, got it</span>
-                    </button>
-                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Add selected devices to: </label>
+                            <select class="select2 form-control" multiple="multiple">
+                                    <option value="group1">Presentation displays</option>
+                                    <option value="group2">Management displays</option>
+                                    <option value="group3">Guest displays</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-primary" data-dismiss="modal">
+                            <i class="bx bx-x d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Close</span>
+                        </button>
+                        <button type="button" class="btn btn-primary ml-1" data-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Save</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -309,8 +315,8 @@
                                         <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
                                         <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
                                         <button type="button" class="btn btn-outline-light rounded btn-delete disabled"><i class="bx bx-trash"></i></button>
-                                        <button type="button" class="btn btn-outline-light rounded btn-groups" data-toggle="modal" data-backdrop="false" data-target="#add-device"><i class="bx bx-hive"></i></button>
-                                        <button type="button" class="btn btn-primary rounded btn-add" data-toggle="modal" data-backdrop="false" data-target="#add-device"><i class="bx bx-plus"></i></button>
+                                        <button type="button" class="btn btn-outline-light rounded btn-groups disabled" data-toggle="modal" data-backdrop="true" data-target="#add-to-group"><i class="bx bx-hive"></i></button>
+                                        <button type="button" class="btn btn-primary rounded btn-add" data-toggle="modal" data-backdrop="true" data-target="#add-device"><i class="bx bx-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +330,6 @@
                                                 <th class="pl-0"><i class='bx bx-tv'></i>Device</th>
                                                 <th><i class='bx bx-barcode'></i>Device id</th>
                                                 <th><i class='bx bx-calendar'></i>Last seen</th>
-                                                <th><i class='bx bx-target-lock'></i>Location</th>
                                                 <th><i class='bx bx-hive'></i>Group</th>
                                                 <th><i class='bx bxs-bolt'></i>Actions</th>
                                             </tr>
@@ -338,10 +343,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">11/04/2019</td>
-                                                <td class="device-location">Hasselt, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -352,10 +358,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">11/02/2019</td>
-                                                <td class="device-location">Leuven, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -366,11 +373,12 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">25/01/2019</td>
-                                                <td class="device-location">Rome, IT</td>
                                                 <td class="device-group"><span>Management displays</span>
                                                 </td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -381,10 +389,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">4/03/2019</td>
-                                                <td class="device-location">DIEST, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -395,10 +404,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">11/04/2019</td>
-                                                <td class="device-location">Diest, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -409,10 +419,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">11/02/2019</td>
-                                                <td class="device-location">Brussels, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -423,11 +434,12 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">25/01/2019</td>
-                                                <td class="device-location">Brussels, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span>
                                                 </td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -438,10 +450,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">4/03/2019</td>
-                                                <td class="device-location">Hasselt, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr> 
                                             <tr>
@@ -452,10 +465,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">11/04/2019</td>
-                                                <td class="device-location">Antwerp, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -466,10 +480,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">11/02/2019</td>
-                                                <td class="device-location">Antwerp, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -480,11 +495,12 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">25/01/2019</td>
-                                                <td class="device-location">Rome, IT</td>
                                                 <td class="device-group"><span>Presentation displays</span>
                                                 </td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -495,10 +511,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">4/03/2019</td>
-                                                <td class="device-location">Brussels, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -509,10 +526,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">11/04/2019</td>
-                                                <td class="device-location">Barcelona, ES</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -523,10 +541,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">11/02/2019</td>
-                                                <td class="device-location">Amsterdam, NL</td>
                                                 <td class="device-group"><span>Presentation displays</span><span>Guest displays</span><span>Management displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -537,11 +556,12 @@
                                                 </td>
                                                 <td class="device-internalname">I3HUDDLE25112019</td>
                                                 <td class="device-lastseen">25/01/2019</td>
-                                                <td class="device-location">Hasselt, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span>
                                                 </td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>  
                                             <tr>
@@ -552,10 +572,11 @@
                                                 </td>
                                                 <td class="device-internalname">I3TOUCH25112017</td>
                                                 <td class="device-lastseen">4/03/2019</td>
-                                                <td class="device-location">Antwerp, BE</td>
                                                 <td class="device-group"><span>Presentation displays</span></td>
                                                 <td class="device-actions">
-                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i></button>
+                                                    <div class="table-action-wrapper">   
+                                                        <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
+                                                    </div>
                                                 </td>
                                             </tr>                                                                                                                                                              
                                         </tbody>
@@ -594,6 +615,7 @@
     <script src="../../../app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
     <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
     <script src="../../../app-assets/vendors/js/tables/datatable/responsive.bootstrap.min.js"></script>
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
@@ -606,6 +628,7 @@
     <script src="../../../app-assets/js/core/app.js"></script>
     <script src="../../../app-assets/js/scripts/components.js"></script>
     <script src="../../../app-assets/js/scripts/footer.js"></script>
+    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->

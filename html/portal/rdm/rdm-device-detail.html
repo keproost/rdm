@@ -169,17 +169,81 @@
                 <section id="device-short-stats">
                     <div class="row"> 
                         <div class="col-xl-3 col-lg-4 d-flex flex-column">
-                            <div class="card text-center bg-primary bg-lighten-1 flex-fill device-detail">
+                            <div class="card device-details flex-fill device-detail">
+                                <div class="card-content">
+                                    <div class="card-header d-flex justify-content-end">
+                                        <div class="dropdown">
+                                            <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#"><i class="bx bx-sync mr-50"></i>Refresh data</a>
+                                                <a class="dropdown-item" href="#"><i class="bx bx-trash mr-50"></i>Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="details">
+                                            <img src="/assets/images/devices/e10.png" alt="element 05"/>
+                                            <h4 class="card-title">i3TOUCH - E10</h4>
+                                            <div class="spec model">
+                                                <span class="title">Model</span>
+                                                <span class="description">I3TOUCH</span>
+                                            </div>
+                                            <div class="spec type">
+                                                <span class="title">Type</span>
+                                                <span class="description">EX</span>
+                                            </div>
+                                            <div class="spec os-version">
+                                                <span class="title">OS Version</span>
+                                                <span class="description">Android 10</span>
+                                            </div>
+                                            <div class="spec last-activity">
+                                                <span class="title">Last Activity</span>
+                                                <span class="description">10 days ago</span>
+                                            </div>                                       
+                                            <div class="spec compliance state">
+                                                <span class="title">Compliance state</span>
+                                                <span class="description">Compliant</span>
+                                            </div>                                         
+                                        </div>
+                                        <!-- <h6 class="subtitle">Available storage</h6>
+                                        <div class="device-details storage">
+                                            <div class="progress progress-bar-info progress-sm mb-0">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="24" aria-valuemin="80" aria-valuemax="100" style="width:24%;"></div>
+                                            </div>
+                                            <div class="w-25 text-right">24%</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card device-specs-actions flex-fill device-detail">
                                 <div class="card-content text-white">
                                     <div class="card-body">
-                                        <img src="/assets/images/devices/e10.png" alt="element 05" class="mb-1 w-100" height="200">
-                                        <h4 class="card-title white">i3TOUCH - E10</h4>
-                                        <div class="details text-left card-text">
-                                            <p>ID4561651651651</p>
-                                            <p>Last activity: 10.10.2019</p>
-                                            <p>945 items</p>
+                                        <h5 class="font-medium-2 font-weight-normal mb-2">Specs & Actions</h5>
+                                        <div class="details tiles">
+                                            <div class="tile tile-action tile-power">
+                                                <div class="tile-content">
+                                                    <i class="bx bx-bolt-circle"></i>
+                                                    <span class="label">Power</span>
+                                                    <span class="state">On</span>
+                                                </div>
+                                            </div>
+                                            <div class="tile tile-action">
+                                                <div class="tile-content tile-wifi">
+                                                    <i class="bx bx-wifi"></i>
+                                                    <span class="label">Wifi</span>
+                                                    <span class="state">Strong</span>
+                                                </div>
+                                            </div>
+                                            <div class="tile tile-action tile-lock locked interactive">
+                                                <div class="tile-content">
+                                                    <i class="bx bx-lock"></i>
+                                                    <span class="label">Lock</span>
+                                                    <span class="state">On</span>
+                                                </div>
+                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +254,7 @@
                                     <div class="card text-center flex-fill">
                                         <div class="card-content">
                                             <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                                <div class="badge-circle badge-circle-lg badge-circle-light-success mx-auto my-1">
                                                     <i class="bx bx-box font-medium-5"></i>
                                                 </div>
                                                 <p class="text-muted mb-0 line-ellipsis">Apps</p>
@@ -212,7 +276,35 @@
                                         </div>
                                     </div>
                                 </div>                                                                
-                            </div>                             
+                            </div>   
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card text-center flex-fill">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                                    <i class="bx bx-key font-medium-5"></i>
+                                                </div>
+                                                <p class="text-muted mb-0 line-ellipsis">Policies</p>
+                                                <h2 class="mb-0">5</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card text-center flex-fill">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                                    <i class="bx bx-hive ox font-medium-5"></i>
+                                                </div>
+                                                <p class="text-muted mb-0 line-ellipsis">Groups</p>
+                                                <h2 class="mb-0">5</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                            </div>                                                         
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card widget-followers">
@@ -279,7 +371,22 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>                           
+                            </div>   
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body p-0">
+                                        <div class="d-lg-flex justify-content-between">
+                                            <div class="widget-card-details d-flex flex-column justify-content-between p-2">
+                                                <div>
+                                                    <h5 class="font-medium-2 font-weight-normal">Battery state</h5>
+                                                    <p class="text-muted">This device is plugged into the power network.</p>
+                                                </div>
+                                            </div>
+                                            <div id="radial-chart-primary"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
                         </div>                        
                         <div class="col-xl-3 col-lg-12 col-md-12 d-flex">
                            <div class="card flex-fill">
@@ -360,7 +467,7 @@
                                                 <a class="btn btn-outline-light rounded btn-expand" data-action="expand"><i class="bx bx-fullscreen"></i></a>
                                                 <a class="btn btn-outline-light rounded btn-refresh" data-action="reload"><i class="bx bx-sync"></i></a>
                                                 <a class="btn btn-outline-light rounded disabled"><i class="bx bx-stop"></i><span class="label">Stop</span></a>
-                                                <a class="btn btn-outline-light rounded disabled"><i class="bx bx-pencil"></i><span class="label">Edit</span></a>
+                                                <a class="btn btn-outline-light rounded disabled"><i class="bx bxs-edit"></i><span class="label">Edit</span></a>
                                                 <a class="btn btn-primary rounded disabled"><i class="bx bx-download"></i><span class="label">Install</span></a>
                                             </div>
                                         </div>
@@ -372,13 +479,13 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th><i class='bx bx-lock'></i>Name</th>
-                                                        <th><i class='bx bxs-bolt'></i>Category</th>
-                                                        <th><i class='bx bxs-bolt'></i>Presence</th>
-                                                        <th><i class='bx bxs-bolt'></i>Status</th>
-                                                        <th><i class='bx bx-info-circle'></i>Version</th>
-                                                        <th><i class='bx bx-info-circle'></i>Publisher</th>
-                                                        <th><i class='bx bxs-bolt'></i>Action</th>
+                                                        <th class="apprepo-name"><i class='bx bxs-cube-alt'></i>Name</th>
+                                                        <th class="apprepo-installation"><i class='bx bxs-purchase-tag'></i>Category</th>
+                                                        <th class="apprepo-presence"><i class='bx bxs-download'></i>Presence</th>
+                                                        <th class="apprepo-status"><i class='bx bx-check-circle'></i>Status</th>
+                                                        <th class="apprepo-version"><i class='bx bx-info-circle'></i>Version</th>
+                                                        <th class="apprepo-publisher"><i class='bx bx-info-circle'></i>Publisher</th>
+                                                        <th class="apprepo-action"><i class='bx bxs-bolt'></i>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -390,7 +497,7 @@
                                                         </td>
                                                         <td class="apprepo-category">Communication</td>
                                                         <td class="apprepo-installation"><span class="badge badge-light-warning">Uninstalled</span></td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-warning">No status</span></td>
+                                                        <td class="apprepo-status"><span class="badge badge-light-warning">No status</span></td>
                                                         <td class="apprepo-version">2.5</td>
                                                         <td class="apprepo-publisher">I3 Technologies</td>
                                                         <td class="apprepo-action">
@@ -412,6 +519,7 @@
                                                         <td class="apprepo-publisher">I3 Technologies</td>
                                                         <td class="apprepo-action">
                                                             <div class="table-action-wrapper">  
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                                 <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-stop"></i><span class="label">Stop</span></button>
                                                             </div>
                                                         </td>
@@ -429,6 +537,7 @@
                                                         <td class="apprepo-publisher">Apple</td>
                                                         <td class="apprepo-action">
                                                             <div class="table-action-wrapper">   
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                             </div>
                                                         </td>
                                                     </tr>   
@@ -445,6 +554,7 @@
                                                         <td class="apprepo-publisher">Apple</td>
                                                         <td class="apprepo-action">
                                                             <div class="table-action-wrapper">   
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                             </div> 
                                                         </td>                                                   
                                                     </tr>  
@@ -461,6 +571,7 @@
                                                         <td class="apprepo-publisher">Apple</td>
                                                         <td class="apprepo-action">
                                                             <div class="table-action-wrapper">   
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                             </div> 
                                                         </td>                                                   
                                                     </tr>   
@@ -477,6 +588,7 @@
                                                         <td class="apprepo-publisher">Apple</td>
                                                         <td class="apprepo-action">
                                                             <div class="table-action-wrapper">   
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                             </div>    
                                                         </td>                                                
                                                     </tr> 
@@ -494,6 +606,7 @@
                                                         <td class="apprepo-publisher">I3 Technologies</td>
                                                         <td class="apprepo-action">
                                                            <div class="table-action-wrapper">   
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
                                                                 <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-stop"></i><span class="label">Stop</span></button>
                                                             </div>                                                         
                                                         </td>
@@ -511,7 +624,7 @@
                                                         <td class="apprepo-publisher">Apple</td>
                                                         <td class="apprepo-action">
                                                            <div class="table-action-wrapper">   
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-pencil"></i><span class="label">Edit</span></button>
+                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bxs-edit"></i><span class="label">Edit</span></button>
                                                             </div>   
                                                         </td>                                                    
                                                     </tr>                                                                                                                                                                                                                                                                                                 

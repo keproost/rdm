@@ -1,4 +1,4 @@
-
+//Tables
 (function (window, document, $) {
   var tablegroups = $('#table-groups').DataTable({
     "searching": true,

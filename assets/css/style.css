@@ -169,20 +169,23 @@ body table.dataTable td.device-group {
 
 body table.dataTable td .table-action-wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: flex-start; }
   body table.dataTable td .table-action-wrapper .btn-table-action {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 68px;
     margin-right: 4px;
     font-weight: 600;
     border-radius: 4px;
-    background-color: transparent; }
+    background-color: transparent;
+    opacity: 0.65; }
     body table.dataTable td .table-action-wrapper .btn-table-action:hover {
       background-color: white;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12); }
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+      opacity: 1; }
       body table.dataTable td .table-action-wrapper .btn-table-action:hover label {
         color: #ED6D05; }
       body table.dataTable td .table-action-wrapper .btn-table-action:hover i:before {
@@ -254,6 +257,120 @@ body table.dataTable.collapsed .dtr-details {
   body table.dataTable.collapsed .dtr-details .dtr-data {
     margin-left: auto; }
 
+body .card.device-details {
+  background-color: #FFFFFF;
+  position: relative; }
+  body .card.device-details .card-header {
+    position: absolute;
+    left: 0;
+    right: 0; }
+    body .card.device-details .card-header .dropdown-menu {
+      left: -10px !important; }
+  body .card.device-details:before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    bottom: -7px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #ED6D05;
+    transform: rotate(225deg); }
+  body .card.device-details img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px; }
+  body .card.device-details .card-title {
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(89, 111, 136, 0.1);
+    font-weight: 600; }
+    body .card.device-details .card-title:before {
+      content: "";
+      background-color: #F49800;
+      height: 23px;
+      width: 5px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: sub; }
+  body .card.device-details .details {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    padding-left: 24px;
+    padding-right: 24px; }
+    body .card.device-details .details .spec {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      body .card.device-details .details .spec .title {
+        font-weight: 600; }
+      body .card.device-details .details .spec .description {
+        justify-self: flex-end;
+        color: #A3AFBD; }
+
+body .card.device-specs-actions .details {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  padding-left: 24px;
+  padding-right: 24px; }
+  body .card.device-specs-actions .details.tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px; }
+    body .card.device-specs-actions .details.tiles .tile {
+      display: flex;
+      flex: 33.333%;
+      padding: 4px; }
+      body .card.device-specs-actions .details.tiles .tile.interactive {
+        cursor: pointer; }
+        body .card.device-specs-actions .details.tiles .tile.interactive:hover .tile-content {
+          background-color: #7E8FA3; }
+          body .card.device-specs-actions .details.tiles .tile.interactive:hover .tile-content .label, body .card.device-specs-actions .details.tiles .tile.interactive:hover .tile-content .state, body .card.device-specs-actions .details.tiles .tile.interactive:hover .tile-content i:before {
+            color: #FFFFFF; }
+      body .card.device-specs-actions .details.tiles .tile.tile-lock.unlocked .tile-content {
+        background-color: rgba(57, 218, 138, 0.2); }
+        body .card.device-specs-actions .details.tiles .tile.tile-lock.unlocked .tile-content .label, body .card.device-specs-actions .details.tiles .tile.tile-lock.unlocked .tile-content .state, body .card.device-specs-actions .details.tiles .tile.tile-lock.unlocked .tile-content i:before {
+          color: #39DA8A; }
+      body .card.device-specs-actions .details.tiles .tile.tile-lock.locked .tile-content {
+        background-color: rgba(255, 91, 92, 0.2); }
+        body .card.device-specs-actions .details.tiles .tile.tile-lock.locked .tile-content .label, body .card.device-specs-actions .details.tiles .tile.tile-lock.locked .tile-content .state, body .card.device-specs-actions .details.tiles .tile.tile-lock.locked .tile-content i:before {
+          color: #FF5B5C; }
+      body .card.device-specs-actions .details.tiles .tile .tile-content {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(163, 175, 189, 0.1);
+        border-radius: 6px;
+        color: #7E8FA3;
+        flex: 50%;
+        padding: 10px;
+        justify-content: center;
+        text-align: center; }
+        body .card.device-specs-actions .details.tiles .tile .tile-content .label {
+          font-weight: 600; }
+        body .card.device-specs-actions .details.tiles .tile .tile-content .label, body .card.device-specs-actions .details.tiles .tile .tile-content .state {
+          text-transform: uppercase;
+          font-size: 12px; }
+      body .card.device-specs-actions .details.tiles .tile i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem; }
+      body .card.device-specs-actions .details.tiles .tile:last-child {
+        margin-right: 0px; }
+
+body #device-detail-table-apprepo th.apprepo-name {
+  padding-left: 0px; }
+
 body #device-detail-table-apprepo td {
   white-space: nowrap; }
   body #device-detail-table-apprepo td.apprepo-name {
@@ -320,9 +437,6 @@ body .page-actions {
     margin-right: 12px; }
   body .page-actions:last-child {
     margin-right: 0px; }
-
-body.device-detail .card.widget-followers {
-  min-height: 280px; }
 
 body.bg-full-screen-image {
   background: url(../../assets/images/pages/auth-bg.jpg); }

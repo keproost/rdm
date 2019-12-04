@@ -1,4 +1,4 @@
-
+//Tables
 (function (window, document, $) {
 
   var devicedetailtablepolicies = $('#device-detail-table-policies').DataTable({
@@ -66,7 +66,6 @@
 })(window, document, jQuery);
 
 //Statistics
-  // Dashboard
 (function(window, undefined) {
     'use strict';
   
@@ -79,6 +78,7 @@
     var $primary40 = '#fdd55c';
     var $primary20 = '#ffe495';
     var $primary10 = '#fff0c5';
+    var $secondary = '#F49800';
     var $success = '#39DA8A';
     var $danger = '#FF5B5C';
     var $warning = '#FDAC41';
@@ -148,7 +148,7 @@
           show: false
         }
       },
-      colors: [$primary],
+      colors: [$secondary],
       dataLabels: {
         enabled: false,
       },
@@ -235,6 +235,47 @@
         });
     }
 
+  // Radial Followers Chart - Primary
+  // --------------------------------
+  var radialPrimaryoptions = {
+    chart: {
+      height: 250,
+      type: "radialBar"
+    },
+    series: [100],
+    colors: [$info],
+    plotOptions: {
+      radialBar: {
+        offsetY: -10,
+        size: 70,
+        hollow: {
+          size: "70%"
+        },
+        dataLabels: {
+          showOn: "always",
+          name: {
+            show: false
+          },
+          value: {
+            colors: [$label_color],
+            fontSize: "20px",
+            show: true,
+            offsetY: 8,
+            fontFamily: "Rubik"
+          }
+        }
+      }
+    },
+    stroke: {
+      lineCap: "round",
+    }
+  };
+  var radialPrimaryChart = new ApexCharts(
+    document.querySelector("#radial-chart-primary"),
+    radialPrimaryoptions
+  );
+
+  radialPrimaryChart.render();
 
 
   });

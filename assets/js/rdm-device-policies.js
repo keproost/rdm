@@ -1,4 +1,4 @@
-
+//Tables
 (function (window, document, $) {
   var tablepolicies = $('#table-policies').DataTable({
     "searching": true,

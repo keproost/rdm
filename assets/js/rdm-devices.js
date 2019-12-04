@@ -1,4 +1,4 @@
-//DATATABLE
+//TABLES
 (function (window, document, $) {
   var tabledevices = $('#table-devices').DataTable({
     "searching": true,
@@ -9,7 +9,7 @@
     'columnDefs': [
       { 
         "orderable": false, 
-        "targets": [6, 5], 
+        "targets": [4, 5], 
       },
       { "responsivePriority": 1, targets: 0 },
       { "responsivePriority": 1, targets: -1},
@@ -40,6 +40,7 @@
 
 })(window, document, jQuery);
 
+//Statistics
 $(document).ready(function () {
 
   var $primary = '#ED6D05';
