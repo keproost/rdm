@@ -71,6 +71,6 @@
   transition: width .25s,opacity .25s,transform .25s;
   top: 0; }
 
-@media (max-width: 1599.98px) {
+@media (max-width: 1199.98px) {
   .horizontal-layout.vertical-overlay-menu .app-content .content-wrapper {
     margin-top: 3.5rem; } }

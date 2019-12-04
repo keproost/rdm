@@ -76,6 +76,18 @@ body {
 			background-color: $tertiary;
 		}
 	}
+	.header-navbar.fixed-top {
+		@include media-breakpoint-down(lgx) {
+			left: 0px;
+		}
+	}
+
+	//CARDS
+
+	.card {
+		border-radius: 6px;
+		margin-bottom: $grid-gutter-width;
+	}
 
 	//NAV TABS
 	.nav {
@@ -213,6 +225,19 @@ body {
 		border-color: #DFE3E7 !important;
 		box-shadow: none !important;
 	}
+	.select2-container--classic.select2-container--open .select2-selection--single, .select2-container--default.select2-container--open .select2-selection--single {
+		border-color: #DFE3E7 !important;
+		box-shadow: none !important;
+	}
+	.select2-container--focus, .select2-container--active, .select2-container--visited {
+		border-color: #DFE3E7 !important;
+		box-shadow: none !important;	
+	}
+	.select2-container--classic .select2-selection--single:focus, .select2-container--default .select2-selection--single:focus {
+		border-color: #DFE3E7 !important;
+		box-shadow: none !important;
+		outline: 0 !important;
+	}
 	.has-icon-left {
 		input {
 			&.form-control {
@@ -249,7 +274,7 @@ body {
 				}
 
 			}
-			tr, td, hd {
+			tr, td{
 				&.selected {
 					color: #727E8C;
 					border-color: #75758d;
@@ -469,6 +494,11 @@ body {
 				border-bottom-color: rgba($white, 0.1);
 				padding-left: 24px;
 				padding-right: 24px;
+				@include media-breakpoint-only(xl) {
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+
 				.spec {
 					flex: 1;
 					display: flex;
@@ -569,6 +599,7 @@ body {
 
 	#device-detail-table-apprepo {
 		th {
+			white-space: nowrap;
 			&.apprepo-name {
 				padding-left: 0px;
 			}	
@@ -643,10 +674,232 @@ body {
 	// PAGE SPECIFIC
 	////DEVICE DETAIL
 	&.device-detail {
-	.card.widget-followers {
-		// min-height: 280px;
+		.card.card-widget-timeline {
+			overflow: hidden;
+			.widget-timeline {
+				height: 340px;
+	
+			// 	@include media-breakpoint-down(lgx) {
+			// 		height: 140px;					
+			// 	}
+			}
+		}
+		.card.widget-followers {
+			// min-height: 280px;
+		}
+
+
 	}
+	&.file-manager-application.app-manager-application {
+		.content-area-wrapper {
+			@include media-breakpoint-down(lg) {
+				margin-left: 0px !important;
+				margin-right: 0px !important;
+			}
+			.sidebar-left.show .app-file-sidebar-left  {
+				transform:translateX(0) translateY(-1px) !important;
+			}
+			.app-file-sidebar-info {
+				width: 420px;
+				display: flex;
+				.card {
+					display: flex;
+					flex: 1;
+					padding-bottom: 0px;
+					box-shadow: none;
+					border-radius: none;
+					margin-bottom: 0px;
+					.card-content, .tab-content, .card-body {
+						display: flex;
+						flex-direction: column;
+						flex: 1;
+					}
+					.tab-pane.active {
+						display: flex;
+						flex-direction: column;
+						flex: 1;
+					}
+					.nav-tabs.nav-tabs-i3-sidebar  {
+						display: flex; 
+						justify-content: space-evenly;
+						margin-bottom: 0px;
+						.nav-item {
+							border-right-style: solid; 
+							border-right-width: 1px;
+							border-right-color: $gray-60;
+							margin: 0px;
+							padding: 0px;
+							justify-content: center;
+							display: flex; 
+							height: 42px;
+							flex: 1;
+							.nav-link {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								flex: 1;
+								border-radius: 0px;
+								text-transform: uppercase;
+								font-size: 12px;
+								color: $gray-200 !important;
+								&.active {
+									color: $gray-700 !important;
+									font-weight: 600;
+									i:before {
+										color: $primary;
+									}
+								}
+							}
+							&:last-child {
+								border-right-style: none;
+							}
+
+						}
+					}
+					.card-header {		
+						background-color: $primary;			
+						.title {
+							font-size: 18px;
+							color: $white;	
+							i {
+								display: inline-block;
+								vertical-align: sub;
+								margin-right: 12px;
+								opacity: 0.20;
+								font-size: 1.8rem;
+							}
+						}
+						.app-file-action-icons {
+							.sidebar-action {
+								opacity: 0.5;
+								color: $white;	
+								&:hover {
+									opacity: 1;
+								}
+							}
+						}
+					}
+					.detail-header {				
+						display: flex;
+						flex-direction: column;
+						.app-image {
+							margin: 24px 0px 14px 0px;
+							display: block;
+							margin-left: auto; 
+							margin-right: auto;
+							width: 96px;
+							height: 96px;
+						}
+						.app-file-details{
+							display: flex; 
+							flex-direction: column;
+							flex: 1;
+							align-items: center;
+							.app-file-name {
+								font-weight: 600;
+								font-size: 18px;
+							}	
+							.app-file-publisher {
+								text-transform: uppercase;
+								color: $gray-80;
+								font-size: 14px;
+							}			
+						}
+						.app-file-details-small {
+							flex-direction: row;
+							display: flex;
+							justify-content: space-between;
+							padding: 0 36px;
+							padding-bottom: 12px;
+							.app-file-size, .app-file-version {
+								color: $gray-80 !important;
+								font-size: 12px;
+							}	
+						}
+					}
+					.card-body {
+						background-color: rgba($gray-100, 0.1);
+					}
+				}
+				&.show {
+					transform:translateX(0) translateY(-1px) !important;
+					right: 0;
+				}
+			}
+		}
+		.app-grid {
+			> [class*="col"] {
+				display: flex;
+				.card {
+					flex: 1 1 auto !important
+				}
+			}
+		}
+		.card {
+			&.app-file-info {
+				border-style: none;
+				box-shadow: 0px 3px 8px 0 rgba(25, 42, 70, 0.13);
+				transition: box-shadow ease-in 0.25s;
+				&:hover {
+					box-shadow: -2px 3px 8px 0 rgba(25, 42, 70, 0.18);
+				}
+				.app-file-content-logo {
+					// background-color: $gray-40 !important;
+					background-color: $white;
+				}
+				.app-file-details {
+					.details-header {
+						padding-left: 6px;
+						padding-right: 6px;
+						.app-file-name {
+							color: $primary;
+							i {
+								display: inline-block;
+								vertical-align: text-bottom;
+								margin-right: 4px;
+							}
+						}
+						.app-file-size, .app-file-version {
+							color: $gray-80 !important;
+							font-size: 12px;
+						}
+						.app-file-publisher {
+							text-transform: uppercase;
+							color: $gray-80;
+							font-size: 12px;
+							font-weight: normal;
+							margin-left: 24px;
+						}
+					}
+					.details-body {
+						padding: 6px;
+						border-top: solid 1px $gray-20;
+						margin-top: 12px;
+						text-align: right;
+						.app-file-category {
+							text-transform: uppercase;
+							color: $gray-80;
+							font-weight: normal;
+							font-size: 12px;
+						}
+					}
+				}
+				.card-footer {
+					padding: 12px;
+					padding-top: 0px;
+					.app-file-last-access {
+						font-size: 12px;
+						color: $gray-60;	
+						margin-bottom: 4px;
+						&:last-child {
+							margin-bottom: 0px;
+						}					
+					}
+				}
+			}
+		}
 	}
+
 	///AUTENTICATION PAGES
 	&.bg-full-screen-image {
 		background: url(../../assets/images/pages/auth-bg.jpg);

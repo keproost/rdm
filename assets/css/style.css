@@ -40,6 +40,14 @@ body .main-menu .nav-toggle .toggle-icon {
 body .header-navbar .dropdown-notification .dropdown-menu-header {
   background-color: #FFBF00; }
 
+@media (max-width: 1599.98px) {
+  body .header-navbar.fixed-top {
+    left: 0px; } }
+
+body .card {
+  border-radius: 6px;
+  margin-bottom: 24px; }
+
 body .nav.nav-tabs.nav-tabs-i3 {
   border: none; }
   body .nav.nav-tabs.nav-tabs-i3 .nav-item {
@@ -122,6 +130,19 @@ body .select2-container--classic.select2-container--focus .select2-selection--mu
   border-color: #DFE3E7 !important;
   box-shadow: none !important; }
 
+body .select2-container--classic.select2-container--open .select2-selection--single, body .select2-container--default.select2-container--open .select2-selection--single {
+  border-color: #DFE3E7 !important;
+  box-shadow: none !important; }
+
+body .select2-container--focus, body .select2-container--active, body .select2-container--visited {
+  border-color: #DFE3E7 !important;
+  box-shadow: none !important; }
+
+body .select2-container--classic .select2-selection--single:focus, body .select2-container--default .select2-selection--single:focus {
+  border-color: #DFE3E7 !important;
+  box-shadow: none !important;
+  outline: 0 !important; }
+
 body .has-icon-left input.form-control {
   padding-left: 2.5rem; }
 
@@ -137,10 +158,10 @@ body table.dataTable thead > tr > td.sorting_asc, body table.dataTable thead > t
 body table.dataTable tbody > tr.selected, body table.dataTable tbody > tr > .selected {
   background-color: rgba(163, 175, 189, 0.15); }
 
-body table.dataTable tbody tr.selected, body table.dataTable tbody td.selected, body table.dataTable tbody hd.selected {
+body table.dataTable tbody tr.selected, body table.dataTable tbody td.selected {
   color: #727E8C;
   border-color: #75758d; }
-  body table.dataTable tbody tr.selected i, body table.dataTable tbody td.selected i, body table.dataTable tbody hd.selected i {
+  body table.dataTable tbody tr.selected i, body table.dataTable tbody td.selected i {
     color: #75758d; }
 
 body table.dataTable.table-hover tbody tr:hover {
@@ -151,7 +172,7 @@ body table.dataTable th i {
   vertical-align: sub;
   margin-right: 6px;
   margin-left: 6px; }
-  @media (max-width: 1599.98px) {
+  @media (max-width: 1199.98px) {
     body table.dataTable th i {
       display: none; } }
 
@@ -194,7 +215,7 @@ body table.dataTable td .table-action-wrapper {
       margin-right: 0px; }
     body table.dataTable td .table-action-wrapper .btn-table-action .label {
       font-size: 10px; }
-    @media (max-width: 1599.98px) {
+    @media (max-width: 1199.98px) {
       body table.dataTable td .table-action-wrapper .btn-table-action {
         width: 50px;
         display: block; }
@@ -206,7 +227,7 @@ body table.dataTable .device-name, body table.dataTable .group-name, body table.
 
 body table.dataTable .group-image, body table.dataTable .policy-image, body table.dataTable .device-image, body table.dataTable .apprepo-image {
   margin-right: 10px; }
-  @media (max-width: 1599.98px) {
+  @media (max-width: 1199.98px) {
     body table.dataTable .group-image, body table.dataTable .policy-image, body table.dataTable .device-image, body table.dataTable .apprepo-image {
       width: 40px;
       height: auto;
@@ -304,6 +325,10 @@ body .card.device-details {
     border-bottom-color: rgba(255, 255, 255, 0.1);
     padding-left: 24px;
     padding-right: 24px; }
+    @media (min-width: 1600px) and (max-width: 1899.98px) {
+      body .card.device-details .details {
+        padding-left: 0px;
+        padding-right: 0px; } }
     body .card.device-details .details .spec {
       flex: 1;
       display: flex;
@@ -368,8 +393,10 @@ body .card.device-specs-actions .details {
       body .card.device-specs-actions .details.tiles .tile:last-child {
         margin-right: 0px; }
 
-body #device-detail-table-apprepo th.apprepo-name {
-  padding-left: 0px; }
+body #device-detail-table-apprepo th {
+  white-space: nowrap; }
+  body #device-detail-table-apprepo th.apprepo-name {
+    padding-left: 0px; }
 
 body #device-detail-table-apprepo td {
   white-space: nowrap; }
@@ -437,6 +464,171 @@ body .page-actions {
     margin-right: 12px; }
   body .page-actions:last-child {
     margin-right: 0px; }
+
+body.device-detail .card.card-widget-timeline {
+  overflow: hidden; }
+  body.device-detail .card.card-widget-timeline .widget-timeline {
+    height: 340px; }
+
+@media (max-width: 1199.98px) {
+  body.file-manager-application.app-manager-application .content-area-wrapper {
+    margin-left: 0px !important;
+    margin-right: 0px !important; } }
+
+body.file-manager-application.app-manager-application .content-area-wrapper .sidebar-left.show .app-file-sidebar-left {
+  transform: translateX(0) translateY(-1px) !important; }
+
+body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info {
+  width: 420px;
+  display: flex; }
+  body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card {
+    display: flex;
+    flex: 1;
+    padding-bottom: 0px;
+    box-shadow: none;
+    border-radius: none;
+    margin-bottom: 0px; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-content, body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .tab-content, body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .tab-pane.active {
+      display: flex;
+      flex-direction: column;
+      flex: 1; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 0px; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar .nav-item {
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: rgba(163, 175, 189, 0.6);
+        margin: 0px;
+        padding: 0px;
+        justify-content: center;
+        display: flex;
+        height: 42px;
+        flex: 1; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar .nav-item .nav-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          border-radius: 0px;
+          text-transform: uppercase;
+          font-size: 12px;
+          color: #828D99 !important; }
+          body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar .nav-item .nav-link.active {
+            color: #40566F !important;
+            font-weight: 600; }
+            body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar .nav-item .nav-link.active i:before {
+              color: #ED6D05; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .nav-tabs.nav-tabs-i3-sidebar .nav-item:last-child {
+          border-right-style: none; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-header {
+      background-color: #ED6D05; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-header .title {
+        font-size: 18px;
+        color: #FFFFFF; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-header .title i {
+          display: inline-block;
+          vertical-align: sub;
+          margin-right: 12px;
+          opacity: 0.20;
+          font-size: 1.8rem; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-header .app-file-action-icons .sidebar-action {
+        opacity: 0.5;
+        color: #FFFFFF; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-header .app-file-action-icons .sidebar-action:hover {
+          opacity: 1; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header {
+      display: flex;
+      flex-direction: column; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-image {
+        margin: 24px 0px 14px 0px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 96px;
+        height: 96px; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details .app-file-name {
+          font-weight: 600;
+          font-size: 18px; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details .app-file-publisher {
+          text-transform: uppercase;
+          color: rgba(163, 175, 189, 0.8);
+          font-size: 14px; }
+      body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details-small {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 36px;
+        padding-bottom: 12px; }
+        body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details-small .app-file-size, body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .detail-header .app-file-details-small .app-file-version {
+          color: rgba(163, 175, 189, 0.8) !important;
+          font-size: 12px; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-body {
+      background-color: rgba(163, 175, 189, 0.1); }
+  body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info.show {
+    transform: translateX(0) translateY(-1px) !important;
+    right: 0; }
+
+body.file-manager-application.app-manager-application .app-grid > [class*="col"] {
+  display: flex; }
+  body.file-manager-application.app-manager-application .app-grid > [class*="col"] .card {
+    flex: 1 1 auto !important; }
+
+body.file-manager-application.app-manager-application .card.app-file-info {
+  border-style: none;
+  box-shadow: 0px 3px 8px 0 rgba(25, 42, 70, 0.13);
+  transition: box-shadow ease-in 0.25s; }
+  body.file-manager-application.app-manager-application .card.app-file-info:hover {
+    box-shadow: -2px 3px 8px 0 rgba(25, 42, 70, 0.18); }
+  body.file-manager-application.app-manager-application .card.app-file-info .app-file-content-logo {
+    background-color: #FFFFFF; }
+  body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header {
+    padding-left: 6px;
+    padding-right: 6px; }
+    body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header .app-file-name {
+      color: #ED6D05; }
+      body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header .app-file-name i {
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 4px; }
+    body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header .app-file-size, body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header .app-file-version {
+      color: rgba(163, 175, 189, 0.8) !important;
+      font-size: 12px; }
+    body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-header .app-file-publisher {
+      text-transform: uppercase;
+      color: rgba(163, 175, 189, 0.8);
+      font-size: 12px;
+      font-weight: normal;
+      margin-left: 24px; }
+  body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-body {
+    padding: 6px;
+    border-top: solid 1px rgba(163, 175, 189, 0.2);
+    margin-top: 12px;
+    text-align: right; }
+    body.file-manager-application.app-manager-application .card.app-file-info .app-file-details .details-body .app-file-category {
+      text-transform: uppercase;
+      color: rgba(163, 175, 189, 0.8);
+      font-weight: normal;
+      font-size: 12px; }
+  body.file-manager-application.app-manager-application .card.app-file-info .card-footer {
+    padding: 12px;
+    padding-top: 0px; }
+    body.file-manager-application.app-manager-application .card.app-file-info .card-footer .app-file-last-access {
+      font-size: 12px;
+      color: rgba(163, 175, 189, 0.6);
+      margin-bottom: 4px; }
+      body.file-manager-application.app-manager-application .card.app-file-info .card-footer .app-file-last-access:last-child {
+        margin-bottom: 0px; }
 
 body.bg-full-screen-image {
   background: url(../../assets/images/pages/auth-bg.jpg); }

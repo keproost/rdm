@@ -202,20 +202,6 @@
   
     // Perfect Scrollbar
     //------------------
-    // Widget - User Details -Perfect Scrollbar X
-    if ($('.widget-user-details .table-responsive').length > 0) {
-      var user_details = new PerfectScrollbar('.widget-user-details .table-responsive');
-    }
-
-    // Widget - Card Overlay - Perfect Scrollbar X - on initial level
-    if ($('.widget-overlay-content .table-responsive').length > 0) {
-      var card_overlay = new PerfectScrollbar('.widget-overlay-content .tab-pane.active .table-responsive');
-    }
-
-    // Widget - Card Overlay - Perfect Scrollbar X - on active tab-pane
-    $('.widget-overlay-content a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-      var card_overlay = new PerfectScrollbar('.widget-overlay-content .tab-pane.active .table-responsive');
-    })
 
     // Widget - timeline perfect scrollbar initialization
     if ($(".widget-timeline").length > 0) {
@@ -239,7 +225,7 @@
   // --------------------------------
   var radialPrimaryoptions = {
     chart: {
-      height: 250,
+      height: 220,
       type: "radialBar"
     },
     series: [100],
@@ -247,7 +233,7 @@
     plotOptions: {
       radialBar: {
         offsetY: -10,
-        size: 70,
+        size: 50,
         hollow: {
           size: "70%"
         },

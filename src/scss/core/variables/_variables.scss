@@ -101,7 +101,7 @@ $link-hover-decoration: none;
 //
 // Set the number of columns and specify the width of the gutters.
 
-// $grid-gutter-width: 28px;
+$grid-gutter-width: 24px;
 
 // Components
 //
@@ -482,7 +482,10 @@ $grid-breakpoints: (xs: 0,
 sm: 576px,
 md: 768px,
 lg: 992px,
-xl: 1600px) !default;
+lgx: 1200px,
+xl: 1600px,
+xxl: 1900px,
+) !default;
 
 
 // Grid containers

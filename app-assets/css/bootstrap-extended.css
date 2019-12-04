@@ -156,22 +156,22 @@ pre {
 .example-container {
   width: 800px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12px;
+  padding-left: 12px;
   margin-right: auto;
   margin-left: auto; }
 
 .example-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -12px;
+  margin-left: -12px; }
 
 .example-content-main {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 12px;
+  padding-left: 12px; }
   @media (min-width: 576px) {
     .example-content-main {
       flex: 0 0 50%;
@@ -184,8 +184,8 @@ pre {
 .example-content-secondary {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 12px;
+  padding-left: 12px; }
   @media (min-width: 576px) {
     .example-content-secondary {
       flex: 0 0 50%;
@@ -592,7 +592,7 @@ label {
 select.form-control:not([multiple="multiple"]) {
   background-image: url("../../app-assets/images/pages/arrow-down.png");
   background-position: calc(100% - 12px) 13px, calc(100% - 20px) 13px, 100% 0;
-  background-size: 12px 12px, 10px 10px;
+  background-size: 12px 12px, 10px 10px;
   background-repeat: no-repeat;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1262,7 +1262,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: none; } }
 
 /* For Medium and down: iPad support for navbr */
-@media (max-width: 1599.98px) {
+@media (max-width: 1199.98px) {
   .header-navbar .navbar-container ul.nav li a.dropdown-user-link {
     padding: 0.9rem 1.23rem; }
   .header-navbar .navbar-container ul.nav li .dropdown-toggle::after {
@@ -1328,11 +1328,11 @@ input[type=number]::-webkit-outer-spin-button {
       flex-direction: row; } }
 
 /* for width of navbar in fixed-top */
-@media (max-width: 1599.98px) {
+@media (max-width: 1199.98px) {
   .header-navbar.fixed-top {
     left: 0; } }
 
-@media (max-width: 1599.98px) {
+@media (max-width: 1199.98px) {
   .header-navbar.navbar-static-top .navbar-wrapper {
     margin-left: 0; } }
 
