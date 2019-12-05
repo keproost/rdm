@@ -600,15 +600,29 @@ body {
 	#device-detail-table-apprepo {
 		th {
 			white-space: nowrap;
-			&.apprepo-name {
-				padding-left: 0px;
-			}	
 		}
 		td {
 			white-space: nowrap;
 			&.apprepo-name {
-				white-space: normal;
-				padding-left: 0px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			&.apprepo-name {
+				.title {
+					white-space: nowrap;
+					padding-left: 0px;
+					min-width: 125px;
+					max-width: 160px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.apprepo-image {
+					width: 42px;
+					height: 42px;
+				}
 			}
 			&.apprepo-publisher {
 				color: $gray-100;

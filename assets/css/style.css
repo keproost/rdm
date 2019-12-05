@@ -395,14 +395,25 @@ body .card.device-specs-actions .details {
 
 body #device-detail-table-apprepo th {
   white-space: nowrap; }
-  body #device-detail-table-apprepo th.apprepo-name {
-    padding-left: 0px; }
 
 body #device-detail-table-apprepo td {
   white-space: nowrap; }
   body #device-detail-table-apprepo td.apprepo-name {
-    white-space: normal;
-    padding-left: 0px; }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  body #device-detail-table-apprepo td.apprepo-name .title {
+    white-space: nowrap;
+    padding-left: 0px;
+    min-width: 125px;
+    max-width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle; }
+  body #device-detail-table-apprepo td.apprepo-name .apprepo-image {
+    width: 42px;
+    height: 42px; }
   body #device-detail-table-apprepo td.apprepo-publisher {
     color: #A3AFBD; }
   body #device-detail-table-apprepo td.apprepo-category {
