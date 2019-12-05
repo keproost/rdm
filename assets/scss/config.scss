@@ -1,0 +1,72 @@
+// Theme config
+@import "vendor/theme/bootstrap.scss";
+@import "vendor/theme/bootstrap-extended.scss";
+
+//// Core variables and mixins
+@import "vendor/theme/bootstrap/functions";
+@import "vendor/theme/bootstrap/mixins";
+@import "vendor/theme/bootstrap-extended/mixins";
+
+
+//// Core variables and mixins overrides
+@import "vendor/theme/core/variables/variables";
+@import "vendor/theme/bootstrap/variables";
+
+//// Overrides user variable
+@import "vendor/theme/core/variables/components-variables";
+@import "vendor/theme/core/mixins/transitions";
+// @import "vendor/theme/colors.scss";
+
+//// layouts
+@import "vendor/theme/core/layouts/content";
+@import "vendor/theme/core/layouts/sidebar";
+@import "vendor/theme/core/layouts/footer";
+
+//// menu
+@import "vendor/theme/core/menu/navigation";
+@import "vendor/theme/core/menu/menu-types/vertical-menu.scss";
+
+//// Components
+// ----------
+@import "vendor/theme/components/helper";
+@import "vendor/theme/components/avatar";
+@import "vendor/theme/components/search";
+@import "vendor/theme/components/chart";
+@import "vendor/theme/components/bootstrap-social";
+@import "vendor/theme/components/chips";
+@import "vendor/theme/components/divider";
+@import "vendor/theme/components/error";
+@import "vendor/theme/components/widget-chat";
+@import "vendor/theme/components/widget-timeline";
+
+////Plugins
+// -------
+@import "vendor/theme/plugins/ui/breakpoints";
+@import "vendor/theme/plugins/forms/tags/basic-input";
+@import "vendor/theme/plugins/forms/select2/select2";
+@import "vendor/theme/plugins/forms/validation/form-validation.scss";
+@import "vendor/theme/plugins/tables/datatables";
+@import "vendor/theme/plugins/pickers/pick-a-date";
+@import "vendor/theme/plugins/pickers/daterange";
+@import "vendor/theme/plugins/extensions/swiper";
+
+//Page config
+@import "vendor/theme/pages/app-file-manager.scss";
+@import "vendor/theme/pages/widgets.scss";
+@import "vendor/theme/pages/faq.scss";
+@import "vendor/theme/pages/page-users.scss";
+
+
+// Vendor config
+
+////Datatables
+@import "/node_modules/datatables/css/media/css/jquery.dataTables.min.css";
+@import "/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css";
+@import "/node_modules/datatables.net-responsive-bs/css/responsive.bootstrap.min.css";
+// @import "/node_modules/swiper/css/swiper.min.css";
+
+////Apex Charts
+@import "/node_modules/apexcharts/dist/apexcharts.css";
+
+////Select2
+@import "/node_modules/select2/dist/css/select2.min.css";

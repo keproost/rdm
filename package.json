@@ -12,10 +12,17 @@
   "homepage": "https://pixinvent.com/demo/frest-clean-bootstrap-admin-dashboard-template/html/ltr/vertical-menu-template/",
   "main": "gulpfile.js",
   "dependencies": {
+    "apexcharts": "^3.10.1",
     "async": "^3.1.0",
+    "datatables": "^1.10.18",
+    "datatables.net-bs4": "^1.10.20",
+    "datatables.net-responsive": "^2.2.3",
+    "datatables.net-responsive-bs": "^2.2.3",
     "gulp-cli": "^2.2.0",
     "gulp-w3c-html-validator": "^1.4.4",
     "node-notifier": "^5.4.3",
+    "select2": "^4.0.12",
+    "swiper": "^5.2.1",
     "through2": "^3.0.1"
   },
   "devDependencies": {
