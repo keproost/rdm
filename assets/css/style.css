@@ -23566,5 +23566,5 @@ body.file-manager-application.app-manager-application .card.app-file-info {
       body.file-manager-application.app-manager-application .card.app-file-info .card-footer .app-file-last-access:last-child {
         margin-bottom: 0px; }
 
-body.bg-full-screen-image {
+body.page-auth.bg-full-screen-image {
   background: url("/assets/images/backgrounds/auth-bg.jpg"); }
