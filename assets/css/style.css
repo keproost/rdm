@@ -22933,7 +22933,7 @@ body.page-app-repository .app-file-sidebar-content {
   padding-top: 4.5rem !important; }
 
 body .main-menu .navbar-header .navbar-brand .brand-logo {
-  background: url("../../app-assets/images/logo/logo-i3.png") no-repeat;
+  background: url("/assets/images/brand/logo-i3.png") no-repeat;
   background-size: contain;
   margin-left: 6px; }
 
@@ -23563,4 +23563,4 @@ body.file-manager-application.app-manager-application .card.app-file-info {
         margin-bottom: 0px; }
 
 body.bg-full-screen-image {
-  background: url(../../assets/images/pages/auth-bg.jpg); }
+  background: url(/assets/images/backgrounds/auth-bg.jpg); }
