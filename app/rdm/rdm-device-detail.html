@@ -6,32 +6,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Page template</title>
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+    <meta name="description" content="An app for remote display management by i3 technologies">
+    <meta name="keywords" content="Remote management displays">
+    <meta name="author" content="i3TECHNOLOGIES">
+    <title>Remote display management</title>
+    <link rel="apple-touch-icon" href="/_theme/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_theme/app-assets/images/ico/favicon.ico">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">     -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css"> -->
+    <!-- END: Temp Vendor CSS untill css can be included in scss and compiled-->  
+    <link rel="stylesheet" type="text/html" href="../../node_modules/datatables/css/media/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/datatables.net-responsive-bs/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/apexcharts/dist/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/select2/dist/css/select2.min.css">
     <!-- END: Vendor CSS-->
 
-    <!-- BEGIN: Theme CSS-->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css"> -->
-    <!-- END: Theme CSS-->
-
-    <!-- BEGIN: Page CSS-->
-    <!-- <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css"> -->
-    <!-- END: Page CSS-->
+    <!-- END: Temp inclusion colors.css file, doesn't get processed in scss structure, gives errors on compilation if using scss variant-->  
+    <link rel="stylesheet" type="text/css" href="/_theme/app-assets/css/colors.css">
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
@@ -44,752 +36,750 @@
 
 <body class="vertical-layout vertical-menu-modern 2-columns device-detail  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
-    <!-- BEGIN: Header-->
-    <div class="header-navbar-shadow"></div>
-    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
-        <div class="navbar-wrapper">
-            <div class="navbar-container content">
-                <div class="navbar-collapse" id="navbar-mobile">
-                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
-                        </ul>
-                        <ul class="nav navbar-nav bookmark-icons">
-                            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-faq.html" data-toggle="tooltip" data-placement="top" title="Support"><i class="ficon bx bx-support"></i></a></li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon bx bx-star warning"></i></a>
-                                <div class="bookmark-input search-input">
-                                    <div class="bookmark-input-icon"><i class="bx bx-search primary"></i></div>
-                                    <input class="form-control input" type="text" placeholder="Search..." tabindex="0" data-search="template-list">
+    <div class="app">
+        <!-- BEGIN: Header-->
+        <div class="header-navbar-shadow"></div>
+        <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+            <div class="navbar-wrapper">
+                <div class="navbar-container content">
+                    <div class="navbar-collapse" id="navbar-mobile">
+                        <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav bookmark-icons">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="rdm-faq.html" data-toggle="tooltip" data-placement="top" title="Support"><i class="ficon bx bx-support"></i></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon bx bx-star warning"></i></a>
+                                    <div class="bookmark-input search-input">
+                                        <div class="bookmark-input-icon"><i class="bx bx-search primary"></i></div>
+                                        <input class="form-control input" type="text" placeholder="Search..." tabindex="0" data-search="template-list">
+                                        <ul class="search-list"></ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="nav navbar-nav float-right">
+                            <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us mr-50"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr mr-50"></i> French</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de mr-50"></i> German</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt mr-50"></i> Portuguese</a></div>
+                            </li>
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon bx bx-fullscreen"></i></a></li>
+                            <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon bx bx-search"></i></a>
+                                <div class="search-input">
+                                    <div class="search-input-icon"><i class="bx bx-search primary"></i></div>
+                                    <input class="input" type="text" placeholder="Search..." tabindex="-1" data-search="template-list">
+                                    <div class="search-input-close"><i class="bx bx-x"></i></div>
                                     <ul class="search-list"></ul>
                                 </div>
                             </li>
+                            <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                    <div class="user-nav d-sm-flex d-none">
+                                        <span class="user-name">John Doe</span>
+                                        <span class="user-status text-muted">Online</span>
+                                    </div>
+                                    <div class="avatar mr-1">
+                                        <img src="/_theme/app-assets/images/portrait/small/avatar-s-20.jpg" alt="avtar img holder" width="35" height="35">
+                                        <span class="avatar-status-online"></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right pb-0">
+                                    <a class="dropdown-item" href="rdm-user-account.html"><i class="bx bx-user mr-50"></i> Edit Profile</a>
+                                    <div class="dropdown-divider mb-0"></div>
+                                    <a class="dropdown-item" href="rdm-dashboard.html"><i class="bx bx-power-off mr-50"></i> Logout</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <ul class="nav navbar-nav float-right">
-                        <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us mr-50"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr mr-50"></i> French</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de mr-50"></i> German</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt mr-50"></i> Portuguese</a></div>
-                        </li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon bx bx-fullscreen"></i></a></li>
-                        <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon bx bx-search"></i></a>
-                            <div class="search-input">
-                                <div class="search-input-icon"><i class="bx bx-search primary"></i></div>
-                                <input class="input" type="text" placeholder="Search..." tabindex="-1" data-search="template-list">
-                                <div class="search-input-close"><i class="bx bx-x"></i></div>
-                                <ul class="search-list"></ul>
-                            </div>
-                        </li>
-                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                <div class="user-nav d-sm-flex d-none">
-                                    <span class="user-name">John Doe</span>
-                                    <span class="user-status text-muted">Online</span>
-                                </div>
-                                <div class="avatar mr-1">
-                                    <img src="../../../app-assets/images/portrait/small/avatar-s-20.jpg" alt="avtar img holder" width="35" height="35">
-                                    <span class="avatar-status-online"></span>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right pb-0">
-                                <a class="dropdown-item" href="rdm-user-account.html"><i class="bx bx-user mr-50"></i> Edit Profile</a>
-                                <div class="dropdown-divider mb-0"></div>
-                                <a class="dropdown-item" href="rdm-dashboard.html"><i class="bx bx-power-off mr-50"></i> Logout</a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
+        </nav>
+        <!-- END: Header-->
+    
+    
+        <!-- BEGIN: Main Menu-->
+        <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mr-auto"><a class="navbar-brand" href="rdm-dashboard.html">
+                            <div class="brand-logo"></div>
+                            <h2 class="brand-text mb-0">I3 Portal</h2>
+                        </a></li>
+                    <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
+                </ul>
+            </div>
+            <div class="shadow-bottom"></div>
+            <div class="main-menu-content">
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
+                    <li class=" navigation-header"><span>Display management</span>
+                    </li>
+                    <li class=" nav-item"><a href="rdm-dashboard.html"><i class="menu-livicon" data-icon="dashboard"></i><span class="menu-title" data-i18n="Users">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-2">2</span></a>
+                    </li>                
+                    <li class=" nav-item"><a href="#"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Invoice">Devices</span></a>
+                        <ul class="menu-content">
+                                <li class=" nav-item active"><a href="rdm-devices.html"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Devices">My devices</span></a>
+                                </li>
+                                <li class=" nav-item"><a href="rdm-device-groups.html"><i class="menu-livicon" data-icon="diagram"></i><span class="menu-title" data-i18n="Groups">Groups</span></a>
+                                </li>
+                                <li class=" nav-item"><a href="rdm-device-policies.html"><i class="menu-livicon" data-icon="lock"></i><span class="menu-title" data-i18n="Policies">Policies</span></a>
+                                </li>
+                        </ul>
+                    </li>
+    
+                    <li class=" nav-item"><a href="rdm-app-repository.html"><i class="menu-livicon" data-icon="thumbnails-small"></i><span class="menu-title" data-i18n="App respository">App repository</span></a>
+                    </li>
+                    <li class=" navigation-header"><span>User management</span>
+                    <li class=" nav-item"><a href="rdm-user-list.html"><i class="menu-livicon" data-icon="users"></i><span class="menu-title" data-i18n="Users">Users</span></a>
+                    </li>                                                            
+    
+                </ul>
+            </div>
         </div>
-    </nav>
-    <!-- END: Header-->
-
-
-    <!-- BEGIN: Main Menu-->
-    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-        <div class="navbar-header">
-            <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="rdm-dashboard.html">
-                        <div class="brand-logo"></div>
-                        <h2 class="brand-text mb-0">I3 Portal</h2>
-                    </a></li>
-                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
-            </ul>
-        </div>
-        <div class="shadow-bottom"></div>
-        <div class="main-menu-content">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
-                <li class=" navigation-header"><span>Display management</span>
-                </li>
-                <li class=" nav-item"><a href="rdm-dashboard.html"><i class="menu-livicon" data-icon="dashboard"></i><span class="menu-title" data-i18n="Users">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-2">2</span></a>
-                </li>                
-                <li class=" nav-item"><a href="#"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Invoice">Devices</span></a>
-                    <ul class="menu-content">
-                            <li class=" nav-item active"><a href="rdm-devices.html"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title" data-i18n="Devices">My devices</span></a>
-                            </li>
-                            <li class=" nav-item"><a href="rdm-device-groups.html"><i class="menu-livicon" data-icon="diagram"></i><span class="menu-title" data-i18n="Groups">Groups</span></a>
-                            </li>
-                            <li class=" nav-item"><a href="rdm-device-policies.html"><i class="menu-livicon" data-icon="lock"></i><span class="menu-title" data-i18n="Policies">Policies</span></a>
-                            </li>
-                    </ul>
-                </li>
-
-                <li class=" nav-item"><a href="rdm-app-repository.html"><i class="menu-livicon" data-icon="thumbnails-small"></i><span class="menu-title" data-i18n="App respository">App repository</span></a>
-                </li>
-                <li class=" navigation-header"><span>User management</span>
-                <li class=" nav-item"><a href="rdm-user-list.html"><i class="menu-livicon" data-icon="users"></i><span class="menu-title" data-i18n="Users">Users</span></a>
-                </li>                                                            
-
-            </ul>
-        </div>
-    </div>
-    <!-- END: Main Menu-->
-
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
-        <div class="content-overlay"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-12 mb-2 mt-1">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h5 class="content-header-title float-left pr-1 mb-0">My devices</h5>
-                            <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb p-0 mb-0">
-                                    <li class="breadcrumb-item"><a href="rdm-dashboard.html"><i class="bx bx-home-alt"></i></a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Devices
-                                    </li>
-                                </ol>
+        <!-- END: Main Menu-->
+    
+        <!-- BEGIN: Content-->
+        <div class="app-content content">
+            <div class="content-overlay"></div>
+            <div class="content-wrapper">
+                <div class="content-header row">
+                    <div class="content-header-left col-12 mb-2 mt-1">
+                        <div class="row breadcrumbs-top">
+                            <div class="col-12">
+                                <h5 class="content-header-title float-left pr-1 mb-0">My devices</h5>
+                                <div class="breadcrumb-wrapper col-12">
+                                    <ol class="breadcrumb p-0 mb-0">
+                                        <li class="breadcrumb-item"><a href="rdm-dashboard.html"><i class="bx bx-home-alt"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Devices
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-body">
-                <section id="device-short-stats">
-                    <div class="row">                         
-                        <div class="col-sm-12 col-md-6 col-lg-5 col-lg-6 col-lgx-5 col-xl-3 order-lgx-first order-xl-first d-flex flex-column">
-                            <div class="card device-details flex-fill device-detail">
-                                <div class="card-content">
-                                    <div class="card-header d-flex justify-content-end">
-                                        <div class="dropdown">
-                                            <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#"><i class="bx bx-sync mr-50"></i>Refresh data</a>
-                                                <a class="dropdown-item" href="#"><i class="bx bx-trash mr-50"></i>Delete</a>
+                <div class="content-body">
+                    <section id="device-short-stats">
+                        <div class="row">                         
+                            <div class="col-sm-12 col-md-6 col-lg-5 col-lg-6 col-lgx-5 col-xl-3 order-lgx-first order-xl-first d-flex flex-column">
+                                <div class="card device-details flex-fill device-detail">
+                                    <div class="card-content">
+                                        <div class="card-header d-flex justify-content-end">
+                                            <div class="dropdown">
+                                                <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-sync mr-50"></i>Refresh data</a>
+                                                    <a class="dropdown-item" href="#"><i class="bx bx-trash mr-50"></i>Delete</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="details">
-                                            <img src="/assets/images/devices/e10.png" alt="element 05"/>
-                                            <h4 class="card-title">i3TOUCH - E10</h4>
-                                            <div class="spec model">
-                                                <span class="title">Model</span>
-                                                <span class="description">I3TOUCH</span>
+                                        <div class="card-body">
+                                            <div class="details">
+                                                <img src="/assets/images/devices/e10.png" alt="element 05"/>
+                                                <h4 class="card-title">i3TOUCH - E10</h4>
+                                                <div class="spec model">
+                                                    <span class="title">Model</span>
+                                                    <span class="description">I3TOUCH</span>
+                                                </div>
+                                                <div class="spec type">
+                                                    <span class="title">Type</span>
+                                                    <span class="description">EX</span>
+                                                </div>
+                                                <div class="spec os-version">
+                                                    <span class="title">OS Version</span>
+                                                    <span class="description">Android 10</span>
+                                                </div>
+                                                <div class="spec last-activity">
+                                                    <span class="title">Last Activity</span>
+                                                    <span class="description">10 days ago</span>
+                                                </div>                                       
+                                                <div class="spec compliance state">
+                                                    <span class="title">Compliance state</span>
+                                                    <span class="description">Compliant</span>
+                                                </div>                                         
                                             </div>
-                                            <div class="spec type">
-                                                <span class="title">Type</span>
-                                                <span class="description">EX</span>
-                                            </div>
-                                            <div class="spec os-version">
-                                                <span class="title">OS Version</span>
-                                                <span class="description">Android 10</span>
-                                            </div>
-                                            <div class="spec last-activity">
-                                                <span class="title">Last Activity</span>
-                                                <span class="description">10 days ago</span>
-                                            </div>                                       
-                                            <div class="spec compliance state">
-                                                <span class="title">Compliance state</span>
-                                                <span class="description">Compliant</span>
-                                            </div>                                         
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 col-lg-6 col-lgx-4 col-xl-3 order-lgx-2 order-xl-2 d-flex flex-column">
-                            <div class="row flex-fill">
-                                <div class="col-sm-6 col-md-6 d-flex flex-column">
-                                    <div class="card text-center flex-fill justify-content-center h-100">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-success mx-auto my-1">
-                                                    <i class="bx bx-box font-medium-5"></i>
+                            <div class="col-sm-12 col-md-6 col-lg-4 col-lg-6 col-lgx-4 col-xl-3 order-lgx-2 order-xl-2 d-flex flex-column">
+                                <div class="row flex-fill">
+                                    <div class="col-sm-6 col-md-6 d-flex flex-column">
+                                        <div class="card text-center flex-fill justify-content-center h-100">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="badge-circle badge-circle-lg badge-circle-light-success mx-auto my-1">
+                                                        <i class="bx bx-box font-medium-5"></i>
+                                                    </div>
+                                                    <p class="text-muted mb-0 line-ellipsis">Apps</p>
+                                                    <h2 class="mb-0">17</h2>
                                                 </div>
-                                                <p class="text-muted mb-0 line-ellipsis">Apps</p>
-                                                <h2 class="mb-0">17</h2>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-6 d-flex flex-column">
-                                    <div class="card text-center flex-fill justify-content-center h-100">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-danger mx-auto my-1">
-                                                    <i class="bx bx-box font-medium-5"></i>
+                                    <div class="col-sm-6 col-md-6 d-flex flex-column">
+                                        <div class="card text-center flex-fill justify-content-center h-100">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="badge-circle badge-circle-lg badge-circle-light-danger mx-auto my-1">
+                                                        <i class="bx bx-box font-medium-5"></i>
+                                                    </div>
+                                                    <p class="text-muted mb-0 line-ellipsis">Active apps</p>
+                                                    <h2 class="mb-0">5</h2>
                                                 </div>
-                                                <p class="text-muted mb-0 line-ellipsis">Active apps</p>
-                                                <h2 class="mb-0">5</h2>
+                                            </div>
+                                        </div>
+                                    </div>                                                                
+                                </div>   
+                                <div class="row flex-fill">
+                                    <div class="col-sm-6 col-md-6 d-flex flex-column">
+                                        <div class="card text-center flex-fill justify-content-center h-100">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                                        <i class="bx bx-key font-medium-5"></i>
+                                                    </div>
+                                                    <p class="text-muted mb-0 line-ellipsis">Policies</p>
+                                                    <h2 class="mb-0">5</h2>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                                                
-                            </div>   
-                            <div class="row flex-fill">
-                                <div class="col-sm-6 col-md-6 d-flex flex-column">
-                                    <div class="card text-center flex-fill justify-content-center h-100">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
-                                                    <i class="bx bx-key font-medium-5"></i>
+                                    <div class="col-sm-6 col-md-6 d-flex flex-column">
+                                        <div class="card text-center flex-fill justify-content-center h-100">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
+                                                        <i class="bx bx-hive ox font-medium-5"></i>
+                                                    </div>
+                                                    <p class="text-muted mb-0 line-ellipsis">Groups</p>
+                                                    <h2 class="mb-0">5</h2>
                                                 </div>
-                                                <p class="text-muted mb-0 line-ellipsis">Policies</p>
-                                                <h2 class="mb-0">5</h2>
                                             </div>
                                         </div>
+                                    </div>                                                                
+                                </div>                                                          
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 col-lgx-3 order-lgx-3 col-xl-3 order-xl-3 d-flex flex-column">
+                                <div class="card card-flex-column">
+                                    <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">App usage</h4>
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-6 d-flex flex-column">
-                                    <div class="card text-center flex-fill justify-content-center h-100">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="badge-circle badge-circle-lg badge-circle-light-info mx-auto my-1">
-                                                    <i class="bx bx-hive ox font-medium-5"></i>
-                                                </div>
-                                                <p class="text-muted mb-0 line-ellipsis">Groups</p>
-                                                <h2 class="mb-0">5</h2>
-                                            </div>
+                                    <div class="card-content">
+                                        <div class="card-body pb-0">
+                                            <div id="radial-chart-multi" class="d-flex flex-fill align-center justify-content-center"></div>
+    
                                         </div>
                                     </div>
-                                </div>                                                                
-                            </div>                                                          
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-lgx-3 order-lgx-3 col-xl-3 order-xl-3 d-flex flex-column">
-                            <div class="card card-flex-column">
-                                <div class="card-header border-bottom d-flex justify-content-between align-items-center">
-                                    <h4 class="card-title">App usage</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-body pb-0">
-                                        <div id="radial-chart-multi" class="d-flex flex-fill align-center justify-content-center"></div>
-
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <ul class="legend list-inline text-center">
-                                        <li> 
-                                            <span class="indicator"><i class="bullet bullet-xs bullet-primary"></i></span>
-                                            <span class="label">I3Allsync</span>
-                                        </li>
-                                        <li> 
-                                            <span class="indicator"><i class="bullet bullet-xs bullet-secondary"></i></span>
-                                            <span class="label">Annotate</span>
-                                        </li>
-                                        <li> 
-                                            <span class="indicator"><i class="bullet bullet-xs bullet-tertiary"></i></span>
-                                            <span class="label">Skype</span>
-                                        </li>
-                                        <li> 
-                                            <span class="indicator"><i class="bullet bullet-xs bullet-info"></i></span>
-                                            <span class="label">Teams</span>
-                                        </li>
-                                        <li> 
-                                            <span class="indicator"><i class="bullet bullet-xs bullet-success"></i></span>
-                                            <span class="label">Excel</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col-lg-6 col-lgx-12 col-xl-3 order-lgx-6 order-xl-4 d-flex flex-column">
-                            <div class="card flex-fill card-widget-timeline">
-                                <div class="card-header">
-                                    <h4 class="card-title">
-                                        Device Activity feed
-                                    </h4>
-                                </div>
-                                <div class="card-content d-flex flex-fill">
-                                    <div class="card-body d-flex flex-fill">
-                                        <ul class="widget-timeline flex-fill">
-                                            <li class="timeline-items timeline-icon-success active">
-                                                <div class="timeline-time">Mon 8:17pm</div>
-                                                <h6 class="timeline-title">Root admin updated</h6>
-                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Main group</a></p>
-                                                <div class="timeline-content">
-                                                    Main group update with new apps
-                                                </div>
+                                    <div class="card-footer">
+                                        <ul class="legend list-inline text-center">
+                                            <li> 
+                                                <span class="indicator"><i class="bullet bullet-xs bullet-primary"></i></span>
+                                                <span class="label">I3Allsync</span>
                                             </li>
-                                            <li class="timeline-items timeline-icon-warning active">
-                                                <div class="timeline-time">Mon 8:17pm</div>
-                                                <h6 class="timeline-title">Root admin pushed message</h6>
-                                                <p class="timeline-text">to <a href="JavaScript:void(0);">Office group</a></p>
-                                                <div class="timeline-content">
-                                                    Dear user all our devices received an update
-                                                </div>
+                                            <li> 
+                                                <span class="indicator"><i class="bullet bullet-xs bullet-secondary"></i></span>
+                                                <span class="label">Annotate</span>
                                             </li>
-                                            <li class="timeline-items timeline-icon-warning">
-                                                <div class="timeline-time">2 min ago</div>
-                                                <h6 class="timeline-title">Mathew Slick liked </h6>
-                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Project name</a></p>
-                                                <div class="timeline-content">
-                                                    The Amairates
-                                                </div>
+                                            <li> 
+                                                <span class="indicator"><i class="bullet bullet-xs bullet-tertiary"></i></span>
+                                                <span class="label">Skype</span>
+                                            </li>
+                                            <li> 
+                                                <span class="indicator"><i class="bullet bullet-xs bullet-info"></i></span>
+                                                <span class="label">Teams</span>
+                                            </li>
+                                            <li> 
+                                                <span class="indicator"><i class="bullet bullet-xs bullet-success"></i></span>
+                                                <span class="label">Excel</span>
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>     
-                        </div>  
-                        <div class="col-lgx-6 col-xl-4 order-lgx-4 order-xl-5 d-flex flex-column">
-                            <div class="card device-specs-actions flex-fill device-detail">
-                                <div class="card-content text-white">
-                                    <div class="card-body">
-                                        <h5 class="font-medium-2 font-weight-normal mb-2">Specs & Actions</h5>
-                                        <div class="details tiles">
-                                            <div class="tile tile-action tile-power">
-                                                <div class="tile-content">
-                                                    <i class="bx bx-bolt-circle"></i>
-                                                    <span class="label">Power</span>
-                                                    <span class="state">On</span>
+                                </div>   
+                            </div>
+                            <div class="col-lg-6 col-lgx-12 col-xl-3 order-lgx-6 order-xl-4 d-flex flex-column">
+                                <div class="card flex-fill card-widget-timeline">
+                                    <div class="card-header">
+                                        <h4 class="card-title">
+                                            Device Activity feed
+                                        </h4>
+                                    </div>
+                                    <div class="card-content d-flex flex-fill">
+                                        <div class="card-body d-flex flex-fill">
+                                            <ul class="widget-timeline flex-fill">
+                                                <li class="timeline-items timeline-icon-success active">
+                                                    <div class="timeline-time">Mon 8:17pm</div>
+                                                    <h6 class="timeline-title">Root admin updated</h6>
+                                                    <p class="timeline-text">on <a href="JavaScript:void(0);">Main group</a></p>
+                                                    <div class="timeline-content">
+                                                        Main group update with new apps
+                                                    </div>
+                                                </li>
+                                                <li class="timeline-items timeline-icon-warning active">
+                                                    <div class="timeline-time">Mon 8:17pm</div>
+                                                    <h6 class="timeline-title">Root admin pushed message</h6>
+                                                    <p class="timeline-text">to <a href="JavaScript:void(0);">Office group</a></p>
+                                                    <div class="timeline-content">
+                                                        Dear user all our devices received an update
+                                                    </div>
+                                                </li>
+                                                <li class="timeline-items timeline-icon-warning">
+                                                    <div class="timeline-time">2 min ago</div>
+                                                    <h6 class="timeline-title">Mathew Slick liked </h6>
+                                                    <p class="timeline-text">on <a href="JavaScript:void(0);">Project name</a></p>
+                                                    <div class="timeline-content">
+                                                        The Amairates
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>     
+                            </div>  
+                            <div class="col-lgx-6 col-xl-4 order-lgx-4 order-xl-5 d-flex flex-column">
+                                <div class="card device-specs-actions flex-fill device-detail">
+                                    <div class="card-content text-white">
+                                        <div class="card-body">
+                                            <h5 class="font-medium-2 font-weight-normal mb-2">Specs & Actions</h5>
+                                            <div class="details tiles">
+                                                <div class="tile tile-action tile-power">
+                                                    <div class="tile-content">
+                                                        <i class="bx bx-bolt-circle"></i>
+                                                        <span class="label">Power</span>
+                                                        <span class="state">On</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="tile tile-action">
-                                                <div class="tile-content tile-wifi">
-                                                    <i class="bx bx-wifi"></i>
-                                                    <span class="label">Wifi</span>
-                                                    <span class="state">Strong</span>
+                                                <div class="tile tile-action">
+                                                    <div class="tile-content tile-wifi">
+                                                        <i class="bx bx-wifi"></i>
+                                                        <span class="label">Wifi</span>
+                                                        <span class="state">Strong</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="tile tile-action tile-lock locked interactive">
-                                                <div class="tile-content">
-                                                    <i class="bx bx-lock"></i>
-                                                    <span class="label">Lock</span>
-                                                    <span class="state">On</span>
+                                                <div class="tile tile-action tile-lock locked interactive">
+                                                    <div class="tile-content">
+                                                        <i class="bx bx-lock"></i>
+                                                        <span class="label">Lock</span>
+                                                        <span class="state">On</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lgx-6 col-xl-8 order-lgx-5 order-xl-6 d-flex flex-column">
+                                <div class="card widget-followers">
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-end widget-followers-heading-left">
+                                            <div class="d-flex flex-column align-items-start mr-1">
+                                                <h4 class="card-title">Activity</h4>
+                                                <small class="text-muted">Device name</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-end widget-followers-heading-right">
+                                            <div class="d-flex flex-column align-items-end mr-1">
+                                                <i class='bx bx-caret-up text-success font-medium-1'></i>
+                                                <small class="text-muted">+62%</small>
+                                            </div>                                                
+                                            <div class="d-flex flex-column align-items-end">
+                                                <h5 class="font-weight-normal mb-0">150</h5>
+                                                <small class="text-muted">Sessions</small>
+                                            </div>                                                                                               
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <div id="follower-primary-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>                                             
+                        </div>       
+                    </section>
+                    <!-- Navigation -->
+                    <ul class="nav nav-tabs nav-justified nav-tabs-i3 mt-3 mb-3" id="myTab2" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="profile-tab-justified" data-toggle="tab" href="#applications" role="tab" aria-controls="profile-just" aria-selected="true">
+                                <div class="title">
+                                    <i class="icon bx bx-box font-medium-5"></i><span class="label">Apps</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="messages-tab-justified" data-toggle="tab" href="#policies" role="tab" aria-controls="messages-just" aria-selected="false">
+                                <div class="title">
+                                    <i class="icon bx bx-lock font-medium-5"></i><span class="label">Policies</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="settings-tab-justified" data-toggle="tab" href="#groups" role="tab" aria-controls="settings-just" aria-selected="false">
+                                <div class="title">
+                                    <i class="icon bx bx-hive font-medium-5"></i><span class="label">Groups</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-1">
+                        <div class="tab-pane active" id="applications" role="tabpanel" aria-labelledby="profile-tab-justified">
+                            <section id="section-table-applications">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Your applications</h4>
+                                            <div class="heading-elements">
+                                                <div class="table-actions">
+                                                    <a class="btn btn-outline-light rounded btn-expand" data-action="expand"><i class="bx bx-fullscreen"></i></a>
+                                                    <a class="btn btn-outline-light rounded btn-refresh" data-action="reload"><i class="bx bx-sync"></i></a>
+                                                    <a class="btn btn-outline-light rounded disabled"><i class="bx bx-stop"></i><span class="label">Stop</span></a>
+                                                    <a class="btn btn-outline-light rounded disabled"><i class="bx bxs-edit"></i><span class="label">Edit</span></a>
+                                                    <a class="btn btn-primary rounded disabled"><i class="bx bx-download"></i><span class="label">Install</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- datatable start -->
+                                            <div class="table-responsive">
+                                                <table id="device-detail-table-apprepo"  class="table table-hover" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th class="apprepo-name"><i class='bx bxs-cube-alt'></i>Name</th>
+                                                            <th class="apprepo-installation"><i class='bx bxs-purchase-tag'></i>Category</th>
+                                                            <th class="apprepo-presence"><i class='bx bxs-download'></i>Presence</th>
+                                                            <th class="apprepo-status"><i class='bx bx-check-circle'></i>Status</th>
+                                                            <th class="apprepo-version"><i class='bx bx-info-circle'></i>Version</th>
+                                                            <th class="apprepo-publisher"><i class='bx bx-info-circle'></i>Publisher</th>
+                                                            <th class="apprepo-action"><i class='bx bxs-bolt'></i>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-powerpoint.svg" alt="app">
+                                                                <div class="title">Application a</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Communication</td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-warning">Uninstalled</span></td>
+                                                            <td class="apprepo-status"><span class="badge badge-light-warning">No status</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">I3 Technologies</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-download"></i><span class="label">Install</span></button>      
+                                                                </div>
+                                                            </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-o365.svg" alt="app">
+                                                                <div class="title">Application betamax</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Communication</td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-success">Installed</span></td>
+                                                            <td class="apprepo-status"><span class="badge badge-light-danger">Running</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">I3 Technologies</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">  
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-stop"></i><span class="label">Stop</span></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-xd.svg"  alt="app">
+                                                                <div class="title">Application c</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Business</td>
+                                                            <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">Apple</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">   
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>   
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-sketch.svg"  alt="app">
+                                                                <div class="title">Application</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Business</td>
+                                                            <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">Apple</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">   
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
+                                                                </div> 
+                                                            </td>                                                   
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-insta.svg"  alt="app">
+                                                                <div class="title">Application e</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Business</td>
+                                                            <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">Apple</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">   
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
+                                                                </div> 
+                                                            </td>                                                   
+                                                        </tr>   
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="apprepo-name">
+                                                                <img class="apprepo-image" src="../../../assets/images/app-repository/app-snapchat.svg"  alt="app">
+                                                                <div class="title">Application f</div>
+                                                            </td>
+                                                            <td class="apprepo-category">Business</td>
+                                                            <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
+                                                            <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
+                                                            <td class="apprepo-version">2.5</td>
+                                                            <td class="apprepo-publisher">Apple</td>
+                                                            <td class="apprepo-action">
+                                                                <div class="table-action-wrapper">   
+                                                                    <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
+                                                                </div>    
+                                                            </td>                                                
+                                                        </tr>                                                                                                                                                                                                                                                                                                  
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- datatable ends -->                                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                        <div class="col-lgx-6 col-xl-8 order-lgx-5 order-xl-6 d-flex flex-column">
-                            <div class="card widget-followers">
-                                <div class="card-header d-flex align-items-center justify-content-between">
-                                    <div class="d-flex align-items-end widget-followers-heading-left">
-                                        <div class="d-flex flex-column align-items-start mr-1">
-                                            <h4 class="card-title">Activity</h4>
-                                            <small class="text-muted">Device name</small>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-end widget-followers-heading-right">
-                                        <div class="d-flex flex-column align-items-end mr-1">
-                                            <i class='bx bx-caret-up text-success font-medium-1'></i>
-                                            <small class="text-muted">+62%</small>
-                                        </div>                                                
-                                        <div class="d-flex flex-column align-items-end">
-                                            <h5 class="font-weight-normal mb-0">150</h5>
-                                            <small class="text-muted">Sessions</small>
-                                        </div>                                                                                               
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div id="follower-primary-chart"></div>
-                                    </div>
-                                </div>
-                            </div>   
-                        </div>                                             
-                    </div>       
-                </section>
-                <!-- Navigation -->
-                <ul class="nav nav-tabs nav-justified nav-tabs-i3 mt-3 mb-3" id="myTab2" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="profile-tab-justified" data-toggle="tab" href="#applications" role="tab" aria-controls="profile-just" aria-selected="true">
-                            <div class="title">
-                                <i class="icon bx bx-box font-medium-5"></i><span class="label">Apps</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="messages-tab-justified" data-toggle="tab" href="#policies" role="tab" aria-controls="messages-just" aria-selected="false">
-                            <div class="title">
-                                <i class="icon bx bx-lock font-medium-5"></i><span class="label">Policies</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="settings-tab-justified" data-toggle="tab" href="#groups" role="tab" aria-controls="settings-just" aria-selected="false">
-                            <div class="title">
-                                <i class="icon bx bx-hive font-medium-5"></i><span class="label">Groups</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content mt-1">
-                    <div class="tab-pane active" id="applications" role="tabpanel" aria-labelledby="profile-tab-justified">
-                        <section id="section-table-applications">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Your applications</h4>
-                                        <div class="heading-elements">
-                                            <div class="table-actions">
-                                                <a class="btn btn-outline-light rounded btn-expand" data-action="expand"><i class="bx bx-fullscreen"></i></a>
-                                                <a class="btn btn-outline-light rounded btn-refresh" data-action="reload"><i class="bx bx-sync"></i></a>
-                                                <a class="btn btn-outline-light rounded disabled"><i class="bx bx-stop"></i><span class="label">Stop</span></a>
-                                                <a class="btn btn-outline-light rounded disabled"><i class="bx bxs-edit"></i><span class="label">Edit</span></a>
-                                                <a class="btn btn-primary rounded disabled"><i class="bx bx-download"></i><span class="label">Install</span></a>
+                        <div class="tab-pane" id="policies" role="tabpanel" aria-labelledby="messages-tab-justified">
+                            <section id="section-table-policies">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Policies</h4>
+                                            <div class="heading-elements">
+                                                <div class="table-actions">
+                                                    <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
+                                                    <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- datatable start -->
-                                        <div class="table-responsive">
-                                            <table id="device-detail-table-apprepo"  class="table table-hover" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th class="apprepo-name"><i class='bx bxs-cube-alt'></i>Name</th>
-                                                        <th class="apprepo-installation"><i class='bx bxs-purchase-tag'></i>Category</th>
-                                                        <th class="apprepo-presence"><i class='bx bxs-download'></i>Presence</th>
-                                                        <th class="apprepo-status"><i class='bx bx-check-circle'></i>Status</th>
-                                                        <th class="apprepo-version"><i class='bx bx-info-circle'></i>Version</th>
-                                                        <th class="apprepo-publisher"><i class='bx bx-info-circle'></i>Publisher</th>
-                                                        <th class="apprepo-action"><i class='bx bxs-bolt'></i>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-powerpoint.svg" alt="app">
-                                                            <div class="title">Application a</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Communication</td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-warning">Uninstalled</span></td>
-                                                        <td class="apprepo-status"><span class="badge badge-light-warning">No status</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">I3 Technologies</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-download"></i><span class="label">Install</span></button>      
-                                                            </div>
-                                                        </td>
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-o365.svg" alt="app">
-                                                            <div class="title">Application betamax</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Communication</td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-success">Installed</span></td>
-                                                        <td class="apprepo-status"><span class="badge badge-light-danger">Running</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">I3 Technologies</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">  
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-stop"></i><span class="label">Stop</span></button>
-                                                            </div>
-                                                        </td>
-                                                    </tr> 
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-xd.svg"  alt="app">
-                                                            <div class="title">Application c</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Business</td>
-                                                        <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">Apple</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">   
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-sketch.svg"  alt="app">
-                                                            <div class="title">Application</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Business</td>
-                                                        <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">Apple</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">   
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
-                                                            </div> 
-                                                        </td>                                                   
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-insta.svg"  alt="app">
-                                                            <div class="title">Application e</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Business</td>
-                                                        <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">Apple</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">   
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
-                                                            </div> 
-                                                        </td>                                                   
-                                                    </tr>   
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apprepo-name">
-                                                            <img class="apprepo-image" src="../../../assets/images/app-repository/app-snapchat.svg"  alt="app">
-                                                            <div class="title">Application f</div>
-                                                        </td>
-                                                        <td class="apprepo-category">Business</td>
-                                                        <td class="apprepo-category"><span class="badge badge-light-success">Installed</span></td>
-                                                        <td class="apprepo-installation"><span class="badge badge-light-info">Idle</span></td>
-                                                        <td class="apprepo-version">2.5</td>
-                                                        <td class="apprepo-publisher">Apple</td>
-                                                        <td class="apprepo-action">
-                                                            <div class="table-action-wrapper">   
-                                                                <button type="button" class="btn btn-table-action" onclick="location.href='rdm-device-detail.html'"><i class="bx bx-x"></i><span class="label">Uninstall</span></button>
-                                                            </div>    
-                                                        </td>                                                
-                                                    </tr>                                                                                                                                                                                                                                                                                                  
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- datatable ends -->                                     
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane" id="policies" role="tabpanel" aria-labelledby="messages-tab-justified">
-                        <section id="section-table-policies">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Policies</h4>
-                                        <div class="heading-elements">
-                                            <div class="table-actions">
-                                                <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
-                                                <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
+                                        <div class="card-body">
+                                            <!-- datatable start -->
+                                            <div class="table-responsive">
+                                                <table id="device-detail-table-policies"  class="table table-hover" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th><i class='bx bx-lock'></i>Name</th>
+                                                            <th><i class='bx bx-info-circle'></i>Description</th>
+                                                            <th><i class='bx bxs-bolt'></i>Policy applied</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="policy-name">
+                                                                <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
+                                                                Policy 1
+                                                            </td>
+                                                            <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                            <td class="policy-actions">
+                                                                <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
+                                                                    <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                    <label class="custom-control-label" for="customSwitch11">
+                                                                        <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                        <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="policy-name">
+                                                                <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
+                                                                Policy 2
+                                                            </td>
+                                                            <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                            <td class="policy-actions">
+                                                                <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
+                                                                    <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                    <label class="custom-control-label" for="customSwitch11">
+                                                                        <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                        <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="policy-name">
+                                                                <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
+                                                                Policy 3
+                                                            </td>
+                                                            <td class="policy-description">This policy disables the installement of all custom apps</td>
+                                                            <td class="policy-actions">
+                                                                <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
+                                                                    <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                                                                    <label class="custom-control-label" for="customSwitch11">
+                                                                        <span class="switch-icon-left"><i class="bx bx-check"></i></span>
+                                                                        <span class="switch-icon-right"><i class="bx bx-check"></i></span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>                                                                               
+                                                    </tbody>
+                                                </table>
                                             </div>
+                                            <!-- datatable ends -->                                  
                                         </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- datatable start -->
-                                        <div class="table-responsive">
-                                            <table id="device-detail-table-policies"  class="table table-hover" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th><i class='bx bx-lock'></i>Name</th>
-                                                        <th><i class='bx bx-info-circle'></i>Description</th>
-                                                        <th><i class='bx bxs-bolt'></i>Policy applied</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="policy-name">
-                                                            <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
-                                                            Policy 1
-                                                        </td>
-                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                        <td class="policy-actions">
-                                                            <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
-                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                <label class="custom-control-label" for="customSwitch11">
-                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                </label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="policy-name">
-                                                            <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
-                                                            Policy 2
-                                                        </td>
-                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                        <td class="policy-actions">
-                                                            <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
-                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                <label class="custom-control-label" for="customSwitch11">
-                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                </label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="policy-name">
-                                                            <img src="../../../assets/images/devices/device-policy.svg" alt="file" class="policy-image" height="60" width="60">
-                                                            Policy 3
-                                                        </td>
-                                                        <td class="policy-description">This policy disables the installement of all custom apps</td>
-                                                        <td class="policy-actions">
-                                                            <div class="custom-control custom-switch custom-switch-glow mr-2 mb-1">
-                                                                <input type="checkbox" class="custom-control-input" id="customSwitch11">
-                                                                <label class="custom-control-label" for="customSwitch11">
-                                                                    <span class="switch-icon-left"><i class="bx bx-check"></i></span>
-                                                                    <span class="switch-icon-right"><i class="bx bx-check"></i></span>
-                                                                </label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>                                                                               
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- datatable ends -->                                  
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane" id="groups" role="tabpanel" aria-labelledby="settings-tab-justified">
-                        <section id="section-table-groups">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Groups</h4>
-                                        <div class="heading-elements">
-                                            <div class="table-actions">
-                                                <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
-                                                <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
+                            </section>
+                        </div>
+                        <div class="tab-pane" id="groups" role="tabpanel" aria-labelledby="settings-tab-justified">
+                            <section id="section-table-groups">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Groups</h4>
+                                            <div class="heading-elements">
+                                                <div class="table-actions">
+                                                    <a class="btn btn-outline-light rounded  btn-expand" data-action="expand"]><i class="bx bx-fullscreen"></i></a>
+                                                    <a class="btn btn-outline-light rounded  btn-refresh" data-action="reload"]><i class="bx bx-sync"></i></a>
+                                                </div>
+                                            </div>                                    
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- datatable start -->
+                                            <div class="table-responsive">
+                                                <table id="device-detail-table-groups" class="table table-hover order-column" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th><i class='bx bx-hive'></i>Name</th>
+                                                            <th><i class='bx bx-info-circle'></i>Description</th>
+                                                            <th><i class='bx bxs-bolt'></i>Added to group</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="group-name">
+                                                                <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
+                                                                Presentation
+                                                            </td>
+                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                            <td class="group-actions">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkboxdefault" checked="">
+                                                                    <label for="checkboxdefault"></label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="group-name">
+                                                                <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
+                                                                Clients
+                                                            </td>
+                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                            <td class="group-actions">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkboxdefault" checked="">
+                                                                    <label for="checkboxdefault"></label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="group-name">
+                                                                <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
+                                                                Finance
+                                                            </td>
+                                                            <td class="group-description">This group is for all devices which are used for presentation internally</td>
+                                                            <td class="group-actions">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkboxdefault" checked="">
+                                                                    <label for="checkboxdefault"></label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>                                                                              
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        </div>                                    
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- datatable start -->
-                                        <div class="table-responsive">
-                                            <table id="device-detail-table-groups" class="table table-hover order-column" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th><i class='bx bx-hive'></i>Name</th>
-                                                        <th><i class='bx bx-info-circle'></i>Description</th>
-                                                        <th><i class='bx bxs-bolt'></i>Added to group</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="group-name">
-                                                            <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
-                                                            Presentation
-                                                        </td>
-                                                        <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                        <td class="group-actions">
-                                                            <div class="checkbox">
-                                                                <input type="checkbox" id="checkboxdefault" checked="">
-                                                                <label for="checkboxdefault"></label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="group-name">
-                                                            <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
-                                                            Clients
-                                                        </td>
-                                                        <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                        <td class="group-actions">
-                                                            <div class="checkbox">
-                                                                <input type="checkbox" id="checkboxdefault" checked="">
-                                                                <label for="checkboxdefault"></label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>  
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="group-name">
-                                                            <img src="../../../assets/images/devices/device-group.svg" alt="file" class="group-image" height="60" width="60">
-                                                            Finance
-                                                        </td>
-                                                        <td class="group-description">This group is for all devices which are used for presentation internally</td>
-                                                        <td class="group-actions">
-                                                            <div class="checkbox">
-                                                                <input type="checkbox" id="checkboxdefault" checked="">
-                                                                <label for="checkboxdefault"></label>
-                                                            </div>
-                                                        </td>
-                                                    </tr>                                                                              
-                                                </tbody>
-                                            </table>
+                                            <!-- datatable ends -->      
                                         </div>
-                                        <!-- datatable ends -->      
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- END: Content-->
+    
+        <div class="sidenav-overlay"></div>
+        <div class="drag-target"></div> 
+    
+        <!-- BEGIN: Footer-->
+        <footer class="footer footer-static footer-light">
+            <p class="clearfix mb-0"><span class="float-left d-inline-block">2019 &copy; I3 TECHNOLOGIES</span><span class="float-right d-sm-inline-block d-none"><a href="#">Privacy policy</a><a href="#">Cookie policy</a></span>
+                <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+            </p>
+        </footer>
+        <!-- END: Footer-->
     </div>
-    <!-- END: Content-->
-
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div> 
-
-    <!-- BEGIN: Footer-->
-    <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-left d-inline-block">2019 &copy; I3 TECHNOLOGIES</span><span class="float-right d-sm-inline-block d-none"><a href="#">Privacy policy</a><a href="#">Cookie policy</a></span>
-            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
-        </p>
-    </footer>
-    <!-- END: Footer-->
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
-    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.select.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="../../../app-assets/vendors/js/tables/datatable/responsive.bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script>
-    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
-
-
-    <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
+    <script src="/_theme/app-assets/vendors/js/vendors.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/scripts/configs/vertical-menu-light.js"></script>
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <script src="../../../app-assets/js/scripts/components.js"></script>
-    <script src="../../../app-assets/js/scripts/footer.js"></script>
-    <script src="../../../app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <script src="/../../assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="/../../assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="/../../assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <script src="/../../assets/js/vendor/theme/scripts/configs/vertical-menu-light.js"></script>
+    <script src="/../../assets/js/vendor/theme/core/app-menu.js"></script>
+    <script src="/../../assets/js/vendor/theme/core/app.js"></script>
+    <script src="/../../assets/js/vendor/theme/scripts/components.js"></script>
+    <script src="/../../assets/js/vendor/theme/scripts/footer.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../assets/js/rdm-device-detail.js"></script>
+    <script src="../../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../node_modules/datatables-select/js/dataTables.select.js"></script>
+    <script src="../../node_modules/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+    <script src="../../node_modules/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../node_modules/datatables.net-responsive-bs/js/responsive.bootstrap.min.js"></script>
+
+    <script src="/_theme/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="/../../assets/js/vendor/theme/scripts/forms/select/form-select2.js"></script>
+
+    <script src="/../../assets/js/vendor/theme/scripts/charts/vendorfolder/apexcharts.js"></script>
+    <script src="/../../assets/js/rdm-device-detail.js"></script>
     <!-- END: Page JS-->
 
 </body>

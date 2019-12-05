@@ -4,6 +4,10 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700,900&display=swap");
 :root {
   --blue: #5A8DEE;
   --indigo: #6610f2;
@@ -23563,4 +23567,4 @@ body.file-manager-application.app-manager-application .card.app-file-info {
         margin-bottom: 0px; }
 
 body.bg-full-screen-image {
-  background: url(/assets/images/backgrounds/auth-bg.jpg); }
+  background: url("/assets/images/backgrounds/auth-bg.jpg"); }
