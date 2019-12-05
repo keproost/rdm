@@ -44,7 +44,7 @@
 - Scrumboard
 - Select2
 -------------------------------------------------------------------*/
-
+// Color palettes
 @function color-function($color, $type) {
   @if map-has-key($colors, $color) {
     $curr_color: map-get($colors, $color);
@@ -58,8 +58,7 @@
   @return null;
 }
 
-// Color palettes
-@import "palette-variables";
+
 
 // Color Classes
 //   Text color: .color .lighten-* / .darken-* / .accent-*

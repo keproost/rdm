@@ -19,7 +19,7 @@ module.exports = (gulp, callback) => {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(config.destination.css + '/pages/'));
   }
-
+  
   const scssPluginTask = function () {
     return gulp.src(config.source.sass+'/plugins/**/*.scss')
     .pipe(sass().on('error', sass.logError))
