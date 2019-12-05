@@ -17,7 +17,7 @@
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
-    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/file-uploaders/dropzone.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -32,6 +32,7 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-file-manager.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/file-uploaders/dropzone.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -145,6 +146,57 @@
     </div>
     <!-- END: Main Menu-->
 
+    <!--Modals-->
+    <div class="modal fade text-left" id="add-app" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel33">Add app</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <label>Publisher: </label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Publisher" class="form-control">
+                        </div>
+                        <label>Category</label>
+                        <div class="form-group">
+                            <input placeholder="Category" class="form-control"></input>
+                        </div>
+                        <label>Upload your application</label>
+                        <div class="form-group">
+                            <fieldset>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"></label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-primary" data-dismiss="modal">
+                            <i class="bx bx-x d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Close</span>
+                        </button>
+                        <button type="button" class="btn btn-primary ml-1" data-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <!-- BEGIN: Content-->
     <div class="app-content content">
         <div class="content-area-wrapper">
@@ -172,12 +224,6 @@
                                         </div>
                                         Favorites
                                     </a>
-                                    <!-- <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="fonticon-wrap d-inline mr-25">
-                                            <i class="livicon-evo" data-options="name: rocket.svg; size: 24px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;"></i>
-                                        </div>
-                                        Packages
-                                    </a>                                     -->
                                 </div>
                                 <label class="app-file-label">App repositories</label>
                                 <div class="list-group list-group-messages my-50">
@@ -230,29 +276,10 @@
                                     </a>
                                 </div>
                                 <!-- App File Left Sidebar - Labels Content Ends -->
-
-
                                 <div class="form-group add-new-file text-center">
                                     <!-- Add File Button -->
-                                    <label for="getFile" class="btn btn-primary btn-block glow my-2 add-file-btn text-capitalize"><i class="bx bx-plus"></i>Add app</label>
-                                    <input type="file" class="d-none" id="getFile">
+                                    <button class="btn btn-primary btn-block glow my-2 add-file-btn text-capitalize" data-toggle="modal" data-backdrop="true" data-target="#add-app"><i class="bx bx-plus"></i>Add app</button>
                                 </div>                               
-                                <!-- App File Left Sidebar - Storage Content Starts -->
-                                <!-- <label class="app-file-label mb-75">Storage Status</label>
-                                <div class="d-flex mb-1">
-                                    <div class="fonticon-wrap mr-1">
-                                        <i class="livicon-evo cursor-pointer" data-options="name: save.svg; size: 30px; style: lines; strokeColor:#475f7b; eventOn:grandparent; duration:0.85;">
-                                        </i>
-                                    </div>
-                                    <div class="file-manager-progress">
-                                        <span class="text-muted font-size-small">19.5GB used of 25GB</span>
-                                        <div class="progress progress-bar-primary progress-sm mb-0">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="80" aria-valuemax="100" style="width:80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="font-weight-bold">Upgrade Storage</a> -->
-                                <!-- App File Left Sidebar - Storage Content Ends -->
                             </div>
                         </div>
                     </div>
@@ -630,6 +657,8 @@
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../../app-assets/vendors/js/extensions/dropzone.min.js"></script>
+    <script src="../../../app-assets/vendors/js/ui/prism.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
