@@ -714,6 +714,9 @@ body {
 						flex-direction: column;
 						flex: 1;
 					}
+					.card-body {
+						padding-top: 24px;
+					}
 					.tab-pane.active {
 						display: flex;
 						flex-direction: column;

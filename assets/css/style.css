@@ -492,6 +492,8 @@ body.file-manager-application.app-manager-application .content-area-wrapper .app
       display: flex;
       flex-direction: column;
       flex: 1; }
+    body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .card-body {
+      padding-top: 24px; }
     body.file-manager-application.app-manager-application .content-area-wrapper .app-file-sidebar-info .card .tab-pane.active {
       display: flex;
       flex-direction: column;
