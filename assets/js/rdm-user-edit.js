@@ -18,11 +18,6 @@ $(document).ready(function () {
     $('.birthdate-picker').pickadate({
         format: 'mmmm, d, yyyy'
     });
-    // profile image upload
-    new Dropzone(document.body, { // Make the whole body a dropzone
-        url: "#", // Set the url
-        clickable: "#select-files" // Define the element that should be used as click trigger to select files.
-    });
 });
 (function (window, document, $) {
     'use strict';
