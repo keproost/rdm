@@ -44,6 +44,8 @@
 - Scrumboard
 - Select2
 -------------------------------------------------------------------*/
+@import "palette-variables";
+
 // Color palettes
 @function color-function($color, $type) {
   @if map-has-key($colors, $color) {
