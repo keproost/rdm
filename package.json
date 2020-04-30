@@ -27,7 +27,7 @@
     "gulp-w3c-html-validator": "^1.4.4",
     "hammerjs": "^2.0.8",
     "i18next": "^19.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-blockui": "^2.7.0",
     "jquery-datatables-checkboxes": "^1.2.11",
     "jquery-match-height": "^0.7.2",
