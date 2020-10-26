@@ -1,0 +1,316 @@
+/**All i3Cair related css**/
+
+
+/*Color variables*/
+$cair-bar-background:					 #F2F4F4;
+$cair-bar-shadow-dark: 					rgba(20,0,0,0.10);
+$cair-bar-shadow-light:					rgba(255,255,255,1);
+$sensor-status-good: 					#9DDF00;
+$sensor-status-moderate: 				#FFCF14;
+$sensor-status-unhealthy-for-sensitive:	#FA8A00;
+$sensor-status-unhealthy: 				#FA3300;
+$sensor-status-very-unhealthy: 			#B90101;
+$sensor-status-hazardous: 				#79004D;
+$base-color: 							#475F7B;
+$base-color-faded: 						rgba($base-color, 0.5);
+
+
+/*Utility classe to provide status*/
+.clr-status-good {
+	color: $sensor-status-good;
+}
+.clr-status-moderate {
+	color: $sensor-status-moderate;
+}
+.clr-status-unhealthy-for-sensitive {
+	color: $sensor-status-unhealthy-for-sensitive;
+}
+.clr-status-unhealthy {
+	color: $sensor-status-unhealthy;
+}
+.clr-status-very-unhealthy {
+	color: $sensor-status-very-unhealthy;
+}
+.clr-status-hazarous {
+	color: $sensor-status-hazardous;
+}
+.bg-status-good {
+	background-color: $sensor-status-good !important;
+}
+.bg-status-moderate {
+	background-color: $sensor-status-moderate !important;
+}
+.bg-status-unhealthy-for-sensitive {
+	background-color: $sensor-status-unhealthy-for-sensitive !important;
+}
+.bg-status-unhealthy {
+	background-color: $sensor-status-unhealthy !important;
+}
+.bg-status-very-unhealthy {
+	background-color: $sensor-status-very-unhealthy !important;
+}
+.bg-status-hazarous {
+	background-color: $sensor-status-hazardous !important;
+}
+
+/*Cair Bar*/
+.cair-bar {
+	.cair-bar-content {
+		.card {
+			background-color: $cair-bar-background;
+			box-shadow: 10px 10px 20px $cair-bar-shadow-dark, -10px -10px 20px $cair-bar-shadow-light;
+			.card-body  {
+				display: flex; 
+				flex-direction: row;
+				flex-wrap: wrap;
+				@include media-breakpoint-down(md) {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+				}
+				.myday {
+					@include media-breakpoint-down(lg) {
+						order: 1;
+						flex: 1;
+					}
+					@media (min-width: 990px) and (max-width: 1199px) { 
+						flex: 0 0 auto;
+					}
+					@media (min-width: 990px) and (max-width: 1199px) { 
+						flex: 0 0 auto;
+					}
+
+					display: flex; 
+					flex-direction: column;
+					.myday-content {
+						@include media-breakpoint-down(lg) {
+							display: flex;
+							align-items: center;
+						}
+						@include media-breakpoint-down(md) {
+							display: flex; 
+							flex-direction: column;
+							flex: 1;
+						}
+						@media (min-width: 990px) and (max-width: 1199px) { 
+							display: block;
+						}
+						.myday-header {
+							@include media-breakpoint-down(lg) {
+								margin-right: 1rem;
+							}
+							@include media-breakpoint-down(md) {
+								margin-right: 0;
+							}
+							.day {
+								display: inline-block;
+								color: $base-color;
+								font-size: 1.60rem;
+								font-family: 'Rubik';
+								font-weight: 300;
+								text-transform: uppercase;		
+								@include media-breakpoint-down(xl) {
+									font-size: 1.25rem;
+								}						
+							}
+							.date {
+								font-size: 0.85rem;
+								color: $base-color-faded;
+							}
+						}
+						.myday-footer {
+							@include media-breakpoint-down(md) {
+								margin-bottom: 1.5rem;
+							}
+							.time {
+								display: inline-block;
+								color: $base-color;
+								font-size: 2rem;
+								font-family: 'Rubik';
+								font-weight: 600;
+								text-transform: uppercase;
+								@include media-breakpoint-down(xl) {
+									font-size: 1.5rem;
+								}	
+								.hour {}
+								.seperator {}
+								.minutes {}
+								.timeformat {margin-left: 1rem;}
+							}
+							.roomname {
+								text-transform: capitalize;
+								font-size: 1rem;
+								color: $base-color-faded;
+								text-transform: uppercase;
+								@include media-breakpoint-down(xl) {
+									font-size: 0.8rem;
+								}
+							}
+						}
+					}
+				}
+				.parameters {
+					display: flex; 
+					flex: 1;
+					@include media-breakpoint-down(lg) {
+						order: 3;
+					}
+					@include media-breakpoint-down(md) {
+						order: 2;
+						flex-direction: column;
+						.parameter {
+							margin-bottom: 1rem;
+						}
+					}
+					@media (min-width: 990px) and (max-width: 1199px) { 
+						order: 2;
+					}
+					.parameter{
+						display: flex; 
+						flex-direction: column;
+						flex: 1;
+						.parameter-content {
+							display: flex; 
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							flex: 1;
+							.icon {
+								background-color: $cair-bar-background;
+								box-shadow: 5px 5px 10px $cair-bar-shadow-dark, -5px -5px 10px $cair-bar-shadow-light;
+								border-radius: 100px;
+								width: 54px;
+								height: 54px;
+								display: flex; 
+								align-items: center;
+								justify-content: center;
+								justify-self: center;
+								margin-bottom: 6px;
+								@include media-breakpoint-down(xl) {
+									width: 50px;
+									height: 50px;
+								}
+								span {
+									font-size: 2.5rem;
+									@include media-breakpoint-down(xl) {
+										font-size: 2rem;
+									}
+									
+								}
+							}
+							.title {
+								font-size: 0.90rem;
+								text-transform: uppercase;
+								font-weight: 600;
+								color: $base-color;
+								// font-size: 2.5rem;
+								@include media-breakpoint-down(xl) {
+									font-size: 0.85rem;
+								}
+	
+	
+							}
+							.details {
+								font-size: 1.50rem;
+								color: $base-color-faded;
+								position: relative;
+								@include media-breakpoint-down(xl) {
+									font-size: 1.25rem;
+								}
+	
+							}
+							.units {
+								position: absolute; 
+								top: 0;
+								font-size: 0.85rem;
+								color: $base-color-faded;
+								@include media-breakpoint-down(xl) {
+									font-size: 0.65rem;
+								}
+							}
+						}
+					}
+				}
+
+				.myhealth {
+					display: flex; 
+					flex-direction: column;
+					max-width: 186px;
+					@include media-breakpoint-down(lg) {
+						order: 2;
+						max-width: auto; 
+						margin-bottom: 1.5rem;
+						max-width: 140px;
+					}
+					@include media-breakpoint-down(md) {
+						order: 3;
+					}
+					@media (min-width: 990px) and (max-width: 1199px) { 
+						order: 3;
+					}
+					.myhealth-content {
+						display: flex; 
+						flex-direction: column;
+						flex: 1;
+						.myhealth-header {
+							display: flex; 
+							flex-direction: column;
+							flex: 1;
+							.aqi-badge {
+								display: flex;
+								flex-direction: row;
+								align-items: center;
+								justify-content: center;
+								background-color: $sensor-status-good;
+								border-radius: 1rem;
+								box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+								margin-bottom: 1rem;
+								.icon {
+									font-size: 5rem;
+									color: white;
+									opacity: 0.5;
+									@include media-breakpoint-down(xl) {
+										font-size: 3.5rem;
+									}
+								}
+								.aqi-value {
+									color: white;
+									font-size: 2.85rem;
+									font-weight: 600;
+									@include media-breakpoint-down(xl) {
+										font-size: 2.2rem;
+									}
+								}
+							}
+						}
+						.myhealth-footer {
+							display: flex; 
+							flex-direction: column;
+							flex: 1;
+							justify-content: flex-end;
+							text-align: right;
+							@include media-breakpoint-down(md) {
+								text-align: center;
+							}
+							.aqi-status {
+								@include media-breakpoint-down(md) {
+									margin-top: 1rem;
+								}
+								.aqi-text {
+									text-transform: uppercase;
+									font-size: 1rem;
+									color: $base-color-faded;
+									@include media-breakpoint-down(xl) {
+										font-size: 0.85rem;
+									}	
+
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
