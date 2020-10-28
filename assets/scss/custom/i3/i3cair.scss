@@ -49,7 +49,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 .bg-status-very-unhealthy {
 	background-color: $sensor-status-very-unhealthy !important;
 }
-.bg-status-hazarous {
+.bg-status-hazardous {
 	background-color: $sensor-status-hazardous !important;
 }
 
@@ -186,7 +186,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 								align-items: center;
 								justify-content: center;
 								justify-self: center;
-								margin-bottom: 6px;
+								margin-bottom: 12px;
 								@include media-breakpoint-down(xl) {
 									width: 50px;
 									height: 50px;
@@ -236,7 +236,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 				.myhealth {
 					display: flex; 
 					flex-direction: column;
-					max-width: 186px;
+					max-width: 160px;
 					@include media-breakpoint-down(lg) {
 						order: 2;
 						max-width: auto; 
@@ -266,8 +266,9 @@ $base-color-faded: 						rgba($base-color, 0.5);
 								border-radius: 1rem;
 								box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 								margin-bottom: 1rem;
+								min-width: 160px;
 								.icon {
-									font-size: 5rem;
+									font-size: 4rem;
 									color: white;
 									opacity: 0.5;
 									@include media-breakpoint-down(xl) {
@@ -276,7 +277,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 								}
 								.aqi-value {
 									color: white;
-									font-size: 2.85rem;
+									font-size: 2.45rem;
 									font-weight: 600;
 									@include media-breakpoint-down(xl) {
 										font-size: 2.2rem;
@@ -312,5 +313,159 @@ $base-color-faded: 						rgba($base-color, 0.5);
 				}
 			}
 		}
+	}
+}
+
+/*Cair aqi badge general style*/
+.aqi-badge {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: $sensor-status-good;
+	border-radius: 1rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+	margin-bottom: 1rem;
+	min-width: 160px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	min-height: 40px;
+	.icon {
+		font-size: 4rem;
+		color: white;
+		opacity: 0.5;
+		@include media-breakpoint-down(xl) {
+			font-size: 3.5rem;
+		}
+	}
+	.aqi-value {
+		color: white;
+		font-size: 2.45rem;
+		font-weight: 600;
+		@include media-breakpoint-down(xl) {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+
+/*Ciar graph*/
+.cair-graph {
+	.card-title-block {
+		display: flex; 
+		flex-direction: row;
+		align-items: center;
+		.icon {
+			font-size: 3rem;
+			background-color: white; 
+		}
+		.card-title {
+			margin-bottom: 0.75rem;
+		}
+		.card-subtitle {
+			color: $base-color-faded;
+		}
+	}
+	.heading-elements {
+		display: flex; 
+		flex-direction: row;
+		align-items: center;
+		.btn {
+			padding-left: 1.5rem;
+		}
+		.aqi-badge {
+			min-width: auto;
+			border-radius: 0.6rem;
+			.icon {
+				font-size: 2rem;
+			}
+			.aqi-value {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.card-body {
+		.tabs-container {
+			display: flex; 
+			.nav-pills {
+				.nav-link {
+					display: flex; 
+					flex-direction: row;
+					align-items: center;
+					background-color: white;
+					padding: 1rem 2rem;
+					&:active, &.active{
+						background-color: #f9f9f9;
+					}
+					
+					.parameter-icon {
+						width: 60px;
+						height: 60px;
+						display: flex; 
+						background-color: white; 
+						box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+						border-radius: 100px;
+						color: $base-color-faded;
+						justify-content: center;
+						flex-direction: column;
+						text-align: center;
+						margin-right: 1rem;
+						span {
+							font-size: 2.8rem;
+						}
+					}
+					.parameter-details {
+						min-width: 130px;
+						.label {
+							font-weight: bold; 
+							color: $base-color;
+							font-size: 1rem;
+							margin-bottom: 3px;
+
+						}
+						.measurements {
+							display: flex;
+							flex-direction: row; 
+							flex: 1;
+							font-size: 14px;
+							text-transform: uppercase;
+							color: #7E8FA2;
+							justify-content: space-between;
+							.min {
+								color: $base-color-faded;
+								text-transform: uppercase;
+								font-weight: bold;
+								.min-label {
+
+								}
+								.min-value {
+
+								}
+							}
+							.max {
+								color: $base-color-faded;
+								text-transform: uppercase;
+								font-weight: bold;
+								.max-label {
+
+								}
+								.max-value {
+
+								}
+							}
+
+						}
+					}
+				}
+			}
+			.tab-content {
+				display: flex; 
+				flex: 1;
+				box-shadow: none;
+			}
+		}
+	}
+	.timescale {
+		
 	}
 }

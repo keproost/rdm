@@ -24481,7 +24481,7 @@ body.page-auth.bg-full-screen-image {
 .bg-status-very-unhealthy {
   background-color: #B90101 !important; }
 
-.bg-status-hazarous {
+.bg-status-hazardous {
   background-color: #79004D !important; }
 
 /*Cair Bar*/
@@ -24600,7 +24600,7 @@ body.page-auth.bg-full-screen-image {
             align-items: center;
             justify-content: center;
             justify-self: center;
-            margin-bottom: 6px; }
+            margin-bottom: 12px; }
             @media (max-width: 1899.98px) {
               .cair-bar .cair-bar-content .card .card-body .parameters .parameter .parameter-content .icon {
                 width: 50px;
@@ -24636,7 +24636,7 @@ body.page-auth.bg-full-screen-image {
     .cair-bar .cair-bar-content .card .card-body .myhealth {
       display: flex;
       flex-direction: column;
-      max-width: 186px; }
+      max-width: 160px; }
       @media (max-width: 1199.98px) {
         .cair-bar .cair-bar-content .card .card-body .myhealth {
           order: 2;
@@ -24665,9 +24665,10 @@ body.page-auth.bg-full-screen-image {
             background-color: #9DDF00;
             border-radius: 1rem;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-            margin-bottom: 1rem; }
+            margin-bottom: 1rem;
+            min-width: 160px; }
             .cair-bar .cair-bar-content .card .card-body .myhealth .myhealth-content .myhealth-header .aqi-badge .icon {
-              font-size: 5rem;
+              font-size: 4rem;
               color: white;
               opacity: 0.5; }
               @media (max-width: 1899.98px) {
@@ -24675,7 +24676,7 @@ body.page-auth.bg-full-screen-image {
                   font-size: 3.5rem; } }
             .cair-bar .cair-bar-content .card .card-body .myhealth .myhealth-content .myhealth-header .aqi-badge .aqi-value {
               color: white;
-              font-size: 2.85rem;
+              font-size: 2.45rem;
               font-weight: 600; }
               @media (max-width: 1899.98px) {
                 .cair-bar .cair-bar-content .card .card-body .myhealth .myhealth-content .myhealth-header .aqi-badge .aqi-value {
@@ -24699,3 +24700,111 @@ body.page-auth.bg-full-screen-image {
             @media (max-width: 1899.98px) {
               .cair-bar .cair-bar-content .card .card-body .myhealth .myhealth-content .myhealth-footer .aqi-status .aqi-text {
                 font-size: 0.85rem; } }
+
+/*Cair aqi badge general style*/
+.aqi-badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #9DDF00;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  min-width: 160px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 40px; }
+  .aqi-badge .icon {
+    font-size: 4rem;
+    color: white;
+    opacity: 0.5; }
+    @media (max-width: 1899.98px) {
+      .aqi-badge .icon {
+        font-size: 3.5rem; } }
+  .aqi-badge .aqi-value {
+    color: white;
+    font-size: 2.45rem;
+    font-weight: 600; }
+    @media (max-width: 1899.98px) {
+      .aqi-badge .aqi-value {
+        font-size: 2.2rem; } }
+
+/*Ciar graph*/
+.cair-graph .card-title-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .cair-graph .card-title-block .icon {
+    font-size: 3rem;
+    background-color: white; }
+  .cair-graph .card-title-block .card-title {
+    margin-bottom: 0.75rem; }
+  .cair-graph .card-title-block .card-subtitle {
+    color: rgba(71, 95, 123, 0.5); }
+
+.cair-graph .heading-elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .cair-graph .heading-elements .btn {
+    padding-left: 1.5rem; }
+  .cair-graph .heading-elements .aqi-badge {
+    min-width: auto;
+    border-radius: 0.6rem; }
+    .cair-graph .heading-elements .aqi-badge .icon {
+      font-size: 2rem; }
+    .cair-graph .heading-elements .aqi-badge .aqi-value {
+      font-size: 1.4rem; }
+
+.cair-graph .card-body .tabs-container {
+  display: flex; }
+  .cair-graph .card-body .tabs-container .nav-pills .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem; }
+    .cair-graph .card-body .tabs-container .nav-pills .nav-link:active, .cair-graph .card-body .tabs-container .nav-pills .nav-link.active {
+      background-color: #f9f9f9; }
+    .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      background-color: white;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 100px;
+      color: rgba(71, 95, 123, 0.5);
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 1rem; }
+      .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-icon span {
+        font-size: 2.8rem; }
+    .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-details {
+      min-width: 130px; }
+      .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-details .label {
+        font-weight: bold;
+        color: #475F7B;
+        font-size: 1rem;
+        margin-bottom: 3px; }
+      .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-details .measurements {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #7E8FA2;
+        justify-content: space-between; }
+        .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-details .measurements .min {
+          color: rgba(71, 95, 123, 0.5);
+          text-transform: uppercase;
+          font-weight: bold; }
+        .cair-graph .card-body .tabs-container .nav-pills .nav-link .parameter-details .measurements .max {
+          color: rgba(71, 95, 123, 0.5);
+          text-transform: uppercase;
+          font-weight: bold; }
+  .cair-graph .card-body .tabs-container .tab-content {
+    display: flex;
+    flex: 1;
+    box-shadow: none; }
