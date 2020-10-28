@@ -24859,6 +24859,13 @@ body.page-auth.bg-full-screen-image {
         background-color: #A3AFBD;
         border-radius: 50px; }
 
+.cair-graph .timescale-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1; }
+  .cair-graph .timescale-container .spacercol {
+    width: 250px; }
+
 .cair-graph .timescale {
   display: flex;
   flex: 1;
@@ -24905,7 +24912,8 @@ body.page-auth.bg-full-screen-image {
         justify-content: flex-start;
         font-size: 12px;
         font-weight: 600;
-        color: #475F7B; }
+        color: #475F7B;
+        width: 20px; }
         .cair-graph .timescale .timescale-content .timescale-increments .increment .label {
           text-indent: -100%;
           white-space: nowrap;

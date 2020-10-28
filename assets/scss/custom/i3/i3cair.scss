@@ -531,6 +531,14 @@ $base-color-faded: 						rgba($base-color, 0.5);
 			}
 		}
 	}
+	.timescale-container {
+		display: flex; 
+		flex-direction: row; 
+		flex: 1;
+		.spacercol {
+			width: 250px;
+		}
+	}
 	.timescale {
 		display: flex; 
 		flex: 1;
@@ -587,6 +595,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 					font-size: 12px;
 					font-weight: 600;
 					color: $base-color;
+					width: 20px;
 					.label {
 						text-indent: -100%;
 						white-space: nowrap;
