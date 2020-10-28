@@ -387,6 +387,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 	.card-body {
 		.tabs-container {
 			display: flex; 
+			flex: 1;
 			.nav-pills {
 				.nav-link {
 					display: flex; 
@@ -460,8 +461,13 @@ $base-color-faded: 						rgba($base-color, 0.5);
 			}
 			.tab-content {
 				display: flex; 
+				flex-direction: column;
 				flex: 1;
 				box-shadow: none;
+				.tab-pane {
+					display: flex; 
+					flex-direction: column;
+				}
 			}
 		}
 	}
@@ -526,6 +532,93 @@ $base-color-faded: 						rgba($base-color, 0.5);
 		}
 	}
 	.timescale {
-		
+		display: flex; 
+		flex: 1;
+		flex-direction: column;
+		.timescale-control {
+			width: 42px;
+			height: 42px;
+			background-color: #F2F4F4;
+			border-radius: 50px;
+			display: flex; 
+			flex-direction: column;
+			align-items: center;
+			justify-items: center;
+			color: $base-color;
+			font-size: 2rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
+			&:hover {
+				background-color: #f9f9f9;
+			}
+			&.left {
+				&:after {
+					font-family: "i3icon" !important;
+					content: $i3-icon-os-caret-left;
+				}
+			}
+			&.right {
+				&:after {
+					font-family: "i3icon" !important;
+					content: $i3-icon-os-caret-right;
+				}
+			}
+		}
+		.timescale-title {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			height: 36px;
+		}
+		.timescale-content {
+			display: flex;
+			flex-direction: row;
+			flex: 1;
+			.timescale-increments {
+				display: flex;
+				flex-direction: row;
+				flex: 1;	
+				justify-content: space-between;			
+				.increment {
+					display: flex; 
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-start;
+					font-size: 12px;
+					font-weight: 600;
+					color: $base-color;
+					.label {
+						text-indent: -100%;
+						white-space: nowrap;
+						overflow: hidden;
+						&:after {
+							margin-top: 0.50rem;
+							content: "";
+							display: block; 
+							margin-left: auto;
+							margin-right: auto;
+							width: 1px;
+							height: 4px;
+							opacity: 0.5;
+							background-color: $base-color-faded;
+						}
+					}
+					&:nth-child(6n+4){
+						.label:after  {
+							height: 8px;
+						}
+					}
+					&:nth-child(6n+7), &:first-child{
+						.label {
+							text-indent: 0;
+						}
+						.label:after  {
+							height: 16px !important;
+							background-color: $base-color;
+						}
+					}
+				}
+			}
+		}
 	}
 }
