@@ -24808,3 +24808,48 @@ body.page-auth.bg-full-screen-image {
     display: flex;
     flex: 1;
     box-shadow: none; }
+
+.cair-graph .cair-tooltip {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  color: #475F7B;
+  padding: 1.5rem; }
+  .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter {
+    margin-bottom: 0.5rem; }
+    .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter:last-child {
+      margin-bottom: 0rem; }
+    .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter .label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1rem; }
+    .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter.today .label:before {
+      content: '';
+      display: block;
+      margin-right: 5px;
+      width: 20px;
+      height: 1px;
+      border-style: solid;
+      border-width: 1px; }
+    .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter.yesterday .label:before {
+      content: '';
+      display: block;
+      margin-right: 5px;
+      width: 20px;
+      height: 1px;
+      border-style: dashed;
+      border-width: 1px; }
+    .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter .value {
+      display: flex;
+      flex-direction: row;
+      color: #475F7B;
+      font-weight: 600;
+      align-items: center;
+      padding-left: 0.5rem; }
+      .cair-graph .cair-tooltip .tooltip-content .tooltip-body .parameter .value .indicator {
+        width: 8px;
+        height: 8px;
+        margin-right: 0.75rem;
+        background-color: #A3AFBD;
+        border-radius: 50px; }
