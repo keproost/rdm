@@ -13,6 +13,8 @@ $sensor-status-very-unhealthy: 			#B90101;
 $sensor-status-hazardous: 				#79004D;
 $base-color: 							#475F7B;
 $base-color-faded: 						rgba($base-color, 0.5);
+$guttersize: 							60px;
+$timescale-control-size: 				45px;
 
 
 /*Utility classe to provide status*/
@@ -31,7 +33,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 .clr-status-very-unhealthy {
 	color: $sensor-status-very-unhealthy;
 }
-.clr-status-hazarous {
+.clr-status-hazardous {
 	color: $sensor-status-hazardous;
 }
 .bg-status-good {
@@ -464,9 +466,15 @@ $base-color-faded: 						rgba($base-color, 0.5);
 				flex-direction: column;
 				flex: 1;
 				box-shadow: none;
+				padding-left: 0px;
+				padding-right: 0px;
+				> .active {
+					display: flex;
+					flex: 1;
+				}
 				.tab-pane {
-					display: flex; 
-					flex-direction: column;
+					// display: flex; 
+					// flex-direction: column;
 				}
 			}
 		}
@@ -536,16 +544,22 @@ $base-color-faded: 						rgba($base-color, 0.5);
 		flex-direction: row; 
 		flex: 1;
 		.spacercol {
-			width: 250px;
+			width: 265px;
 		}
 	}
 	.timescale {
 		display: flex; 
 		flex: 1;
 		flex-direction: column;
+		.timescale-control-container {
+			width: $guttersize; 
+			display: flex; 
+			flex-direction: column;
+			align-items: center;
+		}
 		.timescale-control {
-			width: 42px;
-			height: 42px;
+			width: $timescale-control-size;
+			height: $timescale-control-size;
 			background-color: #F2F4F4;
 			border-radius: 50px;
 			display: flex; 
@@ -554,8 +568,7 @@ $base-color-faded: 						rgba($base-color, 0.5);
 			justify-items: center;
 			color: $base-color;
 			font-size: 2rem;
-			margin-left: 1rem;
-			margin-right: 1rem;
+			cursor: pointer;
 			&:hover {
 				background-color: #f9f9f9;
 			}
@@ -630,4 +643,13 @@ $base-color-faded: 						rgba($base-color, 0.5);
 			}
 		}
 	}
+}
+
+.graph-container {
+	padding-left: $guttersize;
+	padding-right: $guttersize;
+	background-color: red;
+	display: flex; 
+	flex: 1;
+	background-clip: content-box;
 }

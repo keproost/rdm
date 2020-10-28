@@ -24463,7 +24463,7 @@ body.page-auth.bg-full-screen-image {
 .clr-status-very-unhealthy {
   color: #B90101; }
 
-.clr-status-hazarous {
+.clr-status-hazardous {
   color: #79004D; }
 
 .bg-status-good {
@@ -24809,10 +24809,12 @@ body.page-auth.bg-full-screen-image {
     display: flex;
     flex-direction: column;
     flex: 1;
-    box-shadow: none; }
-    .cair-graph .card-body .tabs-container .tab-content .tab-pane {
+    box-shadow: none;
+    padding-left: 0px;
+    padding-right: 0px; }
+    .cair-graph .card-body .tabs-container .tab-content > .active {
       display: flex;
-      flex-direction: column; }
+      flex: 1; }
 
 .cair-graph .cair-tooltip {
   background-color: #ffffff;
@@ -24864,15 +24866,20 @@ body.page-auth.bg-full-screen-image {
   flex-direction: row;
   flex: 1; }
   .cair-graph .timescale-container .spacercol {
-    width: 250px; }
+    width: 265px; }
 
 .cair-graph .timescale {
   display: flex;
   flex: 1;
   flex-direction: column; }
+  .cair-graph .timescale .timescale-control-container {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .cair-graph .timescale .timescale-control {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
     background-color: #F2F4F4;
     border-radius: 50px;
     display: flex;
@@ -24881,8 +24888,7 @@ body.page-auth.bg-full-screen-image {
     justify-items: center;
     color: #475F7B;
     font-size: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem; }
+    cursor: pointer; }
     .cair-graph .timescale .timescale-control:hover {
       background-color: #f9f9f9; }
     .cair-graph .timescale .timescale-control.left:after {
@@ -24935,3 +24941,11 @@ body.page-auth.bg-full-screen-image {
         .cair-graph .timescale .timescale-content .timescale-increments .increment:nth-child(6n+7) .label:after, .cair-graph .timescale .timescale-content .timescale-increments .increment:first-child .label:after {
           height: 16px !important;
           background-color: #475F7B; }
+
+.graph-container {
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: red;
+  display: flex;
+  flex: 1;
+  background-clip: content-box; }
