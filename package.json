@@ -31,7 +31,7 @@
     "jquery-blockui": "^2.7.0",
     "jquery-datatables-checkboxes": "^1.2.11",
     "jquery-match-height": "^0.7.2",
-    "node-notifier": "^5.4.3",
+    "node-notifier": "^8.0.1",
     "pace-js": "^1.0.2",
     "perfect-scrollbar": "^1.4.0",
     "pickadate": "^5.0.0-alpha.3",
