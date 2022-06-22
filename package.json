@@ -13,7 +13,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "apexcharts": "^3.10.1",
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "bootstrap": "^4.4.1",
     "components-unison": "^0.7.1",
     "datatables": "^1.10.18",
